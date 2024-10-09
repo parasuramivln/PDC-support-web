@@ -1,0 +1,31 @@
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
+{% else %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <!-- Logo -->
+    <div class="md-header__title" style="display: flex; align-items: center; font-weight: bold;">
+      <img src="https://www.kth.se/img/logotype-white-6f02f4554cba157ca832fa452bf242a4.svg" alt="KTH Logo" style="height: 50px; margin-right: 15px;">
+      <a href="https://www.pdc.kth.se">
+        {{ config.site_name }}
+      </a>
+    </div>
+    <!-- Navigation -->
+    <div class="md-header__menu">
+      {% for link in config.extra.header_links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+    <!-- Search -->
+    {% if "material/search" in config.plugins %}
+      <label class="md-header__button md-icon" for="__search">
+        {% set icon = config.theme.icon.search or "material/magnify" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </label>
+      {% include "partials/search.html" %}
+    {% endif %}
+  </nav>
+</header>

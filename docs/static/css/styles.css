@@ -1,0 +1,67 @@
+.md-button:link,
+.md-button:visited,
+.md-button:active,
+.md-button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    font-size: 14px;
+    color: white;
+    background-color: #004791;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.md-button:hover {
+    background-color: #6298d2 !important;
+    color: white;
+}
+
+.md-footer {
+    display: none;
+}
+
+.md-sidebar__inner {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.md-elipsis,
+.md-elipsis:link,
+.md-elipsis:visited {
+    color: black !important;
+}
+
+.md-ellipsis:hover {
+    color: black;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', serif; 
+    color: #004791 !important;
+    font-weight: 600 !important;
+}
+
+.md-header__menu a {
+    color: #ebe5e0;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.md-header__menu a:hover {
+    color: white;
+}
+
+.md-sidebar--primary .md-search {
+    margin-top: 20px;
+}
+
+.md-header {
+    background-color:#000061;
+    padding: 10px;
+}
