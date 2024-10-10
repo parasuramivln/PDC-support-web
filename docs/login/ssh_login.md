@@ -13,6 +13,8 @@ authenticate themselves with the help of the Swedish User and Project Repository
 Registered SSH key pair login is restricted by user-defined IPs, and SSH keys have to be renewed regularly.
 After setting up all details in the login portal the user will be able to login from the chosen IP addresses with SSH for the selected validity period.
 
+You can find a video tutorial on how to login at https://youtu.be/I8cNqiYuA-4 or you can read instructions on how to login below.
+
 ## How SSH key pairs work
 
 Authentication using SSH asymmetric key pairs is very common. Each SSH key pair includes two keys: a public key and a secret key. The public key should be copied to the SSH server. Anyone with a copy of the public key can encrypt data which can then only be read by the person who holds the corresponding private key. The private key must remain with the user and should be kept secret.
