@@ -111,22 +111,22 @@ def upload_html_files(kth_username, kth_ubuntu_host, html_path, afs_path_to_targ
     get_command_output(
         ["scp", "-r"] + file_list +
         ["{}@{}:{}".format(kth_username, kth_ubuntu_host, afs_path_to_target)])
-    time.sleep(0.2)
+    time.sleep(2)
 
 def move_folder(kth_username, kth_ubuntu_host, html_path, trash_path):
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "mv", "-f", html_path, trash_path])
-    time.sleep(0.2)
+    time.sleep(2)
 
 def copy_folder(kth_username, kth_ubuntu_host, tmp_path, latest_path):
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "cp", "-r", tmp_path, latest_path])
-    time.sleep(0.2)
+    time.sleep(2)
 
 def delete_folder(kth_username, kth_ubuntu_host, latest_path):
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "rm", "-rf", latest_path])
-    time.sleep(0.2)
+    time.sleep(2)
 
 def main(target, html_path):
     print("Copying files from {} to {}".format(html_path, target))
