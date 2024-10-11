@@ -79,8 +79,8 @@ Different node types are allocated based on the SLURM partition (`-p`) and the `
 The following configuration allocates one node with at least 250 GB of available memory in the main partition, i.e. a large or huge node:
 
 ```default
-#SBATCH   mem=250GB
-#SBATCH  p main
+#SBATCH --mem=250GB
+#SBATCH -p main
 ```
 
 The `--mem` flag imposes a hard upper limit on the amount of memory the job can use.
@@ -98,3 +98,41 @@ The compute nodes on Dardel are divided into four partitions. Each job must spec
 | long             | Thin nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 7 days                                                                                                               |
 | shared           | Thin nodes<br/><br/>Jobs are allocated to cores, not nodes<br/><br/>By default granted one core, get more with `-n or -c`<br/><br/>Job shares node with other jobs<br/><br/>Maximum job time 7 days |
 | memory           | Large, huge and giant nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 7 days                                                                                            |
+
+## How to run on shared partitions
+
+Running on shared partition is a little bit different than running on exclusive nodes.
+First you need to specify the number of cores you will be using, and, at the same time, you get
+an equivalent size of RAM for your job.
+
+### Defining the number of cores or memory
+
+When running on shared nodes, you need to add the number of cores you will be using or the amount of memory you need.
+The amount of memory is equivalent to the amount of cores you are asking and viceversa.
+For example, we are using a node with 128 cores and 256 Gbytes of RAM.
+If you are asking for 20 cores, you will receive 40 Gbytes of RAM. Instead of you are asking for 80 Gbytes of RAM, you will automatically receive 40 cores.
+The cores or memory that is the largest for the job will dictate what is needed.
+
+### Paremeters needed on shared nodes
+
+| Parameter | Description |
+| --- | --- |
+| -n [tasks] | Allocates ntasks |
+| --cpus-per-task [cores] | Allocates physical [cores]=ntasks*cpu-per-task. (Default: cpus-per-task=1) |
+| --mem=[RAM in kbytes] | The max amount of RAM allocated for your job |
+
+**Example 1:** On a shared node with 128 cores, 256 Gbytes RAM.
+In this case you will receive 20 cores, 40 GBytes RAM
+```default
+#SBATCH  -p shared
+#SBATCH  ntasks=10
+#SBATCH --cpus-per-task 2
+```
+
+**Example 2:** On a shared node with 128 cores, 256 Gbytes RAM.
+In this case you will receive 20 cores, 40 GBytes RAM. The amount of cores you ask for does not cover your need for RAM.
+```default
+#SBATCH  -p shared
+#SBATCH  ntasks=2
+#SBATCH --mem 40000
+```
