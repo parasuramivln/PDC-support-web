@@ -14,9 +14,9 @@ For running large time consuming programs, sending the job to the queue system i
   By default any output messages from the job are written to the file `slurm-XXX.out` where `XXX` is the job id.
   More information on how to create an job script can be found in [Job scripts](job_scripts.md#job-scripts).
 
-## WARNING
-Note that programs should **ONLY** be run with sbatch, or following the instruction in [Run interactively](run_interactively.md#run-interactively)
-Running programs in any other way will result in the program running on the login node and not on the super computer.
+!!! WARNING
+
+    Note that programs should **ONLY** be run with sbatch, or following the instruction in [Run interactively](run_interactively.md#run-interactively) Running programs in any other way will result in the program running on the login node and not on the super computer.
 
 * You can remove your job from queue with:
   ```default

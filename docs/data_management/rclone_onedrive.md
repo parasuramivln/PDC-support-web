@@ -53,8 +53,9 @@ Now we are ready to copy the local file to Dardel. Use the paths collected from 
 rsync LOCAL_PATH dardel.pdc.kth.se:REMOTE_PATH
 ```
 
-#### WARNING
-Do not copy a configuration file to Dardel if it is not encrypted! Storing an unencrypted configuration file on a shared file system may enable a malicious user to take control over your data.
+!!! WARNING
+
+    Do not copy a configuration file to Dardel if it is not encrypted! Storing an unencrypted configuration file on a shared file system may enable a malicious user to take control over your data.
 
 To test that the setup worked, now run the following on Dardel:
 

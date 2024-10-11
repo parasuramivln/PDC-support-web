@@ -15,37 +15,37 @@ The queue system uses two main methods to decide which jobs are run. These are c
 
 ### Fair share
 
-> The goal of the fair share algorithm is to make sure that all projects can
-> use their fair share of the available resources within a reasonable time
-> frame. The priority that a job (belonging to a particular project) is given
-> will depend on how much of that project’s time quota has been used recently
-> in relation to the quotas of jobs belonging to other projects - the effect of
-> this on the priority declines gradually with a half-life of 14 days. So jobs
-> submitted by projects that have not used much of their quota recently will be
-> given high priority, and vice versa.
+The goal of the fair share algorithm is to make sure that all projects can
+use their fair share of the available resources within a reasonable time
+frame. The priority that a job (belonging to a particular project) is given
+will depend on how much of that project’s time quota has been used recently
+in relation to the quotas of jobs belonging to other projects - the effect of
+this on the priority declines gradually with a half-life of 14 days. So jobs
+submitted by projects that have not used much of their quota recently will be
+given high priority, and vice versa.
 
 ### Backfill
 
-> As well as having a main queue to ensure that the systems are as full as
-> possible, the job scheduling system also implements “backfill”. If the next
-> job in the queue is large (that is, it will need lots of nodes to run), the
-> scheduler collects nodes as they become free until there are enough to start
-> running the large job. Backfill means that the scheduler looks for smaller
-> jobs that could start on nodes that are free now, and which would finish
-> before there are enough nodes free for the large job to start. For backfill
-> to work well, the scheduler needs to know how long jobs will take. So, to
-> take advantage of the possibility of backfill, you should set the maximum
-> time your job needs to run as accurately as possible in your submit scripts.
+As well as having a main queue to ensure that the systems are as full as
+possible, the job scheduling system also implements “backfill”. If the next
+job in the queue is large (that is, it will need lots of nodes to run), the
+scheduler collects nodes as they become free until there are enough to start
+running the large job. Backfill means that the scheduler looks for smaller
+jobs that could start on nodes that are free now, and which would finish
+before there are enough nodes free for the large job to start. For backfill
+to work well, the scheduler needs to know how long jobs will take. So, to
+take advantage of the possibility of backfill, you should set the maximum
+time your job needs to run as accurately as possible in your submit scripts.
 
 This graph shows the percentage of the nodes on Beskow (previous PDC’s supercomputer)
 that were in use on different dates from early 2015 till late 2016. You can see how
 the scheduler makes good use of Beskow as nearly all of the available nodes are being used
 all the time.
 
-Note: All researchers sharing a particular time allocation have the same
-priority. This means that if other people in your time project have used up
-lots of the allocated time recently, then any jobs you (or they) submit within
-that project will be given the same low priority.
+!!! note
+
+    All researchers sharing a particular time allocation have the same priority. This means that if other people in your time project have used up lots of the allocated time recently, then any jobs you (or they) submit within
+    that project will be given the same low priority.
 
 ### Example of scheduling
 
@@ -94,7 +94,7 @@ The compute nodes on Dardel are divided into four partitions. Each job must spec
 
 | Partition name   | Characteristics                                                                                                                                                                                     |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| main             | Thin, large and huge nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 24 hours or 7 days                                                                                             |
+| main             | Thin, large and huge nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 24 hours
 | long             | Thin nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 7 days                                                                                                               |
 | shared           | Thin nodes<br/><br/>Jobs are allocated to cores, not nodes<br/><br/>By default granted one core, get more with `-n or -c`<br/><br/>Job shares node with other jobs<br/><br/>Maximum job time 7 days |
-| memory           | Large, huge and giant nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 24 hours                                                                                            |
+| memory           | Large, huge and giant nodes<br/><br/>Job gets whole nodes (exclusive)<br/><br/>Maximum job time 7 days                                                                                            |

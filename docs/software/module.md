@@ -73,8 +73,9 @@ module load <SOFTWARE>[/<VERSION>]
 ml <SOFTWARE>[/<VERSION>]
 ```
 
-#### ATTENTION
-In the old **module.tcl** on Cray environments you had to use *swap* for going from one compiler wrapper to the one you prefer. This is not needed on Dardel as it will be handled automatically using the *load* command.
+!!! ATTENTION
+
+    In the old **module.tcl** on Cray environments you had to use *swap* for going from one compiler wrapper to the one you prefer. This is not needed on Dardel as it will be handled automatically using the *load* command.
 
 To remove a software from your environment. Do remember that this command is case sensitive so you need to spell
 <SOFTWARE> with the appropriate lowercase/uppercase letters.

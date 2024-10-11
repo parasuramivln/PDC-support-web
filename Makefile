@@ -12,7 +12,7 @@ serve:
 	mkdocs serve
 
 public:
-	python3 update_docs.py support
+	python3 update_docs.py
 
 # Optional: Clean the site directory
 clean:

@@ -41,10 +41,6 @@ We do not accept applications directly from students below PhD student level. Ho
 Please, contact [business-unit@pdc.kth.se](mailto:business-unit@pdc.kth.se) to discuss conditions and
 contracts.
 
-<!-- TODO: Make red arrows as hyperlinks to pages. -->
-<!-- Shouldn't be here. Maybe in running research section. Acknowledge your SNAC/PDC time allocation https://pdc-web.eecs.kth.se/files/support/images/Placeholder.png -->
-
-
 ## Apply for a new Time Allocation via NAISS
 
 Most Swedish research projects are now handled at the national level in NAISS through [SUPR](https://supr.naiss.se),
@@ -87,8 +83,6 @@ You can see what Time Allocations you belong to in two ways:
 1. If you have a [SUPR](https://supr.naiss.se) account, go to your [SUPR](https://supr.naiss.se) page and click on the Projects tab.
 1. If you have a PDC account, you can login to any of our clusters and use the `projinfo` command.
    It will print the information of all the allocations you belong to and information on the recent usage of the allocation.
-
-
 
 ## Applying for an account
 
@@ -139,13 +133,11 @@ Before starting with the application, please be aware that:
 1. Complete the application form at [https://blackfish.pdc.kth.se/cgi-bin/accounts/request.py](https://blackfish.pdc.kth.se/cgi-bin/accounts/request.py)
    and submit it.
 
-#### SEE ALSO
-**Nationality: Why do we bother?**
+!!! note Nationality: Why do we bother?
 
-If you are concerned with what we do with your nationality information or why was ask, we at PDC do not care what nationality you have.
-Unfortunately, some of the computer vendors and states where these computers are manufactured do care.
-Therefore we have to restrict citizens of a small number of nationalities (there is a list which is updated now and then)
-access to whole or part of our facilities.
+    If you are concerned with what we do with your nationality information or why was ask, we at PDC do not care what nationality you have.
+    Unfortunately, some of the computer vendors and states where these computers are manufactured do care.
+    Therefore we have to restrict citizens of a small number of nationalities (there is a list which is updated now and then) access to whole or part of our facilities.
 
 ## Request class access
 
@@ -153,9 +145,7 @@ If you are the *instructor* of a course affiliated to a higher school education 
 and want to request access to PDC clusters for all course participants,
 please complete this application below.
 
-> ##### [Request class access](https://www.kth.se/form/pdc-request-class-access)
-> 
-> Complete the application and submit
+[Request class access](https://www.kth.se/form/pdc-request-class-access)
 
 Please keep in mind that we will later ask you for a complete list of all the students participating in the
 course and will ask you to inform your students to apply for a PDC account.

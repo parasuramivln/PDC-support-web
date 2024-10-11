@@ -36,7 +36,7 @@ On the top row of the PDC system usage page, click on *Graph*.
 
 ### To view account usage information as a table
 
-> On the top row of the PDC system usage page, click on *Table*.
+On the top row of the PDC system usage page, click on *Table*.
 
 ## Viewing usage information per day or per month
 

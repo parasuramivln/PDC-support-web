@@ -167,8 +167,7 @@ When a firewall is installed between your workstation and the computers at PDC, 
    | ftp                         |            21 | TCP         |                                                                         |
    | kpasswd                     |           464 | UDP         | Only for password change                                                |
 
-   If possible, open UDP port 88 for bidirectional communication. This is the default (and preferred) mode of operation. Otherwise continue with the next step.
-   After that, try to contact our authentication server with kinit as described before.
+  If possible, open UDP port 88 for bidirectional communication. This is the default (and preferred) mode of operation. Otherwise continue with the next step. After that, try to contact our authentication server with kinit as described before.
 1. If there is no contact through UDP port 88, open TCP port 88 for outgoing traffic instead (if possible), and try kinit again. If it still does not work, continue with the next step.
 1. The next thing to try is to get Kerberos to communicate via http over TCP port 80. This port is often open, since it is needed for surfing the web.
    1. Create the Kerberos configuration file. In addition you need to add the following

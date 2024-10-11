@@ -53,6 +53,7 @@ If you want to register a new key:
 ### Click on ‘Add new key 
 
 ![image](../static/images/Dardel_SSH/portal_addkey1.png)
+
 * Upload or copy and paste the **public!** part of your SSH key pair (usually with extension .pub). (Tip: If you don’t see the  *.ssh* directory try toggling the visibility of dot files with e.g. pressing *Ctrl + h* in Linux or *shift + cmd + ‘.’* for MacOS.)
 * Name the label or in case the label came from a .pub file you can also rename the label. Labels are for your personal reference only, but you can’t use the same label twice.
 * The IP address from where you are connected as seen from the portal will already be shown in the address field as a default. A significant bit mask of between /24 and /32 or a domain-name based range can be added to the IP address.

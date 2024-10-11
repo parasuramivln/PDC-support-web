@@ -62,8 +62,6 @@ cc -fopenmp source.c
 CC -fopenmp source.cpp
 ```
 
-<<<<<<< HEAD
-
 ## Running jobs
 
 After logging in you are on the login node of the cluster. The login node is a shared resource and
@@ -80,16 +78,12 @@ $ salloc -A edu19.summer --reservation <reservation-name> -N 1 -t 1:0:0
 ```
 
 When the interactive compute node is allocated to you, a new shell session is started (in the same terminal).
-<<<<<<< HEAD
 To run a parallel job on the interactive node, type:
 
 ```default
 $ srun -n 32 ./my_executable
 ```
 
-> $ srun -n 32 ./my_executable
-
->>>>>>> 4d729ef0c05b7932d305c428695633397b7c00d4
 **To run a batch job**, you first need to prepare a submit script. In the simplest case, it can look like this:
 
 ```default
@@ -100,13 +94,9 @@ $ srun -n 32 ./my_executable
 #SBATCH  J name of my job
 #SBATCH  t 1 00 00
 #SBATCH  N 2
+srun -n 64 ./my_executable > my_output_file 2>&1
 ```
 
-<<<<<<< HEAD
-
-> srun -n 64 ./my_executable > my_output_file 2>&1
-
->>>>>>> 4d729ef0c05b7932d305c428695633397b7c00d4
 To submit the job to the scheduler, type
 
 ```default
