@@ -108,7 +108,7 @@ an equivalent size of RAM for your job.
 ### Defining the number of cores or memory
 
 When running on shared nodes, you need to add the number of cores you will be using or the amount of memory you need.
-The amount of memory is equivalent to the amount of cores you are asking and viceversa.
+The amount of memory is equivalent to the amount of cores you are asking for and viceversa.
 For example, we are using a node with 128 cores and 256 Gbytes of RAM.
 If you are asking for 20 cores, you will receive 40 Gbytes of RAM. Instead of you are asking for 80 Gbytes of RAM, you will automatically receive 40 cores.
 The cores or memory that is the largest for the job will dictate what is needed.
@@ -119,7 +119,7 @@ The cores or memory that is the largest for the job will dictate what is needed.
 | --- | --- |
 | -n [tasks] | Allocates ntasks |
 | --cpus-per-task [cores] | Allocates physical [cores]=ntasks*cpu-per-task. (Default: cpus-per-task=1) |
-| --mem=[RAM in kbytes] | The max amount of RAM allocated for your job |
+| --mem=[RAM in Mbytes] | The max amount of RAM allocated for your job |
 
 **Example 1:** On a shared node with 128 cores, 256 Gbytes RAM.
 In this case you will receive 20 cores, 40 GBytes RAM

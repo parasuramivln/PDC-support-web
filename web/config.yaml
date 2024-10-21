@@ -1,0 +1,25 @@
+baseURL: "https://www.pdc.kth.se"
+languageCode: "en-us"
+theme: "pdc"
+title: "PDC Center for High Performance Computing"
+
+menu:
+  main:
+    - name: "Support"
+      url: "/support/"
+      weight: 1
+    - name: "Applications"
+      url: "https://support.pdc.kth.se/software"
+      weight: 2
+    - name: "System statistics"
+      url: "https://support.pdc.kth.se/cluster_usage/"
+      weight: 3
+    - name: "System status"
+      url: "https://www.pdc.kth.se/cgi-bin/flash/flash.py"
+      weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+relativeURLs: true

@@ -13,27 +13,27 @@ Follow links to find information about [Dardel compute nodes](job_scheduling.md#
 Below is a job script example for a pure MPI job. For PDC-installed programs, you can find examples in the [software page](https://www.pdc.kth.se/software).
 
 ```text
-#! bin bash  l
-# The  l above is required to get the full environment with modules
+#! bin bash -l
+# The -l above is required to get the full environment with modules
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
-#SBATCH  A naissYYYY X XX
+#SBATCH -A naissYYYY X XX
 
 # The name of the script is myjob
-#SBATCH  J myjob
+#SBATCH -J myjob
 
 # The partition
-#SBATCH  p main
+#SBATCH -p main
 
 # 10 hours wall clock time will be given to this job
-#SBATCH  t 10 00 00
+#SBATCH -t 10:00:00
 
 # Number of nodes
-#SBATCH   nodes=4
+#SBATCH --nodes=4
 
 # Number of MPI processes per node
-#SBATCH   ntasks per node=128
+#SBATCH --ntasks-per-node=128
 
 # Run the executable named myexe
 # and write the output into my output file
@@ -46,29 +46,29 @@ Below is another example for a hybrid MPI+OpenMP program. This example will plac
 
 ```text
 #! bin bash  l
-# The  l above is required to get the full environment with modules
+# The -l above is required to get the full environment with modules
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
-#SBATCH  A naissYYYY X XX
+#SBATCH -A naissYYYY X XX
 
 # The name of the script is myjob
-#SBATCH  J myjob
+#SBATCH -J myjob
 
 # The partition
-#SBATCH  p main
+#SBATCH -p main
 
 # 10 hours wall clock time will be given to this job
-#SBATCH  t 10 00 00
+#SBATCH -t 10:00:00
 
 # Number of Nodes
-#SBATCH   nodes=4
+#SBATCH --nodes=4
 
 # Number of MPI tasks per node
-#SBATCH   ntasks per node=16
+#SBATCH --ntasks-per-node=16
 # Number of logical cores hosting OpenMP threads
 # Note that cpus per task is set as 2x OMP NUM THREADS
-#SBATCH   cpus per task=16
+#SBATCH --cpus-per-task=16
 
 # Number and placement of OpenMP threads
 export OMP_NUM_THREADS=8
@@ -91,27 +91,27 @@ same number of nodes and take roughly the same time to complete.
 For more information see [Job arrays](job_arrays.md#job-arrays).
 
 ```text
-#! bin bash  l
-# The  l above is required to get the full environment with modules
+#! bin bash -l
+# The -l above is required to get the full environment with modules
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
-#SBATCH  A naissYYYY X XX
+#SBATCH -A naissYYYY X XX
 
 # The name of the script is myjob
-#SBATCH  J myjobarray
+#SBATCH -J myjobarray
 
 # The partition
-#SBATCH  p main
+#SBATCH -p main
 
 # 10 hours wall clock time will be given to this job
-#SBATCH  t 10 00 00
+#SBATCH -t 10:00:00
 
 # Number of nodes used for each individual job
-#SBATCH   nodes=1
+#SBATCH --nodes=1
 
 # Number of MPI tasks per node
-#SBATCH   ntasks per node=128
+#SBATCH --ntasks-per-node=128
 
 # Indices of individual jobs in the job array
 #SBATCH  a 0 99
@@ -136,28 +136,31 @@ Please note that the `shared` partition is used, since this job cannot saturate
 a single node on Dardel.
 
 ```text
-#! bin bash  l
-# The  l above is required to get the full environment with modules
+#! bin bash -l
+# The -l above is required to get the full environment with modules
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
-#SBATCH  A naissYYYY X XX
+#SBATCH -A naissYYYY X XX
 
 # The name of the script is myjob
-#SBATCH  J myjob
+#SBATCH -J myjob
 
 # The partition
-#SBATCH  p shared
+#SBATCH -p shared
 
-# The number of cores requested
-#SBATCH  n 10
+# The number of tasks requested
+#SBATCH -n 10
+
+# The number of tasks for each node requested
+#SBATCH --ntasks-per-node 2
 
 # 10 hours wall clock time will be given to this job
-#SBATCH  t 10 00 00
+#SBATCH -t 10:00:00
 
 # Run the executable named myexe
 # and write the output into my output file
-srun -n 10 ./myexe > my_output_file
+srun -n 20 ./myexe > my_output_file
 ```
 
 **Example 5:**
@@ -167,27 +170,27 @@ Please note that the `shared` partition is used, since this job cannot saturate
 a single node on Dardel.
 
 ```text
-#! bin bash  l
-# The  l above is required to get the full environment with modules
+#! bin bash -l
+# The -l above is required to get the full environment with modules
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
-#SBATCH  A naissYYYY X XX
+#SBATCH -A naissYYYY X XX
 
 # The name of the script is myjob
-#SBATCH  J myjob
+#SBATCH -J myjob
 
 # The partition
-#SBATCH  p shared
+#SBATCH -p shared
 
 # Number of tasks
-#SBATCH  n 1
+#SBATCH -n 1
 
 # Number of cpus per task
-#SBATCH  c 16
+#SBATCH -c 16
 
 # 10 hours wall clock time will be given to this job
-#SBATCH  t 10 00 00
+#SBATCH -t 10:00:00
 
 export OMP_NUM_THREADS=8
 
@@ -212,27 +215,27 @@ srun: error: Unable to create step for job <JOBID>: More processors requested th
 Below is a job script example for a job running on a Dardel GPU node.
 
 ```text
-#! bin bash  l
-# The  l above is required to get the full environment with modules
+#! bin bash -l
+# The -l above is required to get the full environment with modules
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
-#SBATCH  A naissYYYY X XX
+#SBATCH -A naissYYYY X XX
 
 # The name of the script is myjob
-#SBATCH  J myjob
+#SBATCH -J myjob
 
 # The partition
-#SBATCH  p gpu
+#SBATCH -p gpu
 
 # 1 hour wall clock time will be given to this job
-#SBATCH  t 01 00 00
+#SBATCH -t 01:00:00
 
 # Number of nodes
-#SBATCH   nodes=1
+#SBATCH --nodes=1
 
 # Number of MPI processes per node
-#SBATCH   ntasks per node=1
+#SBATCH --ntasks per node=1
 
 # Load a ROCm module and set the accelerator target
 ml rocm/5.0.2

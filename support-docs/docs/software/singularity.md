@@ -274,6 +274,12 @@ After having a valid token you can build your singularity sandbox remotely using
 singularity build --remote --sandbox <sandbox name> <recipe name>
 ```
 
+## Create a container at seqera
+
+There are sites where you can build your own singularity container as you see fit by adding which software you
+would need and then download the actual singularity container.
+Using [seqera](https://seqera.io/containers/) you can choose which software you want to use, and then download a container created for this purpose.
+
 ## Running singularity images at PDC
 
 Singularity works on Dardel by loading the singularity module.

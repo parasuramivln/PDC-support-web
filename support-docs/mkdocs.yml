@@ -4,7 +4,6 @@ theme:
   font:
     text: 'Roboto'
     code: 'Fira Code'
-  custom_dir: "overrides"
 extra_css:
   - static/css/styles.css
 extra_javascript:
@@ -74,13 +73,3 @@ nav:
     - Frequently Asked Questions (FAQ): faq/faq.md
   - Contact Support: 
     - Contact Support: contact/contact_support.md
-extra:
-  header_links:
-    - title: "Support"
-      url: "https://support.pdc.kth.se/docs"
-    - title: "Applications"
-      url: "https://support.pdc.kth.se/software"
-    - title: "System usage"
-      url: "https://support.pdc.kth.se/cluster_usage/"
-    - title: "System status"
-      url: "https://www.pdc.kth.se/cgi-bin/flash/flash.py"
