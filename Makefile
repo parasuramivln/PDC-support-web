@@ -28,6 +28,7 @@ public:
 # Optional: Clean the site directory
 clean:
 	rm -rf support-docs/site
+	rm -rf software-docs/site
 	rm -rf web/public
 	rm -rf web/static/support-docs
 	rm -rf web/static/software-docs
