@@ -27,10 +27,6 @@
     border-bottom: none;
 }
 
-.md-nav__title {
-    display: none;    
-}
-
 .md-elipsis,
 .md-elipsis:link,
 .md-elipsis:visited {
@@ -48,6 +44,7 @@ h1, h2, h3, h4 {
     font-weight: 600 !important;
 }
 
+.md-nav__title,
 .md-footer,
 .md-header__title {
     display: none;

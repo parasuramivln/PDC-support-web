@@ -1,7 +1,7 @@
 # NAISS support documentation
 Support documentation for NAISS.
 These pages are written using Hugo, with the exception
-of the support pages which are written in mkDocs.
+of the support/software pages which are written in mkDocs.
 Both tools however enable to publish material in MarkDown.
 
 ## Installation and using mkDocs
@@ -29,8 +29,13 @@ whereas all the markdown file are found in `web/content`
 
 ### Support documentation
 
-The primary document is available in `mkdocs/mkdocs.yaml`
-whereas all the markdown file are found in `mkdocs/docs`
+The primary document is available in `support-docs/mkdocs.yaml`
+whereas all the markdown file are found in `support-docs/docs`
+
+### Support documentation
+
+The primary document is available in `software-docs/mkdocs.yaml`
+whereas all the markdown file are found in `software-docs/docs`
 
 ## build site
 
