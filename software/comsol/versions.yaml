@@ -1,0 +1,50 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 5.6
+      - version: 6.0
+  - resource: centos5
+    versions:
+      - version: 4.3b
+      - version: 4.2a
+      - version: 4.3.2.189
+      - version: 4.4
+      - version: 3.5a
+      - version: 4.0
+      - version: 5.0
+      - version: 4.4.248
+      - version: 4.3a
+      - version: 4.3.1.161
+      - version: 4.3
+      - version: 4.2b
+  - resource: centos7
+    versions:
+      - version: 5.5
+      - version: 5.6
+      - version: 5.3a
+      - version: 5.1.0.180
+      - version: 5.2
+      - version: 5.0
+      - version: 5.3
+      - version: 5.2.1.262
+      - version: 5.1
+      - version: 5.2a
+      - version: 5.3.1.348
+      - version: 5.4
+  - resource: centos6
+    versions:
+      - version: 4.3b
+      - version: 4.2a
+      - version: 4.3.2.189
+      - version: 4.4
+      - version: 5.0
+      - version: 4.4.248
+      - version: 4.3a
+      - version: 4.3.1.161
+      - version: 4.3
+  - resource: cpe22.06
+    versions:
+      - version: 6.1
+      - version: 5.6
+      - version: 6.2
+      - version: 6.0

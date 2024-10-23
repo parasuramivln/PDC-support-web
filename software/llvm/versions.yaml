@@ -1,0 +1,9 @@
+resources:
+  - resource: cpe21.11
+    versions:
+  - resource: centos7
+    versions:
+      - version: 4.0.1
+      - version: 10.0.0
+      - version: 7.0.0
+      - version: 10.0.0-gcc8.2.0

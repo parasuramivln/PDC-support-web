@@ -1,0 +1,18 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 5.0c
+  - resource: lindgren
+    versions:
+      - version: 4.5a
+      - version: 5.0b
+      - version: 4.4d
+      - version: 4.3b
+      - version: 4.4b-rt16843
+      - version: 4.4c
+      - version: 4.3c
+      - version: 4.3d-scania
+      - version: 4.4a-scania
+      - version: 5.0c
+      - version: 4.4b-scania
+      - version: 5.0a

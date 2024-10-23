@@ -1,0 +1,45 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 6.3.2-wannier90
+      - version: 6.4.3-vanilla
+      - version: 5.4.4-wannier90
+      - version: 6.2.1-vanilla
+      - version: 6.3.2-vanilla
+      - version: 6.4.2-vanilla
+      - version: 6.2.1-wannier90
+      - version: 6.2.1-vtst-dftd4
+      - version: 5.4.4-vanilla
+      - version: 5.4.4-vtst
+  - resource: cpe21.11
+    versions:
+      - version: 6.3.0-vanilla
+      - version: 5.4.4-wannier90
+      - version: 6.2.1-vanilla
+      - version: 6.3.1-vanilla
+      - version: 6.2.1-wannier90
+      - version: 6.2.1-vtst-dftd4
+      - version: 5.4.4-vanilla
+      - version: 5.4.4-vtst
+  - resource: crayos7
+    versions:
+      - version: 6.1.0
+      - version: 5.4.4
+      - version: 5.4.4-vanilla
+  - resource: centos5
+    versions:
+      - version: 4.6
+      - version: 5.3.5
+      - version: 5.2
+      - version: 5.3.3
+  - resource: centos7
+    versions:
+      - version: 5.3.5
+      - version: 5.4.1
+  - resource: crayos5
+    versions:
+      - version: 5.3.5-31Mar14
+      - version: 5.4.4-wannier90
+      - version: 5.4.1.patched
+      - version: 5.3.5-vtst3.1
+      - version: 5.4.4

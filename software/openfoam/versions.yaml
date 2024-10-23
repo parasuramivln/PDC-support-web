@@ -1,0 +1,71 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 2312
+      - version: 2012
+      - version: 6
+      - version: 7
+      - version: 9
+  - resource: cpe21.11
+    versions:
+      - version: 2012
+      - version: 6
+      - version: 2106
+      - version: 7
+      - version: 9
+  - resource: crayos7
+    versions:
+      - version: 4.1
+      - version: 1912
+      - version: 1906
+      - version: 3.0.1
+      - version: 6
+      - version: 8
+      - version: 1606
+      - version: 1812
+      - version: 7
+      - version: 2.3.1
+  - resource: centos5
+    versions:
+      - version: 2.2.0
+      - version: 2.2.2
+      - version: 2.3.0
+      - version: 2.3.1
+      - version: 2.1.0
+  - resource: centos7
+    versions:
+      - version: 4.1
+      - version: 1912
+      - version: 6
+      - version: 1806
+      - version: 1712
+      - version: 5.0
+      - version: 1812
+      - version: 7
+      - version: 1706
+  - resource: crayos5
+    versions:
+      - version: 4.1
+      - version: 3.0
+      - version: 3.0.1
+      - version: 3.0.0
+      - version: 6
+      - version: 1806
+      - version: 1712
+      - version: 1606
+      - version: 5.0
+      - version: 1612
+      - version: 1706
+  - resource: lindgren
+    versions:
+      - version: 2.2.0
+      - version: 2.0.1
+      - version: 1.7.1
+      - version: 2.1.0
+  - resource: cpe22.06
+    versions:
+      - version: 2012
+      - version: 6
+      - version: 2106
+      - version: 7
+      - version: 9

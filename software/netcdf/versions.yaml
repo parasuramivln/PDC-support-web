@@ -1,0 +1,6 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 4.4.1.1-gcc-6.2
+      - version: 4.1.1
+      - version: 4.3.3.1

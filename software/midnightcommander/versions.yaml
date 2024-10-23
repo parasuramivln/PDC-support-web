@@ -1,0 +1,10 @@
+resources:
+  - resource: crayos7
+    versions:
+      - version: 4.8.23
+  - resource: centos7
+    versions:
+      - version: 4.8.13
+  - resource: crayos5
+    versions:
+      - version: 4.8.13

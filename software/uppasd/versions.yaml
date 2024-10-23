@@ -1,0 +1,16 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 6.0.2
+  - resource: cpe21.11
+    versions:
+      - version: 5.1.1
+  - resource: cpe23.03
+    versions:
+      - version: 6.0.2
+  - resource: crayos7
+    versions:
+      - version: 5.1.1
+  - resource: cpe22.06
+    versions:
+      - version: 6.0.2

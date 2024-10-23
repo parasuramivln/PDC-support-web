@@ -1,0 +1,15 @@
+resources:
+  - resource: crayos7
+    versions:
+      - version: 20.0.3
+      - version: 19.1.1
+  - resource: centos7
+    versions:
+      - version: 6.1
+      - version: 18.1.1
+      - version: 20.0.3
+      - version: 7.0
+  - resource: crayos5
+    versions:
+      - version: 18.1.1
+      - version: 7.0

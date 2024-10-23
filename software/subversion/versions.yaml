@@ -1,0 +1,7 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 1.8.15
+  - resource: crayos5
+    versions:
+      - version: 1.8.15

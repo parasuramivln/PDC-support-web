@@ -1,0 +1,4 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 1.51.1

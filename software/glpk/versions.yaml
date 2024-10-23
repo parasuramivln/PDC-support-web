@@ -1,0 +1,14 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 5.0-update
+      - version: 4.65
+  - resource: centos7
+    versions:
+      - version: 4.60
+      - version: 4.65
+      - version: 4.50
+  - resource: cpe22.06
+    versions:
+      - version: 5.0-update
+      - version: 4.65

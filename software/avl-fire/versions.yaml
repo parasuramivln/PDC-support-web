@@ -1,0 +1,21 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 2013.0
+      - version: 2011.1
+      - version: 2013.1
+  - resource: centos7
+    versions:
+      - version: 2018a
+      - version: 2014.2
+      - version: 2013.0
+      - version: 2013.1
+      - version: 2017.0
+      - version: 2017.1
+  - resource: lindgren
+    versions:
+      - version: 2011.1
+      - version: 2013.1
+      - version: 2011
+      - version: 2013
+      - version: 2013.2

@@ -1,0 +1,7 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 1.0rc3
+  - resource: cpe21.11
+    versions:
+      - version: 1.0rc3

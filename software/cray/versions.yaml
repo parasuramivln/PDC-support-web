@@ -1,0 +1,7 @@
+resources:
+  - resource: milner
+    versions:
+      - version: 8.2.3
+  - resource: crayos5
+    versions:
+      - version: 8.3.4

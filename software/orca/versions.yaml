@@ -1,0 +1,13 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 6.0.0
+      - version: 5.0.3
+      - version: 5.0.4
+  - resource: cpe21.11
+    versions:
+      - version: 5.0.3
+  - resource: cpe22.06
+    versions:
+      - version: 5.0.3
+      - version: 5.0.4

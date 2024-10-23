@@ -1,0 +1,13 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 3.7.1
+      - version: 3.11.0
+      - version: 3.5.0
+      - version: 3.8.1
+  - resource: centos6
+    versions:
+      - version: 3.5.0
+  - resource: cpe21.09
+    versions:
+      - version: 3.15.3

@@ -1,0 +1,38 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 2024.3
+      - version: 2024.1
+  - resource: cpe21.11
+    versions:
+      - version: 9.1
+      - version: 7.1-sirius
+      - version: 2022.2
+  - resource: crayos7
+    versions:
+      - version: 6.1-libxc-libint-plumed
+      - version: 8.1-max-am-6-elpa
+      - version: 3.0-libxc-libint-plumed
+      - version: 7.1-max-am-6-elpa
+      - version: 6.1-max-am-6
+      - version: 8.1-max-am-6
+      - version: 7.1-max-am-6
+      - version: 8.2-max-am-6
+  - resource: cpe23.12.gpu
+    versions:
+      - version: 2024.3
+      - version: 2024.1
+  - resource: cpe21.09
+    versions:
+      - version: 8.2
+  - resource: crayos5
+    versions:
+      - version: 3.0
+      - version: 2.5.1
+      - version: 2.6.2
+      - version: 3.0-libxc-plumed
+  - resource: cpe22.06
+    versions:
+      - version: 8.2
+      - version: 9.1
+      - version: 2022.2

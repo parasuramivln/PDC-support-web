@@ -1,0 +1,7 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: TF_v2.7_ZenDNN_v3.2_Python_v3.8
+  - resource: cpe22.06
+    versions:
+      - version: TF_v2.7_ZenDNN_v3.2_Python_v3.8

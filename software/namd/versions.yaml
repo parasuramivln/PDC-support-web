@@ -1,0 +1,21 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 2.14
+  - resource: cpe23.03
+    versions:
+      - version: 3.06b
+      - version: 2.14
+  - resource: crayos7
+    versions:
+      - version: 2.13
+  - resource: centos7
+    versions:
+      - version: 2.14
+  - resource: crayos5
+    versions:
+      - version: 2.13
+      - version: 2.10
+  - resource: cpe22.06
+    versions:
+      - version: 2.14

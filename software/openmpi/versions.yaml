@@ -1,0 +1,19 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 1.5.4-intel-11
+      - version: 1.5.4-pgi-11
+      - version: 1.5.4-gcc-4.6
+      - version: 1.5.4-intel-12
+  - resource: centos7
+    versions:
+      - version: 1.8-gcc-5.1
+      - version: 4.0-gcc-8.2
+      - version: 1.8-gcc-4.9
+      - version: 1.8-gcc-4.8
+      - version: 1.10-gcc-5.1
+      - version: 4.1-gcc-9.2
+      - version: 2.0-gcc-6.2
+      - version: 1.10-gcc-java
+      - version: 3.0-gcc-6.2
+      - version: 4.0-gcc-7.2

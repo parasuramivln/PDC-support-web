@@ -1,0 +1,24 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 5.9.1
+  - resource: centos5
+    versions:
+      - version: 3.6.1
+      - version: 3.8.1
+  - resource: centos7
+    versions:
+      - version: 5.7.0
+      - version: 5.2.0
+      - version: 5.8.1
+      - version: 3.14.1
+      - version: 5.4.1
+      - version: 5.0.0
+  - resource: centos6
+    versions:
+      - version: 3.14.1
+      - version: 3.8.1
+  - resource: cpe22.06
+    versions:
+      - version: 5.9.1
+      - version: 5.11.1

@@ -1,0 +1,4 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 5148096_06-17-15-gnu

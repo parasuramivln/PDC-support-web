@@ -1,0 +1,5 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 4.0.1
+      - version: 3.2-pl-5

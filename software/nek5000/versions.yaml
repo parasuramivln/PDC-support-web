@@ -1,0 +1,7 @@
+resources:
+  - resource: crayos7
+    versions:
+      - version: r1054
+  - resource: crayos5
+    versions:
+      - version: r1054

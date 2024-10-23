@@ -1,0 +1,7 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 2013.4
+  - resource: lindgren
+    versions:
+      - version: 2013.3

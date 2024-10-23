@@ -1,0 +1,10 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 3.6.1-gnu
+      - version: 3.5.4-gnu
+      - version: 3.2.1.cray
+      - version: 3.2.1.gnu
+  - resource: cpe22.06
+    versions:
+      - version: 4.0.4-cpeGNU

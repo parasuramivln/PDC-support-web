@@ -1,0 +1,8 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: g03.D01
+      - version: g09.A02
+  - resource: centos7
+    versions:
+      - version: g09.D01

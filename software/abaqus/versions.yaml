@@ -1,0 +1,28 @@
+resources:
+  - resource: zorn
+    versions:
+      - version: 6.11
+      - version: 6.12
+      - version: 6.13
+  - resource: cpe21.11
+    versions:
+      - version: 2019
+      - version: 2021
+  - resource: centos5
+    versions:
+      - version: 6.11
+      - version: 6.9
+      - version: 6.12
+  - resource: centos7
+    versions:
+      - version: 6.14-6
+      - version: 6.12
+      - version: 2018
+      - version: 2019
+      - version: 2017
+      - version: 6.13
+      - version: 6.14
+  - resource: cpe22.06
+    versions:
+      - version: 2019
+      - version: 2021

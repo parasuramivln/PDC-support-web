@@ -1,0 +1,27 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 1.77.0
+  - resource: milner
+    versions:
+      - version: 1.61.0
+  - resource: crayos7
+    versions:
+      - version: 1.63.0
+      - version: 1.72.0-intel
+  - resource: centos7
+    versions:
+      - version: 1.59.0
+      - version: 1.58.0
+      - version: 1.71.0
+  - resource: cpe21.09
+    versions:
+      - version: 1.75.0
+  - resource: crayos5
+    versions:
+      - version: 1.63.0
+      - version: 1.57.0
+  - resource: cpe22.06
+    versions:
+      - version: 1.77.0
+      - version: 1.75.0

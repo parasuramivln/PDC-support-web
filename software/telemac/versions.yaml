@@ -1,0 +1,16 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: v8p3r1
+  - resource: crayos7
+    versions:
+      - version: v7p1r0
+      - version: v7p3r1
+  - resource: crayos5
+    versions:
+      - version: v7p1r0
+      - version: v7p3r1
+      - version: v7p1r1
+  - resource: cpe22.06
+    versions:
+      - version: v8p4r0

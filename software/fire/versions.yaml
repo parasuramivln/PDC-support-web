@@ -1,0 +1,6 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 2013.0
+      - version: 2011.1
+      - version: 2013.1

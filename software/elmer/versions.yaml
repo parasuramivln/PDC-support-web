@@ -1,0 +1,7 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: a450ffc-gnu
+  - resource: crayos5
+    versions:
+      - version: trunk_e0d5e66_gnu

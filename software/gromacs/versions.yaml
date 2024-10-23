@@ -1,0 +1,87 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 2021.6-cpeCray-23.12-plumed-2.7.2
+      - version: 2024.1-cpeGNU-23.12
+      - version: 2022.5-cpeCray-23.12
+      - version: 2022-cpeCray-23.12
+      - version: 2024.2-cpeGNU-23.12
+      - version: 2024.2-cpeGNU-23.12-plumed-2.9.2
+  - resource: cpe21.11
+    versions:
+      - version: 2021.6-cpeCray-21.11-PLUMED-2.7.2
+      - version: 2021.5-cpeCray-21.11
+      - version: 2022.1-cpeCray-21.11
+      - version: 2021.3-cpeCray-21.11
+      - version: 2020.5-cpeCray-21.11
+      - version: 2021-cpeCray-21.11-PLUMED-2.7.2
+  - resource: cpe23.03
+    versions:
+      - version: 2024.1-cpeGNU-23.03
+  - resource: cpe23.03.gpu
+    versions:
+      - version: 2024.1-cpeGNU-23.03-gpu-without-heffte
+  - resource: crayos7
+    versions:
+      - version: 2018.6-plumed
+      - version: 2019.5-plumed
+      - version: 2020.4-plumed
+      - version: 2019.3
+      - version: 2018.1
+      - version: 2020.1
+      - version: 2021
+      - version: 2020.4
+      - version: 2020.5
+  - resource: centos5
+    versions:
+      - version: 4.6.5
+      - version: 4.0.7
+      - version: 4.5.3
+      - version: 4.0.5
+      - version: 4.5.7
+  - resource: centos7
+    versions:
+      - version: 2019.2
+      - version: 2016.1
+      - version: 5.0.6
+      - version: 2020.1
+      - version: 4.6.7
+      - version: 2021
+      - version: 5.1.2
+      - version: 2020.4
+      - version: 2020.5
+  - resource: cpe22.06.gpu
+    versions:
+      - version: 2023-cpeGNU-22.06-gpu
+      - version: 2023.2-cpeGNU-22.06-gpu-without-heffte
+  - resource: cpe23.12.gpu
+    versions:
+      - version: 2024.1-cpeGNU-23.12-gpu-without-heffte
+      - version: 2024.2-cpeGNU-23.12-gpu
+      - version: 2024.2-cpeGNU-23.12-gpu-plumed-2.9.2
+  - resource: crayos5
+    versions:
+      - version: 2016.3
+      - version: 5.1.1
+      - version: 2019.2
+      - version: 2016.1
+      - version: 2016.4
+      - version: drude
+      - version: 2019
+      - version: 5.0.6
+      - version: 2018.1
+      - version: 4.6.7
+      - version: 5.1
+      - version: 5.0.4
+      - version: 5.1.2
+      - version: 2018.3
+  - resource: cpe22.06
+    versions:
+      - version: 2023.2-cpeGNU-22.06
+      - version: 2022.1-cpeCray-22.06
+      - version: 2020.7-cpeCray-22.06
+      - version: 2023-cpeGNU-22.06
+      - version: 2021.7-cpeCray-22.06
+      - version: 2021-cpeCray-22.06-plumed-2.7.2
+      - version: 2021.3-cpeCray-22.06
+      - version: 2021.6-cpeCray-22.06-plumed-2.7.2

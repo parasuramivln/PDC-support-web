@@ -1,0 +1,7 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 2.2.17
+  - resource: cpe21.09
+    versions:
+      - version: 2.12.0

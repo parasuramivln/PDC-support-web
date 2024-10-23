@@ -1,0 +1,10 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 11.1
+  - resource: centos7
+    versions:
+      - version: 16.0.3
+      - version: 15.0.2
+      - version: 18.0.1
+      - version: 17.0.1

@@ -1,0 +1,5 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 1.9-gcc-4.6
+      - version: 1.9-intel-13

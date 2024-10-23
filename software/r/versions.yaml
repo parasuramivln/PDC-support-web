@@ -1,0 +1,30 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 4.1.1.1
+      - version: 4.1.2
+  - resource: milner
+    versions:
+      - version: 3.2.2
+  - resource: centos5
+    versions:
+      - version: 2.9.2
+      - version: 2.13.1
+      - version: 3.0.2
+      - version: 2.12.2
+  - resource: centos7
+    versions:
+      - version: 3.2.0
+      - version: 3.3.1
+      - version: 4.0.0
+      - version: 3.4.3
+  - resource: centos6
+    versions:
+      - version: 3.0.2
+  - resource: crayos5
+    versions:
+      - version: 3.1.2
+  - resource: cpe22.06
+    versions:
+      - version: 4.1.1.1
+      - version: 4.1.2

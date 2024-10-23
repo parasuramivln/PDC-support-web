@@ -1,0 +1,5 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 1.12.1-intel
+      - version: 1.12.1-cray

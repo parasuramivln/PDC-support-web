@@ -1,0 +1,4 @@
+resources:
+  - resource: cpe23.03
+    versions:
+      - version: 1.6.0-OMP

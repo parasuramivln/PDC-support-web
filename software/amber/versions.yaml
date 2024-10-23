@@ -1,0 +1,26 @@
+resources:
+  - resource: zorn
+    versions:
+      - version: 14
+  - resource: cpe21.11
+    versions:
+      - version: 18
+  - resource: crayos7
+    versions:
+      - version: 18
+  - resource: centos7
+    versions:
+      - version: 14
+      - version: 16
+  - resource: cpe22.06.gpu
+    versions:
+      - version: 22
+  - resource: crayos5
+    versions:
+      - version: 14
+      - version: 12
+      - version: 16
+  - resource: cpe22.06
+    versions:
+      - version: 18
+      - version: 22

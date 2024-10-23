@@ -1,0 +1,6 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 3.10-gcc-5.1-openmpi-1.10
+      - version: 3.10-cmake
+      - version: 3.10-gcc-4.8-openmpi-1.8

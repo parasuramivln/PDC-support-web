@@ -1,0 +1,4 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 4.7

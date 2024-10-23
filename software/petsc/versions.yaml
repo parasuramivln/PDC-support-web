@@ -1,0 +1,10 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 3.16.2
+  - resource: centos7
+    versions:
+      - version: 3.6.1-complex
+      - version: 3.5.4-complex
+      - version: 3.6.1-real
+      - version: 3.6.1

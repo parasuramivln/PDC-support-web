@@ -1,0 +1,9 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 3.3.0-gcc-6.2
+      - version: 3.2-1
+  - resource: crayos5
+    versions:
+      - version: 3.2.1
+      - version: 3.3.0-gcc

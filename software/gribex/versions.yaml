@@ -1,0 +1,4 @@
+resources:
+  - resource: crayos5
+    versions:
+      - version: 000370

@@ -9,7 +9,7 @@ menu:
       url: "/support/"
       weight: 1
     - name: "Applications"
-      url: "https://support.pdc.kth.se/software"
+      url: "/applications"
       weight: 2
     - name: "System statistics"
       url: "https://support.pdc.kth.se/cluster_usage/"

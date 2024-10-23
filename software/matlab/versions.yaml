@@ -1,0 +1,50 @@
+resources:
+  - resource: zorn
+    versions:
+      - version: r2012b
+      - version: r2013b
+      - version: r2013a
+  - resource: cpe23.12
+    versions:
+      - version: r2024a
+  - resource: cpe21.11
+    versions:
+      - version: r2022b
+      - version: r2020b
+  - resource: cpe23.03
+    versions:
+      - version: r2024a
+  - resource: centos5
+    versions:
+      - version: r2012a
+      - version: r2012b
+      - version: r2010a
+      - version: r2013a
+      - version: r2008b
+      - version: r2011a
+  - resource: centos7
+    versions:
+      - version: r2016b
+      - version: r2016a
+      - version: r2018b
+      - version: r2015a
+      - version: r2017a
+      - version: r2021b
+      - version: r2021a
+  - resource: centos6
+    versions:
+      - version: r2012a
+      - version: r2014b
+      - version: r2013b
+      - version: r2014a
+      - version: r2013a
+      - version: r2011a
+  - resource: cpe21.09
+    versions:
+      - version: r2021b
+  - resource: cpe22.06
+    versions:
+      - version: r2022b
+      - version: r2020b
+      - version: r2023a
+      - version: r2021b

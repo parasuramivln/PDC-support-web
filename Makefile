@@ -7,6 +7,7 @@ all: build
 build:
 	mkdocs build -f support-docs/mkdocs.yml 
 	cp -r support-docs/site web/static/support-docs	
+	python3 format_software_info.py
 	mkdocs build -f software-docs/mkdocs.yml 
 	cp -r software-docs/site web/static/software-docs	
 	hugo --source "web"
@@ -15,12 +16,10 @@ build:
 serve:
 	mkdocs build -f support-docs/mkdocs.yml 
 	cp -r support-docs/site web/static/support-docs
+	python3 format_software_info.py
 	mkdocs build -f software-docs/mkdocs.yml 
 	cp -r software-docs/site web/static/software-docs	
 	hugo server --source "web"
-
-serve_mkdocs:
-	mkdocs serve -f support-docs/mkdocs.yml 
 
 public:
 	python3 update_docs.py

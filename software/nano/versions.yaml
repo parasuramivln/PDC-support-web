@@ -1,0 +1,10 @@
+resources:
+  - resource: cpe21.09
+    versions:
+      - version: 5.8
+  - resource: crayos5
+    versions:
+      - version: 2.3.6
+  - resource: cpe22.06
+    versions:
+      - version: 5.8

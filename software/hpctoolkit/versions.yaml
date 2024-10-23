@@ -1,0 +1,4 @@
+resources:
+  - resource: crayos7
+    versions:
+      - version: 242f100

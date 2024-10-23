@@ -1,0 +1,7 @@
+resources:
+  - resource: centos7
+    versions:
+      - version: 7.0.5
+      - version: 5.0
+      - version: 7.6.0
+      - version: 5.1

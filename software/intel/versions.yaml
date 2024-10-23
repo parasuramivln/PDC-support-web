@@ -1,0 +1,21 @@
+resources:
+  - resource: centos5
+    versions:
+      - version: 15.0.2
+  - resource: centos7
+    versions:
+      - version: 16.0.3
+      - version: 15.0.2
+      - version: 18.0.1
+      - version: 20.4.0
+      - version: 19.0.1
+  - resource: centos6
+    versions:
+      - version: 15.0.2
+  - resource: crayos5
+    versions:
+      - version: 18.0.0.128
+      - version: 15.0.1
+      - version: 16.0.1.150
+      - version: 17.0.5.239
+      - version: 14.0.4

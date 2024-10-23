@@ -1,0 +1,40 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 2Aug2023
+  - resource: cpe21.11
+    versions:
+      - version: 20210310
+      - version: 23Jun2022
+      - version: 15Sep2022
+  - resource: crayos7
+    versions:
+      - version: 29Oct20
+  - resource: centos5
+    versions:
+      - version: 2014-06-28
+      - version: 2014-01-24
+  - resource: centos7
+    versions:
+      - version: 11Aug17
+  - resource: cpe21.09
+    versions:
+      - version: 20200721
+  - resource: crayos5
+    versions:
+      - version: 10Aug15
+      - version: 10Feb15
+      - version: 11Aug17
+      - version: 30Oct14
+      - version: 31Mar17
+  - resource: lindgren
+    versions:
+      - version: 2013-07-08
+      - version: 2011-02-10
+      - version: 2013-02-21
+  - resource: cpe22.06
+    versions:
+      - version: 20200721
+      - version: 20210310
+      - version: 23Jun2022
+      - version: 15Sep2022

@@ -1,0 +1,10 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 2012.8.1
+  - resource: crayos7
+    versions:
+      - version: ksh
+  - resource: cpe22.06
+    versions:
+      - version: 2012.8.1

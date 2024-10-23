@@ -1,0 +1,14 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 8.4-cpeGNU
+      - version: 8.4-cpeCray
+  - resource: cpe21.11
+    versions:
+      - version: 7.0
+  - resource: centos7
+    versions:
+      - version: 7.0
+  - resource: cpe22.06
+    versions:
+      - version: 7.0

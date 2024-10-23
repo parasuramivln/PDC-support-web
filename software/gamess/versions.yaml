@@ -1,0 +1,22 @@
+resources:
+  - resource: cpe23.12
+    versions:
+      - version: 2021R2
+  - resource: cpe21.11
+    versions:
+      - version: 2021R2
+  - resource: crayos7
+    versions:
+      - version: 2019R2
+      - version: 2021R2
+      - version: 2013-05-01-R1
+  - resource: centos5
+    versions:
+      - version: 2013-05-01-R1
+  - resource: crayos5
+    versions:
+      - version: 2012-05-01-R1
+      - version: 2013-05-01-R1
+  - resource: lindgren
+    versions:
+      - version: 20120501R1_v2

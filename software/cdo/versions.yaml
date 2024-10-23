@@ -1,0 +1,16 @@
+resources:
+  - resource: tegner
+    versions:
+      - version: 1.7.2
+  - resource: cpe21.11
+    versions:
+      - version: 1.9.19
+  - resource: centos7
+    versions:
+      - version: 1.7.2
+  - resource: crayos5
+    versions:
+      - version: 1.6.7
+  - resource: cpe22.06
+    versions:
+      - version: 1.9.19

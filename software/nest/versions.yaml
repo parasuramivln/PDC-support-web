@@ -1,0 +1,9 @@
+resources:
+  - resource: cpe21.11
+    versions:
+      - version: 2.20.2
+      - version: 3.1
+  - resource: cpe22.06
+    versions:
+      - version: 2.20.2
+      - version: 3.1
