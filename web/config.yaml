@@ -12,7 +12,7 @@ menu:
       url: "/applications"
       weight: 2
     - name: "System statistics"
-      url: "https://support.pdc.kth.se/cluster_usage/"
+      url: "/stats"
       weight: 3
     - name: "System status"
       url: "https://www.pdc.kth.se/cgi-bin/flash/flash.py"
