@@ -11,7 +11,7 @@ The library is free software under the GNU General Public License.
 
 The MPFR library can be accessed by loading the appropriate modules
 # To load the module
-ml PDC/21.11
+ml PDC
 ml MPFR/4.1.0-cpeGNU-21.11
 # To show info on what path and environment variables are set by the module
 ml show MPFR/4.1.0-cpeGNU-21.11

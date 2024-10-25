@@ -22,10 +22,11 @@ VMD (Visual Molecular Dynamics) is a molecular visualization program for display
 To see what versions of vmd are available on each machine use the command
 module avail vmd
 
-# Running on Tegner
+# Running on Dardel
 vmd can be started from the command line e.g.
+
 ```
-module load vmd/1.9.1
+module load vmd
 vmd
 ```
 

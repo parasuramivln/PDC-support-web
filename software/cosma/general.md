@@ -3,9 +3,17 @@ COSMA is a parallel, high-performance, GPU-accelerated, matrix-matrix multiplica
 ## How to use
 
 You can check available COSMA modules using
+```
 ml spider cosma
+```
+
 For example, load the module for the COSMA library 2.6.6 with GPU backend
-ml PDC/23.12
+```
+ml PDC
 ml cosma/2.6.6-cpeGNU-23.12-gpu
+```
+
 To see what environment variables are set when loading the module
+```
 ml show cosma/2.6.6-cpeGNU-23.12-gpu
+```

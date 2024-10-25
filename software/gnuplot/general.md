@@ -12,6 +12,6 @@ The source code is copyrighted but freely distributed (i.e., you don't have to p
 
 You can load the module using
 ```
-$ module load PDC/21.11 gnuplot/5.2.8
+$ module load PDC gnuplot/5.2.8
 
 ```

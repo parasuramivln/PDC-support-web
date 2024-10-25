@@ -15,7 +15,7 @@ Whether at one process or ten thousand, Allinea MAP is designed to work out-of-t
 
 Load the the ARM-forge 21.1 suite 
 ```
-$ module load PDC/21.09
+$ module load PDC
 $ module load arm
 ```
 To prepare code for MAP or DDT, just compile with debugging enabled 

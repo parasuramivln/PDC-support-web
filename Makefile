@@ -5,6 +5,7 @@ all: build
 
 # Build PDC site
 build:
+	make clean
 	mkdocs build -f support-docs/mkdocs.yml 
 	cp -r support-docs/site web/static/support-docs	
 	python3 format_software_info.py
@@ -14,6 +15,7 @@ build:
 
 # Runs a local server
 serve:
+	make clean
 	mkdocs build -f support-docs/mkdocs.yml 
 	cp -r support-docs/site web/static/support-docs
 	python3 format_software_info.py
@@ -22,6 +24,7 @@ serve:
 	hugo server --source "web"
 
 public:
+	make build
 	python3 update_docs.py
 
 # Optional: Clean the site directory

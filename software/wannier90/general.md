@@ -4,7 +4,10 @@ http://www.wannier.org/
 ## How to use
 
 To use this module do
-ml PDCTEST/22.06
-ml wannier90/3.1.0-cpeGNU-22.06
+```
+ml PDCTEST/<version>
+ml wannier90/<version>-cpeGNU-<version>>
+```
+
 Please consult the official Wannier90 documentation for more details
 http://www.wannier.org/

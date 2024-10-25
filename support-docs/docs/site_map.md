@@ -95,20 +95,13 @@
 
 # Available Software
 
+* [How to get information about installed softwares](software/software.md)
 * [How to use module to load different softwares into your environment](software/module.md)
     * [Cray Programming Environment](software/module.md#cray-programming-environment)
     * [What softwares are installed](software/module.md#what-softwares-are-installed)
     * [What softwares are present in my environment](software/module.md#what-softwares-are-present-in-my-environment)
     * [How to manage software into your environment](software/module.md#how-to-manage-software-into-your-environment)
     * [What parameters are set by a specific module](software/module.md#what-parameters-are-set-by-a-specific-module)
-* [Instructions for using singularity at PDC](software/singularity.md)
-    * [Security](software/singularity.md#security)
-    * [Performance](software/singularity.md#performance)
-    * [Installation of singularity](software/singularity.md#installation-of-singularity)
-    * [How to use singularity on your local computer](software/singularity.md#how-to-use-singularity-on-your-local-computer)
-    * [How to remote build a singularity image on the cluster](software/singularity.md#how-to-remote-build-a-singularity-image-on-the-cluster)
-    * [Running singularity images at PDC](software/singularity.md#running-singularity-images-at-pdc)
-* [Available Software](https://support.pdc.kth.se/software){:target="_blank"}
 
 # Data Management
 

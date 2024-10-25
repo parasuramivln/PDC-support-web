@@ -14,7 +14,7 @@ AMD GPUs using Rocm-5.4.
 In order to run the PyTorch container, first allocate
 a GPU node. Then, load the PDC and the singularity
 modules.
-ml add PDC/22.06
+ml add PDC
 ml add singularity/3.10.4-cpeGNU-22.06
 PDC containers are placed at */pdc/software/sing_hub**.
 They can also be reached by invoking *PDC_SHUB*.

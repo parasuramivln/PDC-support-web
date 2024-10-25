@@ -32,10 +32,20 @@ whereas all the markdown file are found in `web/content`
 The primary document is available in `support-docs/mkdocs.yaml`
 whereas all the markdown file are found in `support-docs/docs`
 
-### Support documentation
+### Software documentation
 
 The primary document is available in `software-docs/mkdocs.yaml`
 whereas all the markdown file are found in `software-docs/docs`
+Also there is a file called `software-docs/clusters.yaml`
+which directs what softwares will be published by pointing out active clusters, and their os.
+
+### Files for software
+
+Files for different software should be stored under *software/[software name]*
+
+1. **general.md** Contains general information about the software and a section on how to use the software on clusters
+1. **versions.yaml** A YAML file containing information about at which clusters the software is installed and what versions are installed
+1. **keywords.yaml** A YAML file containing information about what keywords could be associated with the software
 
 ## build site
 
@@ -48,7 +58,7 @@ In order to start mkdocs and Hugo at the local computer use `make serve` from to
 
 ### Running mkdocs locally
 
-You can also just run and test the mkdocs documentation but using `make serve_mkdocs`
+You can also just run and test the mkdocs documentation but using `mkdocs build -f [support/software]-docs/mkdocs.yml `
 and navigate to http://127.0.0.1:8000/
 
 ## publish site

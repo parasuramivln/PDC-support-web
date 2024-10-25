@@ -2,14 +2,15 @@ Mathematica is an application for scientific calculation and visualization featu
 **Mathematica is licensed software. In order to use Mathematica you need a license.**
 
 # External links
-`Wolfram Mathematica website <http://http://www.wolfram.com/mathematica/>`_
-`Wolfram learning resources <https://www.wolfram.com/wolfram-u>`_
-`Mathematica 15-minute video tutorial: <https://wolfram.com/wolfram-u/courses/wolfram-language/hands-on-start-to-mathematica-wl005/>`_
-`Mathematica online course with live Q&A: <https://www.wolfram.com/wolfram-u/courses/wolfram-language/mathematica-training-tutorials-hos>`_
+[Wolfram Mathematica website](http://http://www.wolfram.com/mathematica/)
+[Wolfram learning resources](https://www.wolfram.com/wolfram-u)
+[Mathematica 15-minute video tutorial](https://wolfram.com/wolfram-u/courses/wolfram-language/hands-on-start-to-mathematica-wl005/)
+[Mathematica online course with live Q&A](https://www.wolfram.com/wolfram-u/courses/wolfram-language/mathematica-training-tutorials-hos)
 
 ## How to use
 
 Mathematica can be accessed by loading the appropriate module. To see which versions of Mathematica are available use the command
+```
 ml PDC
 ml spider mathemmatica
 ml avail mathematica
@@ -17,6 +18,7 @@ ml avail mathematica
 ml show mathematica
 # To load the module
 ml mathematica
+```
 In order to use Mathematica you need to have a Mathematica license. KTH has a site license for KTH users, the server is
 mathematica-lic.ug.kth.se
 In order to access the installation of Mathematica on Dardel, please contact PDC support and request access.
@@ -42,7 +44,7 @@ ssh -X nid001015
 ```
 and then start Mathematica with
 ```
-ml PDC/22.06
+ml PDC
 ml mathematica/13.0.1
 mathematica
 ```

@@ -5,6 +5,6 @@ For more information see: https://github.com/dftd4/dftd4
 
 You can load the module using
 ```
-$ module load PDC/21.11
+$ module load PDC
 $ module load dftd4/3.3.0
 ```

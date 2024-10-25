@@ -12,7 +12,6 @@ Example run script:
 Note that this script edits the input template "input_template" and replaces
 ``<<++SCRDIR++>>`` by the actual scratch directory
 ```
-
 # scratch_dir <<++SCRDIR++>>
 ```
 

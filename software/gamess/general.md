@@ -35,14 +35,11 @@ system and of your calculation.
 ## How to use
 
 
-# Example job script
-
-## 
+### Example job script
 
 ```
 # the name of this job
 #PBS -N gamess
-```
 # wall time limit
 #PBS -l walltime=04:00:00
 # stdout and stderr
@@ -68,3 +65,4 @@ cd $PBS_O_WORKDIR
 # run gamess with input file example.inp
 # the number of mpi tasks has to match mppwidth above
 rungms example 01 96 > example.out
+```

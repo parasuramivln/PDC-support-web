@@ -24,8 +24,10 @@ The UppASD files can be accessed by loading the appropriate modules. To see whic
 ml avail uppasd
 ml spider uppasd
 To load the 6.0.2 version of the program
-ml PDC/22.06
+```
+ml PDC
 ml uppasd/6.0.2-cpeGNU-22.06
+```
 The binary is ``sd``
 Examples are provided in ``$EBROOTUPPASD/examples``
 The code is documented in the `UppASD manual <https://uppasd.github.io/UppASD-manual>`_ and in technical notes in the directory ``$UPPASD_DOCS``.
@@ -33,7 +35,29 @@ A tutorial with examples and exercises on atomistic spin-dynamics are contained 
 
 # Running on the batch system
 Sample job script to queue an UppASD job with 16 openMP threads on cores on the shared partition of Dardel
-:language: text
+
+```
+#!/bin/bash
+#SBATCH -A <project name>     # Set the allocation to be charged for this job
+#SBATCH -J myjob              # The name of the script is myjob
+#SBATCH -t 02:00:00           # 2 hours wall-clock time
+#SBATCH -p shared             # The partition
+#SBATCH -N 1                  # Number of nodes
+#SBATCH -n 1                  # Number of tasks
+#SBATCH -c 16                 # Number of cpus per task
+
+ml PDC/22.06
+ml uppasd/6.0.2-cpeGNU-22.06
+
+export OMP_NUM_THREADS=16
+
+echo "Script initiated at `date` on `hostname`"
+
+sd > out.log
+
+echo "Script finished at `date` on `hostname`"
+```
+
 For information on how to submit jobs on Dardel, see `Queueing jobs <https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html>`_ .
 
 ## User Graphic Interface

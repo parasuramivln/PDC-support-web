@@ -16,6 +16,7 @@ enabled. This means that you can run GROMOS in parallel on a single
 node by using multiple threads. The number of threads can be set using
 the `OMP_NUM_THREADS` environment variable.
 Unfortunately, the OMP implementation allows a maximum of 16 threads.
+```
 #!/bin/bash -l
 #SBATCH -A XXXX-XX-XX
 #SBATCH -J gromosjob
@@ -26,7 +27,7 @@ Unfortunately, the OMP implementation allows a maximum of 16 threads.
 # set the number of threads
 export OMP_NUM_THREADS=16
 # load the GROMOS module
-ml PDC/23.03
+ml PDC
 ml gromosXX/1.6.0-cpeGNU-23.03-omp
 # Run gromos
 srun srun md \
@@ -38,4 +39,4 @@ srun srun md \
 @trc output_trajectory.trc.gz \
 @tre output_energy.tre.gz \
 @input config.imd > log.omd
-
+```

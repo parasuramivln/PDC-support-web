@@ -5,6 +5,6 @@ For more information see: https://bitbucket.org/adaptivesimulations/dolfin-hpc/s
 
 You can load the module using
 ```
-$ ml PDC/21.11
+$ ml PDC
 $ ml dolfin-hpc/0.9.5
 ```

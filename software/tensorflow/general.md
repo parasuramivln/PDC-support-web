@@ -10,24 +10,34 @@ AMD GPUs using Rocm-5.4.
 In order to run the Tensorflow container, first allocate
 a GPU node. Then, load the PDC and the singularity
 modules.
-ml add PDC/22.06
+```
+ml add PDC
 ml add singularity/3.10.4-cpeGNU-22.06
+```
 PDC containers are placed at */pdc/software/sing_hub**.
 They can also be reached by invoking *PDC_SHUB*.
+```
 ls $PDC_SHUB
+```
 Now that singularity is loaded, we can for example open a shell session
 within the container with:
+```
 singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.4-tf2.10
+```
 The **--rocm** flag tells singularity to use the GPUs, and the **-B** flag tells singularity to
 mount */cfs/klemming* into the container, thereby, making it possible to access files placed outside
 it.
 After the command, a prompt like this will appear:
+```
 Singularity>
+```
 Which means that we are inside the container, and now we can use **python** to run our Tensorflow scripts
 from the terminal.
 Tensorflow models can also be run directly without the need of opening a shell in the container using
 the following command:
+```
 singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.4-tf2.10 python3 <TF_script.py>
+```
 
 ## Installing additional Python packages
 There are some restrictions regarding singularity on Dardel.

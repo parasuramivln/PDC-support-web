@@ -4,8 +4,10 @@ It could be used standalone or, as it is more common, in combination with extern
 ## How to use
 
 The PLUMED library can be accessed by loading the appropriate module
+```
 # To load the module
-ml PDC/21.11
+ml PDC
 ml PLUMED/2.7.2-cpeGNU-21.11
 # To show info on what path and environment variables are set by the module
 ml show PLUMED/2.7.2-cpeGNU-21.11
+```

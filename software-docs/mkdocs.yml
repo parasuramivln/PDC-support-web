@@ -14,43 +14,89 @@ markdown_extensions:
   - attr_list
 nav:
   - Home: index.md
-  - Abinit: abinit/index.md
-  - Cosma: cosma/index.md
-  - Cp2k: cp2k/index.md
-  - Cubelib: cubelib/index.md
-  - Elk: elk/index.md
-  - Elpa: elpa/index.md
-  - Fenics: fenics/index.md
-  - Fleur: fleur/index.md
-  - Gamess: gamess/index.md
-  - Gromacs: gromacs/index.md
-  - Gromosxx: gromosxx/index.md
-  - Heffte: heffte/index.md
-  - Julia: julia/index.md
-  - Lammps: lammps/index.md
-  - Libxc: libxc/index.md
-  - Linaro-forge: linaro-forge/index.md
-  - Mathematica: mathematica/index.md
-  - Matlab: matlab/index.md
-  - Mpi4py: mpi4py/index.md
-  - Namd: namd/index.md
-  - Nwchem: nwchem/index.md
-  - Octopus: octopus/index.md
-  - Openfoam: openfoam/index.md
-  - Orca: orca/index.md
-  - Plumed: plumed/index.md
-  - Python: python/index.md
-  - Quantum-espresso: quantum-espresso/index.md
-  - Rspt: rspt/index.md
-  - Scalasca: scalasca/index.md
-  - Score-p: score-p/index.md
-  - Singularity: singularity/index.md
-  - Spfft: spfft/index.md
-  - Spla: spla/index.md
-  - Starccm: starccm/index.md
-  - Tensorflow: tensorflow/index.md
-  - Uppasd: uppasd/index.md
-  - Vasp: vasp/index.md
-  - Veloxchem: veloxchem/index.md
-  - Vmd: vmd/index.md
-  - Wannier90: wannier90/index.md
+  - Applications:
+    - Abinit: abinit/index.md
+    - Cp2k: cp2k/index.md
+    - Elk: elk/index.md
+    - Fleur: fleur/index.md
+    - Gamess: gamess/index.md
+    - Gromacs: gromacs/index.md
+    - Lammps: lammps/index.md
+    - Libxc: libxc/index.md
+    - Namd: namd/index.md
+    - Nwchem: nwchem/index.md
+    - Octopus: octopus/index.md
+    - Openfoam: openfoam/index.md
+    - Orca: orca/index.md
+    - Plumed: plumed/index.md
+    - Quantum-espresso: quantum-espresso/index.md
+    - Rspt: rspt/index.md
+    - Starccm: starccm/index.md
+    - Uppasd: uppasd/index.md
+    - Vasp: vasp/index.md
+    - Veloxchem: veloxchem/index.md
+    - Wannier90: wannier90/index.md
+  - Chemistry:
+    - Abinit: abinit/index.md
+    - Cp2k: cp2k/index.md
+    - Gamess: gamess/index.md
+    - Libxc: libxc/index.md
+    - Nwchem: nwchem/index.md
+    - Octopus: octopus/index.md
+    - Orca: orca/index.md
+    - Quantum-espresso: quantum-espresso/index.md
+    - Vasp: vasp/index.md
+    - Veloxchem: veloxchem/index.md
+  - Compilers and languages:
+    - Julia: julia/index.md
+    - Python: python/index.md
+  - Debugging tools:
+    - Linaro-forge: linaro-forge/index.md
+  - Fluid dynamics:
+    - Openfoam: openfoam/index.md
+    - Starccm: starccm/index.md
+  - Libraries:
+    - Cosma: cosma/index.md
+    - Cubelib: cubelib/index.md
+    - Elpa: elpa/index.md
+    - Heffte: heffte/index.md
+    - Mpi4py: mpi4py/index.md
+    - Spfft: spfft/index.md
+    - Spla: spla/index.md
+    - Tensorflow: tensorflow/index.md
+  - Mathematics:
+    - Fenics: fenics/index.md
+    - Mathematica: mathematica/index.md
+    - Matlab: matlab/index.md
+    - R: r/index.md
+  - Molecular dynamics:
+    - Gromacs: gromacs/index.md
+    - Lammps: lammps/index.md
+    - Namd: namd/index.md
+    - Plumed: plumed/index.md
+  - Performance tools:
+    - Linaro-forge: linaro-forge/index.md
+  - Physics:
+    - Abinit: abinit/index.md
+    - Cp2k: cp2k/index.md
+    - Elk: elk/index.md
+    - Fleur: fleur/index.md
+    - Libxc: libxc/index.md
+    - Quantum-espresso: quantum-espresso/index.md
+    - Rspt: rspt/index.md
+    - Uppasd: uppasd/index.md
+    - Vasp: vasp/index.md
+    - Wannier90: wannier90/index.md
+  - Tools:
+    - Fenics: fenics/index.md
+    - Mathematica: mathematica/index.md
+    - Matlab: matlab/index.md
+    - R: r/index.md
+    - Scalasca: scalasca/index.md
+    - Score-p: score-p/index.md
+    - Singularity: singularity/index.md
+    - Vmd: vmd/index.md
+  - Visualization:
+    - Vmd: vmd/index.md
+  - Misc:
+    - Gromosxx: gromosxx/index.md

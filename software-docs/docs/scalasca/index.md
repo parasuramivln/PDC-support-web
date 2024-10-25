@@ -20,8 +20,6 @@ https://www.scalasca.org/
 
 Scalasca makes use of the Cube performance report explorer and Score-P. You can check available modules of Scalasca using
 
-# 
-
 ```
 ml PDC
 ml spider Scalasca
@@ -29,16 +27,12 @@ ml avail Scalasca
 ```
 For example, to load the module for Scalasca built with the cpeGnu 21.11 toolchain
 
-## 
-
 ```
 ml PDC
 ml Scalasca/2.6-cpeGNU-21.11
 ```
 To display information on what dependency modules are loaded, and paths and environment variables are set, when loading a
 Scalasca module
-
-## 
 
 ```
 ml show Scalasca/2.6-cpeGNU-21.11

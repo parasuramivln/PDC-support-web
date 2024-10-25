@@ -28,7 +28,7 @@ Here's an axample script to run GPAW on Dardel
 # Number of MPI processes per node
 #SBATCH --ntasks-per-node=64
 #load the gpaw module
-ml add PDC/22.06
+ml add PDC
 ml add gpaw/22.8.0
 # Define where you have the datasets
 export GPAW_SETUP_PATH=XXXX

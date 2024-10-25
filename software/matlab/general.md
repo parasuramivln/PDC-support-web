@@ -4,9 +4,8 @@ MATLAB is a proprietary multi-paradigm programming language and numeric computin
 In order to use Matlab you need to have a Matlab license. KTH has a site-wide license for Matlab which includes all Matlab toolboxes.
 
 ## External links
-`Matlab <https://se.mathworks.com/products/matlab.html>`_
-`Information on the Matlab Parallel Computing Toolbox <https://se.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html>`_
-`Matlab information at the SNIC knowledge base <http://docs.snic.se/wiki/Matlab>`_
+[Matlab](https://se.mathworks.com/products/matlab.html)
+[Information on the Matlab Parallel Computing Toolbox](https://se.mathworks.com/help/parallel-computing/getting-started-with-parallel-computing-toolbox.html)
 
 ## How to use
 
@@ -14,7 +13,7 @@ In order to use Matlab you need to have a Matlab license. KTH has a site-wide li
 # Getting Started with serial and parallel MATLAB
 Load the matlab module by
 ```
-ml add PDC/22.06
+ml add PDC
 ml matlab/r2021b
 ```
 In order to use MATLAB you need to have a MATLAB license. KTH has a site license that
@@ -41,7 +40,7 @@ ssh -X nid001015
 ```
 and then start MATLAB with
 ```
-ml add PDC/22.06
+ml add PDC
 ml matlab/r2021b
 matlab
 ```
@@ -114,9 +113,9 @@ sbatch run_matlab.sh
 
 ## To learn more
 To learn more about the MATLAB Parallel Computing Toolbox, check out these resources:
-#. `Parallel Computing Coding Examples <http://www.mathworks.com/products/parallel-computing/code-examples.html>`_
-#. `Parallel Computing Documentation <http://www.mathworks.com/help/distcomp/index.html>`_
-#. `Parallel Computing Overview <http://www.mathworks.com/products/parallel-computing/index.html>`_
-#. `Parallel Computing Tutorials <http://www.mathworks.com/products/parallel-computing/tutorials.html>`_
-#. `Parallel Computing Videos <http://www.mathworks.com/products/parallel-computing/videos.html>`_
-#. `Parallel Computing Webinars <http://www.mathworks.com/products/parallel-computing/webinars.html>`_
+1. [Parallel Computing Coding Examples](http://www.mathworks.com/products/parallel-computing/code-examples.html)
+1. [Parallel Computing Documentation](http://www.mathworks.com/help/distcomp/index.html)
+1. [Parallel Computing Overview](http://www.mathworks.com/products/parallel-computing/index.html)
+1. [Parallel Computing Tutorials](http://www.mathworks.com/products/parallel-computing/tutorials.html)
+1. [Parallel Computing Videos](http://www.mathworks.com/products/parallel-computing/videos.html)
+1. [Parallel Computing Webinars](http://www.mathworks.com/products/parallel-computing/webinars.html)

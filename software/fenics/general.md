@@ -9,6 +9,8 @@ Singularity is available as a module on Dardel and should be loaded in your job 
 
 # Running in Batch mode
 Example job script for using FEniCS on 2 nodes.
+
+```
 #!/bin/bash -l
 # The -l above is required to get the full environment with modules
 # Set the allocation to be charged for this job
@@ -41,3 +43,5 @@ echo "Starting at.." ; date
 # Run FEniCs
 srun --mpi=pmi2 --ntasks=64 singularity exec -B /etc/libibverbs.d:/etc/libibverbs.d:ro -B /var/spool:/var/spool -B /usr/lib64:/usr/lib64:ro -B /opt:/opt:ro -B /var/opt:/var/opt:ro $FEniCS_CONTAINER bash -c "python3 <input.py>"
 echo "Ending at.." ; date
+```
+

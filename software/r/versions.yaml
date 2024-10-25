@@ -28,3 +28,7 @@ resources:
     versions:
       - version: 4.1.1.1
       - version: 4.1.2
+  - resource: cpe23.12
+    versions:
+      - version: 4.4.1
+      - version: 4.1.2

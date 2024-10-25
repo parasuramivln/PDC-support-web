@@ -9,7 +9,7 @@ For more information see: https://tools.bsc.es/extrae
 
 # Extrae module
 You can see which versions of Extrae are installed using
-ml add PDC/22.06
+ml add PDC
 ml av extrae
 
 ## Using Extrae

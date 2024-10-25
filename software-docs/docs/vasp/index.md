@@ -22,12 +22,8 @@ For more information see: http://vasp.at
 
 # Licenses
 VASP is not free software and requires a software license.
-VASP licenses are managed in `SUPR <https://supr.snic.se/>`_.
-All people who want to use VASP should have SUPR accounts and be a
-member of a VASP group in SUPR. VASP groups have owners, typically a
-principal investigator of a project,
-and that owner can add and remove people using the SUPR interface.
-If you are Ph.D student, we suggest that you check with your supervisor.
+If you want to use VASP please contact us with information
+of the e-mail address that you have listed in the VASP global portal.
 
 ## How to use
 
@@ -39,10 +35,12 @@ If you are Ph.D student, we suggest that you check with your supervisor.
 
 ## NPAR, NCORE and NSIM
 From initial testing, we recommend:
+```
 - NPAR = number of compute nodes
 - NCORE = cores / node, typically 16,24 or 32.
 - NSIM = 2
 - KPAR = number of compute nodes (if applicable)
+```
 
 ## How to choose the number of cores
 Rule of thumb:
@@ -74,24 +72,22 @@ this get memory available for each MPI rank.
 
 ## BEEF functionals
 This version of VASP has been compiled with support for BEEF functionals.
-See `this page for details <https://confluence.slac.stanford.edu/display/SUNCAT/BEEF+Functional+Software>`__.
+See https://confluence.slac.stanford.edu/display/SUNCAT/BEEF+Functional+Software.
 
 ## VASP TST Tools
 The VTST extension to VASP enables finding saddle points and evaluating
 transition state theory (TST) rate constants with VASP.
-Full documentation can be found
-`on this page <http://theory.cm.utexas.edu/vtsttools/>`__.
+Full documentation can be found at http://theory.cm.utexas.edu/vtsttools/
 
 ## VTST Scripts
 A number of Perl scripts are available to perform common tasks to
 help with VASP calculations, and particularly with transition state finding.
-These are documented `on this page <http://theory.cm.utexas.edu/vtsttools/scripts.html>`__ and the path to the scripts is added to your PATH variable
+These are documented at http://theory.cm.utexas.edu/vtsttools/scripts.html and the path to the scripts is added to your PATH variable
 when you load the vasp/5.4.4 module.
 
 ## VASPsol
 VASPsol is an implementation of an implicit solvation model that describes the effect of electrostatics, cavitation, and dispersion on the interaction between a solute and solvent.
-Full documentation on how to use VASPsol can be
-`found here <https://github.com/henniggroup/VASPsol/blob/master/docs/USAGE.md>`__. In short:
+Full documentation on how to use VASPsol can be at https://github.com/henniggroup/VASPsol/blob/master/docs/USAGE.md. In short:
 - Do a vacuum calculation for your system first and save the wavefunction file WAVECAR by specifying LWAVE = .TRUE. in the INCAR file.
 - Start the solvation calculation from the vacuum WAVECAR, specify ISTART = 1 in the INCAR file.
 - The solvation parameters are read from the INCAR file.
@@ -112,5 +108,4 @@ launch a job script (*vasp.run*) for a background execution
 ``sbatch ./vasp.run``
 Here is an example of a job script (*vasp.run*)
 If your job requires a lot of memory it can be necessary to use fewer cores per node than the available 32. Here is an example of how to do this correctly using the -N flag to aprun, where a total of 64 cores distributed over 4 nodes (16 on each) are used
-
 

@@ -31,7 +31,7 @@ Whether at one process or ten thousand, Allinea MAP is designed to work out-of-t
 
 Load the the Linaro-forge 24.0 suite 
 ```
-$ module load PDC/23.12
+$ module load PDC
 $ module load linaro/24.0
 ```
 To prepare code for MAP or DDT, just compile with debugging enabled 
@@ -69,22 +69,26 @@ bottlenecks have been handled.
 
 ## Light profiling of original code to identify bottlenecks
 
-## 
-
 ```
 $ ftn -g examples/wave_modified0.f90 -o wave_mod0.ex
 ```
 Submit a job of a binary compiled from *wave_modified0.f90*. When finished, open the resulting **.map** file in the gui
 $ map wave_mod0_64p_1n_2021-11-30_01-58.map
-:width: 500pt
+
+![image](files/map0.png)
+
 Here we see that total run time is **79s** and **99.9%** of the time is spent in the subroutine update().
 Clicking this field gives us a detailed view of where this time is spent.
-:width: 500pt
+
+![image](files/map0-zoomed.png)
+
 The 46.6% post is not so much to do about in terms of rearranging operations. But two others can easily be modified:
 a. Line 345 can be moved outside the do loop. (8.8% of the time)
 b. Line 356-357 are better to turn into vector operations. (13.2% and 3% of the time)
 In wave_modified1.f90 these parts have been modified. Let's compile this file and run the binary.
-:width: 500pt
+
+![image](files/map1.png)
+
 The total time is now **38s**. Interestingly, the slowest part went from 36.8s (46.6%) to 16.3s (43.0%)
 without seemingly touching it. However, note that we eliminated the if-else statement that previously
 was done at each iteration of the inner do loop.
@@ -97,9 +101,10 @@ Now we turn to the next posts - (15.7%) on line 338 and (14.3%) line 331. These 
 are *waiting* to receive (MPI_recv) for the endpoints from their neighbors. However, one may observe that the
 bulk of time in line 349 in the original code can actually be performed immediately - all points except the end points.
 We separate these from the loop and use non-blocking MPI_Isend to match the moved MPI_Recv.
-:width: 500pt
+
+![image](files/map2.png)
+
 Now we see that the waiting time for the processes were reduced to (8%) while the total time is now **37s**.
 In absolute terms, no big difference but this last step still illustrates how one can use non-blocking
 routines to fine-tune design.
-
 

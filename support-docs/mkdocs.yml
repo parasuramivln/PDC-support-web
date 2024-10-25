@@ -41,9 +41,8 @@ nav:
     - Run interactively: run_jobs/run_interactively.md
     - Job Statistics: run_jobs/job_statistics.md
   - Available Software: 
+    - How to get information about installed softwares: software/software.md
     - How to use module to load different softwares into your environment: software/module.md
-    - Instructions for using singularity at PDC: software/singularity.md
-    - Available Software: https://support.pdc.kth.se/software
   - Data Management: 
     - Data Management: data_management/data_management.md
     - Klemming: data_management/klemming.md

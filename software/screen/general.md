@@ -5,7 +5,7 @@ https://www.gnu.org/software/screen/
 ## How to use
 
 To use this module do
-ml PDC/21.11
+ml PDC
 ml screen/4.8.0
 Please consult the official documentation for more details
 https://www.gnu.org/software/screen/manual/
