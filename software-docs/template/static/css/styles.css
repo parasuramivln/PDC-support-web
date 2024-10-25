@@ -81,3 +81,7 @@ h1, h2, h3, h4 {
 .md-search__input::placeholder {
     color: #888;
 }
+
+.md-icon {
+    color: #000000 !important;
+}
