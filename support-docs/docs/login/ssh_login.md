@@ -13,7 +13,7 @@ authenticate themselves with the help of the Swedish User and Project Repository
 Registered SSH key pair login is restricted by user-defined IPs, and SSH keys have to be renewed regularly.
 After setting up all details in the login portal the user will be able to login from the chosen IP addresses with SSH for the selected validity period.
 
-You can find a video tutorial on how to login at https://youtu.be/I8cNqiYuA-4 or you can read instructions on how to login below.
+You can watch a [video tutorial](https://play.kth.se/media/login_dardel/0_6xdjxrjr) on how to login or you can read instructions on how to login below.
 
 ## How SSH key pairs work
 
