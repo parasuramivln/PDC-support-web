@@ -15,7 +15,7 @@ menu:
       url: "/stats"
       weight: 3
     - name: "System status"
-      url: "https://www.pdc.kth.se/cgi-bin/flash/flash.py"
+      url: "/status"
       weight: 4
 
 markup:
