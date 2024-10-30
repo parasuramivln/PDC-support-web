@@ -92,6 +92,8 @@ def writeVersions(softwarename,clusters,fp,fpidx):
 #-------------------------------------------------------------------------------
 # Write general information about the software
 def appendGeneralInfo(softwarename,fp):
+  if not os.path.isfile(os.path.join(SOFTWARE_DIR,softwarename,"general.md")):
+    return
   fp2=open(os.path.join(SOFTWARE_DIR,softwarename,"general.md"),"r")
   fp.write("## General information\n\n")
   for line in fp2:
@@ -104,9 +106,9 @@ def getClusterText(resource,clusters):
   for cluster in clusters:
     if cluster['cluster'] == resource:
       return resource
-    if not 'os' in cluster:
+    if not 'env' in cluster:
       continue
-    if cluster['os'] == resource:
+    if cluster['env'] == resource:
       return cluster['cluster']+"/"+resource
   return ""
 #-------------------------------------------------------------------------------

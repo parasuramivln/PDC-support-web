@@ -1,9 +1,9 @@
 - cluster: Dardel
-  os: cpe23.12
+  env: cpe23.12
 - cluster: Dardel-GPU
-  os: cpe23.12.gpu
+  env: cpe23.12.gpu
 - cluster: Dardel
-  os: cpe23.03
+  env: cpe23.03
 - cluster: Dardel-GPU
-  os: cpe23.03.gpu
+  env: cpe23.03.gpu
 - cluster: Dardel
