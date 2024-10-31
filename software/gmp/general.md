@@ -11,7 +11,7 @@ The library is free software under the GNU General Public License.
 
 The GMP library can be accessed by loading the appropriate modules
 # To load the module
-ml PDC
+ml PDC/<version>
 ml GMP/6.2.1-cpeGNU-21.11
 # To show info on what path and environment variables are set by the module
 ml show GMP/6.2.1-cpeGNU-21.11

@@ -37,7 +37,7 @@ Unfortunately, the OMP implementation allows a maximum of 16 threads.
 # set the number of threads
 export OMP_NUM_THREADS=16
 # load the GROMOS module
-ml PDC
+ml PDC/<version>
 ml gromosXX/1.6.0-cpeGNU-23.03-omp
 # Run gromos
 srun srun md \

@@ -9,7 +9,7 @@ ml spider cosma
 
 For example, load the module for the COSMA library 2.6.6 with GPU backend
 ```
-ml PDC
+ml PDC/<version>
 ml cosma/2.6.6-cpeGNU-23.12-gpu
 ```
 

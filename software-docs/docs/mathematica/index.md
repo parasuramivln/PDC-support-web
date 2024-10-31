@@ -27,7 +27,7 @@ Mathematica is an application for scientific calculation and visualization featu
 
 Mathematica can be accessed by loading the appropriate module. To see which versions of Mathematica are available use the command
 ```
-ml PDC
+ml PDC/<version>
 ml spider mathemmatica
 ml avail mathematica
 # To view info on the module
@@ -60,7 +60,7 @@ ssh -X nid001015
 ```
 and then start Mathematica with
 ```
-ml PDC
+ml PDC/<version>
 ml mathematica/13.0.1
 mathematica
 ```

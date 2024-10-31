@@ -14,7 +14,7 @@ http://www.lstc.com/products/ls-dyna
 A script for running LS-DYNA in MPI mode on Dardel called lsdyna_run.sh is shown below.
 Note that this script does not include all the arguments that you can supply to LS-DYNA, but you should add/modify the script to suit your needs.
 Firstly, you need to start the license server:
-cp -r /pdc/software/21.11/other/ls-dyna/license_manager /cfs/klemming/home/<u>/<username>
+cp -r /pdc/software/other/ls-dyna/license_manager /cfs/klemming/home/<u>/<username>
 # replace <username> with your username and <u> with the first letter of the username
 cd license_manager
 ./lstc_server -l "LS-Dyna_Log_`date +%F"_"%H%M`"

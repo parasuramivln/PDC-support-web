@@ -24,12 +24,12 @@ CP2K is a program to perform atomistic and molecular simulations of solid state,
 The CP2K installation contained in this module was built with support for the programs and libraries ELPA, Libint-CP2K, libvori, libxc, libxsmm, PLUMED, and spglib.
 To display info on which environment variables are set when loading the module, use
 ```
-ml PDC
+ml PDC/<version>
 ml show cp2k/2022.2-cpeGNU-22.06
 ```
 To load the CP2K module
 ```
-ml PDC
+ml PDC/<version>
 ml cp2k/2022.2-cpeGNU-22.06
 ```
 Below follows an example job script for CP2K, for running on a single Dardel node using 16 MPI ranks and 8 threads.
@@ -47,7 +47,7 @@ You need to replace *pdc.staff* with an active project that you belong to.
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=16
 
-ml PDC
+ml PDC/<version>
 ml cp2k/2022.2-cpeGNU-22.06
 
 export OMP_NUM_THREADS=8
@@ -84,7 +84,7 @@ the optimal setting for running on 8 nodes on Dardel is
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=16
 
-ml PDC
+ml PDC/<version>
 ml cp2k/2022.2-cpeGNU-22.06
 
 export OMP_NUM_THREADS=8
@@ -107,7 +107,7 @@ For using CP2K together with PLUMED, we suggest to use 128 MPI ranks and 1 threa
 #SBATCH --ntasks-per-node=128
 #SBATCH --cpus-per-task=1
 
-ml PDC
+ml PDC/<version>
 ml cp2k/2022.2-cpeGNU-22.06
 
 export OMP_NUM_THREADS=1

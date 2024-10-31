@@ -28,7 +28,7 @@ enterprise-ready Anaconda Python distribution,
 which is installed as modules on Dardel.
 To list available Anaconda modules, type:
 ```
-$ ml PDC
+$ ml PDC/<version>
 $ ml av anaconda3
 ```
 
@@ -70,7 +70,7 @@ If you create your own conda environment you would have full control and
 install everything you would want into that environment. For example
 you can create a conda environment under your Klemming folder:
 ```
-ml PDC
+ml PDC/<version>
 ml anaconda3/2024.02-1-cpeGNU-23.12
 source conda.init.sh
 conda create --name my-conda-env
@@ -95,7 +95,7 @@ and `Miniconda <https://conda.io/miniconda.html>`_, respectively.
 Another option for installing packages which are missing from the available Anaconda
 modules (and their conda environments) is to install them locally with `pip`:
 ```
-$ ml PDC
+$ ml PDC/<version>
 $ ml anaconda3/2024.02-1-cpeGNU-23.12
 $ pip install --user <package-name>
 ```
@@ -109,7 +109,7 @@ On Dardel, you instead run Python on the allocated interactive node using
 the srun command:
 ```
 $ salloc -A <your-project-ID> -t 1:0:0 -n 1 -p shared
-$ ml PDC
+$ ml PDC/<version>
 $ ml anaconda3/2024.02-1-cpeGNU-23.12
 $ srun -n 1 python some_script.py
 ```
@@ -129,7 +129,7 @@ $ srun -n 1 python some_script.py
 # Job partition
 #SBATCH -p shared
 # load the anaconda module
-ml PDC
+ml PDC/<version>
 ml anaconda3/2024.02-1-cpeGNU-23.12
 # if you need the custom conda environment:
 conda activate my-conda-env

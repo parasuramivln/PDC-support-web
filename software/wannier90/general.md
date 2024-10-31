@@ -5,7 +5,7 @@ http://www.wannier.org/
 
 To use this module do
 ```
-ml PDCTEST/<version>
+ml PDC/<version>
 ml wannier90/<version>-cpeGNU-<version>>
 ```
 

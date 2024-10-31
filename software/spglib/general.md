@@ -7,7 +7,7 @@ The Spglib library can be built using different toolchains. You can check availa
 # 
 
 ```
-ml PDC
+ml PDC/<version>
 ml spider spglib
 ml avail spglib
 ```
@@ -16,7 +16,7 @@ For example, to load the module for the Spglib library built with the cpeGNU 21.
 ## 
 
 ```
-ml PDC
+ml PDC/<version>
 ml spglib/1.16.0-cpeGNU-21.11
 ```
 To display information on what paths and environment variables are used when loading a

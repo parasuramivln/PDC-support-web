@@ -32,7 +32,7 @@ Example job script for regular NAMD run on 2 nodes:
 #SBATCH -p main
 #SBATCH --ntasks-per-node=128
 # load the NAMD module
-ml PDC
+ml PDC/<version>
 ml NAMD/2.14
 # Run namd
 srun namd2 input.namd > output_file
@@ -49,7 +49,7 @@ MPI process per node:
 #SBATCH -p main
 #SBATCH --ntasks-per-node=1
 # load the NAMD module
-ml PDC
+ml PDC/<version>
 ml NAMD/2.14
 # Run namd
 srun -n 2 namd2 +ppn 31 input.namd > output_file
@@ -66,7 +66,7 @@ processing cores:
 #SBATCH -p main
 #SBATCH --ntasks-per-node=4
 # load the NAMD module
-ml PDC
+ml PDC/<version>
 ml NAMD/2.14
 # Run namd
 srun -n 8 namd2 +ppn 7 +pemap 1-7,9-15,17-23,25-31 +commap 0,8,16,24 input.namd > output_file

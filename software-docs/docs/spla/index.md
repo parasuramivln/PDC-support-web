@@ -25,7 +25,7 @@ You can check available SPLA modules using
 ml spider spla
 ```
 For example, load the module for the SPLA library 1.5.5 with GPU backend
-```ml PDC
+```ml PDC/<version>
 ml spla/1.5.5-cpeGNU-23.12-gpu
 ```
 To see what environment variables are set when loading the module

@@ -4,7 +4,7 @@ https://www.ffmpeg.org/
 ## How to use
 
 To use this module do
-ml PDC
+ml PDC/<version>
 ml FFmpeg/4.3.3
 Please consult the official FFmpeg documentation for more details
 https://www.ffmpeg.org/

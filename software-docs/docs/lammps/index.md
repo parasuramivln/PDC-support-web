@@ -21,7 +21,7 @@ For more information see: https://www.lammps.org/
 
 The LAMMPS module can be loaded with
 ```
-ml PDCTEST/22.06
+ml PDC/<version>
 ml lammps/15Sep2022-cpeGNU-22.06
 ```
 
@@ -45,7 +45,7 @@ Below is an example batch script for a LAMMPS job:
 # number of MPI processes per node
 #SBATCH --ntasks-per-node=128
 
-ml PDC/21.11
+ml PDC/<version>
 ml lammps/20210310
 
 # Run with the file infile as input and write to outfile

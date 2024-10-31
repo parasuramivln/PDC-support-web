@@ -4,7 +4,7 @@ https://www.ghostscript.com/
 ## How to use
 
 To use this module do
-ml PDC
+ml PDC/<version>
 ml ghostscript/9.55.0
 Please consult the official Ghostscript documentation for more details
 https://www.ghostscript.com/

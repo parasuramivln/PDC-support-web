@@ -6,13 +6,13 @@ https://www.vi-hps.org/projects/score-p
 The Score-P measurement infrastructure is a highly scalable and easy-to-use tool suite for profiling and event tracing of HPC applications.
 You can check available modules of Score-P using
 ```
-ml PDC
+ml PDC/<version>
 ml spider Score-P
 ml avail Score-P
 ```
 For example, to load the module for Score-P built with the cpeGnu 21.11 toolchain
 ```
-ml PDC
+ml PDC/<version>
 ml Score-P/7.0-cpeGNU-21.11
 ```
 To display information on what dependency modules are loaded, and paths and environment variables are set, when loading a

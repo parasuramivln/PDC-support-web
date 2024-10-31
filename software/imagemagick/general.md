@@ -4,7 +4,7 @@ https://imagemagick.org/
 ## How to use
 
 To use this module do
-ml PDC
+ml PDC/<version>
 ml ImageMagick/7.1.0-32
 In order to view images on Dardel, you can use:
 magick display my_image.jpg

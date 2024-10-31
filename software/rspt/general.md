@@ -5,10 +5,10 @@ https://www.physics.uu.se/research/materials-theory/ongoing-research/code-develo
 
 To display info on which environment variables are set when loading the module, use
 ```
-ml PDC
+ml PDC/<version>
 ml show rspt/20211004
 To load the RSPt module
-ml PDC
+ml PDC/<version>
 ml rspt/20211004
 ```
 The binaries are found in the ``$RSPT_HOME/bin`` directory.
@@ -42,7 +42,7 @@ Sample job script
 # Number of MPI processes
 #SBATCH -n 256
 
-ml PDC/22.06
+ml PDC/<version>
 ml rspt/20230120-cpeGNU-22.06
 
 echo "Script initiated at `date` on `hostname`"

@@ -9,7 +9,7 @@ ml spider heffte
 For example, load the module for the HeFFTe library version 2.4.0
 built with
 ```
-ml PDC
+ml PDC/<version>
 ml heffte/2.4.0-cpeGNU-23.12-gpu
 ```
 To see what environment variables are set when loading the module

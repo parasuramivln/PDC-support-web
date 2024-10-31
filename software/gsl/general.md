@@ -14,7 +14,7 @@ The GSL modules were built using different toolchains. You can check available m
 # 
 
 ```
-ml PDC
+ml PDC/<version>
 ml spider GSL
 ml avail GSL
 ```
@@ -23,7 +23,7 @@ For example, to load the module for GSL library built with the cpeCray 21.11 too
 ## 
 
 ```
-ml PDC
+ml PDC/<version>
 ml GSL/2.7-cpeCray-21.11
 ```
 To display information on what paths and environment variables are set when loading a

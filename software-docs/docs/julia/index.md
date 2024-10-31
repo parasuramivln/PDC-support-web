@@ -22,7 +22,7 @@ More information can be found here https://julialang.org
 
 To load the module
 ```
-ml PDC
+ml PDC/<version>
 ml julia/1.8.2-cpeGNU-22.06
 ```
 

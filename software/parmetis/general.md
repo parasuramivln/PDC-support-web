@@ -8,7 +8,7 @@ The ParMETIS modules were built using different toolchains. You can check availa
 # 
 
 ```
-ml PDC
+ml PDC/<version>
 ml spider parmetis
 ml avail parmetis
 ```
@@ -17,7 +17,7 @@ For example, to load the module for ParMETIS library built with the cpeCray 21.1
 ## 
 
 ```
-ml PDC
+ml PDC/<version>
 ml ParMETIS/4.0.3-cpeCray-21.11
 ```
 To display information on what paths and environment variables are used when loading a

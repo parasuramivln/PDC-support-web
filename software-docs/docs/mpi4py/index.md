@@ -28,7 +28,7 @@ This is version 3.1.3 built with ggc11.2 and python3.8.
 # To load the module
 
 ```
-ml PDC
+ml PDC/<version>
 ml mpi4py/3.1.4-py39
 # To show info on what path and environment variables are set by the module
 ml show mpi4py/3.1.4-py39

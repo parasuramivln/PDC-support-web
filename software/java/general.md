@@ -7,7 +7,7 @@ To load the module for Java
 # 
 
 ```
-ml PDC
+ml PDC/<version>
 ml Java/17.0.4
 ```
 To show path and enviroment variables set by Java, do

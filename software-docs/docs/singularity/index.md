@@ -269,7 +269,7 @@ create a free account at [https://cloud.sylabs.io/builder](https://cloud.sylabs.
 First of all login to the PDC cluster and access the module singularity
 
 ```text
-ml PDC
+ml PDC/<version>
 ml singularity
 ```
 
@@ -360,7 +360,7 @@ in your image and you can send in a job using…
 # Number of MPI processes per node
 #SBATCH   ntasks per node=24
 # Run the executable named myexe
-ml PDC singularity
+ml PDC/<version> singularity
 srun -n 24 singularity exec -B /cfs/klemming <sandbox folder> <myexe>
 ```
 
@@ -386,7 +386,7 @@ recipes with Cray MPI support mentioned earlier which do reside in the [https://
 # Number of MPI processes per node
 #SBATCH   ntasks per node=12
 # Run the executable named myexe
-ml PDC singularity
+ml PDC/<version> singularity
 srun -n 24 --mpi=pmi2 singularity exec -B /cfs/klemming <sandbox folder> <myexe>
 ```
 
@@ -413,7 +413,7 @@ in your image and you can send in a job using…
 # Using the GPU partition which is at the moment is under testing
 #SBATCH  p gpu
 # Run the executable named myexe
-ml PDC singularity
+ml PDC/<version> singularity
 srun -n 1 singularity exec --rocm -B /cfs/klemming <sandbox folder> <myexe>
 ```
 

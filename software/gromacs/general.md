@@ -10,7 +10,7 @@ Special assembly kernels make its core compute engine one of the fastest MD
 simulation programs.
 In order to use this module, you need to
 ```
-ml PDC
+ml PDC/<version>
 ml gromacs/2021.6-cpeCray-22.06-plumed-2.7.2
 ```
 Preprocessing input files (molecular topology, initial coordinates and
@@ -45,7 +45,7 @@ command! Here is an example script that requests 2 nodes:
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=128
 
-ml PDC
+ml PDC/<version>
 ml gromacs/2023-cpeGNU-22.06
 
 export OMP_NUM_THREADS=1

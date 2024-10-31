@@ -9,7 +9,7 @@ To load the module for pFUnit built with the cpeCray 21.11 toolchain
 # 
 
 ```
-ml PDC
+ml PDC/<version>
 ml pFUnit/4.4.1-cpeCray-21.11
 ```
 To show path and enviroment variables set by pFUnit, do

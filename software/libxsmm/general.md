@@ -7,7 +7,7 @@ The LIBXSMM library can be built using different toolchains. You can check avail
 # 
 
 ```
-ml PDCTEST/22.06
+ml PDC/<version>
 ml spider libxsmm
 ml avail libxsmm
 ```
@@ -16,7 +16,7 @@ For example, to load the module for the LIBXSMM library built with the cpeGNU 21
 ## 
 
 ```
-ml PDCTEST/22.06
+ml PDC/<version>
 ml libxsmm/1.17-cpeGNU-22.06
 ```
 To display information on what paths and environment variables are used when loading a

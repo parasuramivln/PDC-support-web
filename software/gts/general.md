@@ -4,7 +4,7 @@ http://gts.sourceforge.net/index.html
 ## How to use
 
 To use this module do
-ml PDC
+ml PDC/<version>
 ml GTS/0.7.6-cpeCray-21.11
 Please consult the GTS documentation for more details
 http://gts.sourceforge.net/index.html

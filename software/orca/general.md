@@ -5,7 +5,7 @@ https://orcaforum.kofo.mpg.de/
 
 The ORCA module can be loaded with
 ```
-ml PDC
+ml PDC/<version>
 ml orca/5.0.4
 ```
 
@@ -33,10 +33,10 @@ Below follows an example job script for ORCA
 #SBATCH --ntasks-per-node=128
 
 
-ml PDC/22.06
+ml PDC/<version>
 ml orca/5.0.4
 
-/pdc/software/22.06/other/orca/5.0.4/bin/orca h2.inp > out.log
+/pdc/software/other/orca/5.0.4/bin/orca h2.inp > out.log
 ```
 
 

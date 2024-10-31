@@ -9,7 +9,7 @@ You can find more information on chapel at https://chapel-lang.org/
 Also you can find some nice information on how to develop using
 chapel... https://hpc-carpentry.github.io/hpc-chapel/
 As an example, you can compile using Chapel like
-$ ml PDC
+$ ml PDC/<version>
 $ ml chapel
 $ chpl -o hello hello.chpl
 For running chapel executable, you do not need to use *srun*

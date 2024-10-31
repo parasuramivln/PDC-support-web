@@ -18,7 +18,7 @@ Start the client and navigate to Options>Host profiles>New Host. In the Host Set
 Field                               Value
 =================================== =========================================================
 Remote host name                    dardel.pdc.kth.se
-Path to VisIt installtion           /pdc/software/22.06/other/visit/3.2.2
+Path to VisIt installtion           /pdc/software/other/visit/3.2.2
 Username                            <Your PDC username>
 Tunnel data connection through SSH  yes
 SSH command                         ssh

@@ -6,12 +6,12 @@ http://elk.sourceforge.net/
 The Elk installation contained in this module was built with support for the programs and libraries Libxc and Wannier90.
 To display info on which environment variables are set when loading the module, use
 ```
-ml PDC
+ml PDC/<version>
 ml show elk/8.8.26-cpeGNU-22.06
 ```
 To load the Elk module
 ```
-ml PDC
+ml PDC/<version>
 ml elk/8.8.26-cpeGNU-22.06
 ```
 The species files are found in ``EBROOTELK/species``
@@ -42,7 +42,7 @@ Sample job script to queue an Elk job with 16 MPI ranks, and 8 openMP threads
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=16
 
-ml PDC
+ml PDC/<version>
 ml elk/8.8.26-cpeGNU-22.06
 
 export OMP_NUM_THREADS=8

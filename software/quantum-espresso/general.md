@@ -15,7 +15,7 @@ http://docs.snic.se/wiki/Quantum_Espresso.
 ## Running Quantum ESPRESSO
 To use this module do
 ```
-ml PDC
+ml PDC/<version>
 ml quantum-espresso/7.1.0-cpeGNU-22.06
 ```
 Here is an example of a job script requesting 128 MPI processes per node:
@@ -30,7 +30,7 @@ Here is an example of a job script requesting 128 MPI processes per node:
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=128
 
-ml PDC/22.06
+ml PDC/<version>
 ml quantum-espresso/7.1.0-cpeGNU-22.06
 
 export OMP_NUM_THREADS=1
@@ -55,7 +55,7 @@ because AMD's simultaneous multithreading (SMT) is enabled.
 #SBATCH --ntasks-per-node=64
 #SBATCH --cpus-per-task=4
 
-ml PDC/22.06
+ml PDC/<version>
 ml quantum-espresso/7.1.0-cpeGNU-22.06
 
 export OMP_NUM_THREADS=2

@@ -8,7 +8,7 @@ ml avail uppasd
 ml spider uppasd
 To load the 6.0.2 version of the program
 ```
-ml PDC
+ml PDC/<version>
 ml uppasd/6.0.2-cpeGNU-22.06
 ```
 The binary is ``sd``
@@ -29,7 +29,7 @@ Sample job script to queue an UppASD job with 16 openMP threads on cores on the 
 #SBATCH -n 1                  # Number of tasks
 #SBATCH -c 16                 # Number of cpus per task
 
-ml PDC/22.06
+ml PDC/<version>
 ml uppasd/6.0.2-cpeGNU-22.06
 
 export OMP_NUM_THREADS=16

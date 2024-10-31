@@ -7,13 +7,13 @@ The General Algebraic Modeling System (GAMS) is a high-level modeling system for
 
 # gams module
 To load the GAMS module
-ml PDC
+ml PDC/<version>
 ml gams/37.1.0
 
 ## Running using the queue system
 Here is an example job script, job.sh, for running gams
 #!/bin/bash
-ml PDC
+ml PDC/<version>
 ml gams/37.1.0
 gams inputfile.gms > outputfile.lst
 Which can be submitted with

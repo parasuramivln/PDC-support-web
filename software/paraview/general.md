@@ -16,7 +16,7 @@ Begin by starting the client on your local workstation.
 Then login to Dardel using SSH and run the following commands to load the
 required modules
 ```
-ml PDC
+ml PDC/<version>
 ml paraview/5.11.1
 ```
 Now allocate an interactive job to run the server in. Depending on the size of the data you may want to use more or less cores, and depending on the task you may want more or less time. This example allocates one node (128 cores) for 60 minutes

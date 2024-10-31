@@ -9,7 +9,7 @@ ml spider ELPA
 
 For example, load the module for the ELPA library
 ```
-ml PDC
+ml PDC/<version>
 ml elpa/2022.11.001.rc1-cpeGNU-22.06
 ```
 To see what environment variables are set when loading the module
