@@ -165,10 +165,8 @@
 # Courses
 
 * [General instructions for PDC courses](courses/general.md)
-* [PRACE Deep Learning workshop at PDC](courses/deeplearning.md)
 * [Introduction to PDC](courses/pdcintro.md)
 * [PDC Summer School](courses/summerschool.md)
-* [PDC/PRACE workshop “HPC Tools for the Modern Era”](courses/prace.md)
 
 # PDC Blog
 
