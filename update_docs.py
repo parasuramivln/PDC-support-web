@@ -186,4 +186,4 @@ def main(target, html_path):
     print("Please do not forget to push your changes to central repository.")
 
 if __name__ == "__main__":
-    main("docs", "web/public)
+    main("docs", "web/public")
