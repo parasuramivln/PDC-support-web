@@ -1,11 +1,15 @@
 resources:
   - resource: cpe23.12
     versions:
+      - version: 2406
       - version: 2312
       - version: 2012
-      - version: 6
-      - version: 7
+      - version: 11
+      - version: 10
       - version: 9
+      - version: 7
+      - version: 6
+
   - resource: cpe21.11
     versions:
       - version: 2012

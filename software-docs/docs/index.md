@@ -59,7 +59,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 | [Nwchem](nwchem/index.md) | Dardel/cpe23.12 | 7.0.2 |
 | [Octopus](octopus/index.md) | Dardel/cpe23.12 | 14.0 |
 || Dardel/cpe23.03 | 14.0 |
-| [Openfoam](openfoam/index.md) | Dardel/cpe23.12 | 2312, 2012, 6, 7, 9 |
+| [Openfoam](openfoam/index.md) | Dardel/cpe23.12 | 2406, 2312, 2012, 11, 10, 9, 7, 6 |
 | [Orca](orca/index.md) | Dardel/cpe23.12 | 6.0.0, 5.0.3, 5.0.4 |
 | [Plumed](plumed/index.md) | Dardel/cpe23.12 | 2.9.0, 2.9.2 |
 | [Python](python/index.md) | Dardel/cpe23.12 | 2024.02-1 |
