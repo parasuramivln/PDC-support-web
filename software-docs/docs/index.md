@@ -22,8 +22,11 @@ PDC takes no responsibility for the correctness of results produced with the bin
 
 | Software | Cluster | Versions |
 |---|---|---|
+| [Abaqus](abaqus/index.md) | Dardel/cpe23.12 | 2024, 2021, 2019 |
 | [Abinit](abinit/index.md) | Dardel/cpe23.12 | 10.0.5, 9.10.3 |
 || Dardel/cpe23.03 | 9.10.3 |
+| [Ansys-fluent](ansys-fluent/index.md) | Dardel/cpe23.12 | 23.1, 21.2 |
+| [Comsol](comsol/index.md) | Dardel/cpe23.12 | 6.3, 6.2, 6.1, 6.0, 5.6 |
 | [Cosma](cosma/index.md) | Dardel/cpe23.12 | 2.6.6 |
 || Dardel/cpe23.03 | 2.6.6 |
 || Dardel-GPU/cpe23.03.gpu | 2.6.6 |
@@ -79,7 +82,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 || Dardel/cpe23.03 | 1.5.5 |
 || Dardel-GPU/cpe23.03.gpu | 1.5.5 |
 || Dardel-GPU/cpe23.12.gpu | 1.5.5 |
-| [Starccm](starccm/index.md) | Dardel/cpe23.12 | 19.06.008-dp, 19.04.007-dp, 19.02.013-dp, 19.02.009-dp, 19.02.009, 18.06.006-dp, 18.02.008-dp, 18.02.008, 17.06.008-dp, 17.06.008 |
+| [Starccm+](starccm+/index.md) | Dardel/cpe23.12 | 19.06.008-dp, 19.04.007-dp, 19.02.013-dp, 19.02.009-dp, 19.02.009, 18.06.006-dp, 18.02.008-dp, 18.02.008, 17.06.008-dp, 17.06.008 |
 || Dardel/cpe23.03 | 19.02.009 |
 | [Tensorflow](tensorflow/index.md) | Dardel/cpe23.03 | 2.12 |
 | [Uppasd](uppasd/index.md) | Dardel/cpe23.12 | 6.0.2 |

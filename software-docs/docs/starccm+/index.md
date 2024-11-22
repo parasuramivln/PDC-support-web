@@ -1,10 +1,10 @@
 ---
-title: Information about starccm
+title: Information about starccm+
 keywords:
   - Applications
   - Fluid Dynamics
 ---
-# Starccm
+# Starccm+
 
 ## Installed versions
 

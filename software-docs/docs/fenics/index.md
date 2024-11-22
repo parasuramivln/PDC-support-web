@@ -3,6 +3,7 @@ title: Information about fenics
 keywords:
   - Tools
   - Mathematics
+  - Finite Element Analysis
 ---
 # Fenics
 
@@ -15,7 +16,7 @@ keywords:
 ## General information
 
 FEniCS is an open source software for solving partial differential equations. With FEniCS users can quickly translate scientific models into finite element code.
-More information on FEniCS can be found here: https://fenicsproject.org/
+More information on FEniCS can be found here: [https://fenicsproject.org/](https://fenicsproject.org/)
 
 ## How to use
 

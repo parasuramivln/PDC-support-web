@@ -15,7 +15,10 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Applications:
+    - Abaqus: abaqus/index.md
     - Abinit: abinit/index.md
+    - Ansys-fluent: ansys-fluent/index.md
+    - Comsol: comsol/index.md
     - Cp2k: cp2k/index.md
     - Elk: elk/index.md
     - Fleur: fleur/index.md
@@ -31,7 +34,7 @@ nav:
     - Plumed: plumed/index.md
     - Quantum-espresso: quantum-espresso/index.md
     - Rspt: rspt/index.md
-    - Starccm: starccm/index.md
+    - Starccm+: starccm+/index.md
     - Uppasd: uppasd/index.md
     - Vasp: vasp/index.md
     - Veloxchem: veloxchem/index.md
@@ -52,9 +55,15 @@ nav:
     - Python: python/index.md
   - Debugging tools:
     - Linaro-forge: linaro-forge/index.md
+  - Finite element analysis:
+    - Abaqus: abaqus/index.md
+    - Comsol: comsol/index.md
+    - Fenics: fenics/index.md
   - Fluid dynamics:
+    - Ansys-fluent: ansys-fluent/index.md
+    - Comsol: comsol/index.md
     - Openfoam: openfoam/index.md
-    - Starccm: starccm/index.md
+    - Starccm+: starccm+/index.md
   - Libraries:
     - Cosma: cosma/index.md
     - Cubelib: cubelib/index.md
