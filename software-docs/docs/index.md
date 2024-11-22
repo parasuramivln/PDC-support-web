@@ -79,7 +79,8 @@ PDC takes no responsibility for the correctness of results produced with the bin
 || Dardel/cpe23.03 | 1.5.5 |
 || Dardel-GPU/cpe23.03.gpu | 1.5.5 |
 || Dardel-GPU/cpe23.12.gpu | 1.5.5 |
-| [Starccm](starccm/index.md) | Dardel/cpe23.03 | 19.02.009 |
+| [Starccm](starccm/index.md) | Dardel/cpe23.12 | 19.06.008-dp, 19.04.007-dp, 19.02.013-dp, 19.02.009-dp, 19.02.009, 18.06.006-dp, 18.02.008-dp, 18.02.008, 17.06.008-dp, 17.06.008 |
+|| Dardel/cpe23.03 | 19.02.009 |
 | [Tensorflow](tensorflow/index.md) | Dardel/cpe23.03 | 2.12 |
 | [Uppasd](uppasd/index.md) | Dardel/cpe23.12 | 6.0.2 |
 || Dardel/cpe23.03 | 6.0.2 |
