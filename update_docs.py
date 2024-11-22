@@ -31,7 +31,7 @@ def check_mkdocs(python_exe):
 
 def check_hugo():
     print("Checking Hugo ...")
-    get_command_output("hugo -h")
+    get_command_output(["hugo", "-h"])
     print("OK\n")
 
 def check_git_status():
