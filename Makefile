@@ -7,9 +7,10 @@ all: build
 build:
 	make clean
 	mkdocs build -f support-docs/mkdocs.yml 
-	cp -r support-docs/site web/static/support-docs	
 	python3 format_software_info.py
-	mkdocs build -f software-docs/mkdocs.yml 
+	mkdocs build -f software-docs/mkdocs.yml
+	python3 merge_search_index.py
+	cp -r support-docs/site web/static/support-docs	
 	cp -r software-docs/site web/static/software-docs	
 	hugo --source "web"
 
@@ -17,9 +18,10 @@ build:
 serve:
 	make clean
 	mkdocs build -f support-docs/mkdocs.yml 
-	cp -r support-docs/site web/static/support-docs
 	python3 format_software_info.py
-	mkdocs build -f software-docs/mkdocs.yml 
+	mkdocs build -f software-docs/mkdocs.yml
+	python3 merge_search_index.py
+	cp -r support-docs/site web/static/support-docs	
 	cp -r software-docs/site web/static/software-docs	
 	hugo server --source "web"
 
