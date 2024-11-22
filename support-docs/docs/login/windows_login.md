@@ -159,14 +159,17 @@ As seen in the image below:
 
 Before logging in, save your PuTTY config as a profile named dardel:
 
+<!--- 
 > ![image](../static/images/Windows_Login/win10-krb-05-puttyprofile.png)
+--->
+![image](../static/images/Windows_Login/PuTTY_snapshot_1.png)
 
 Now, click Open. If you have valid Kerberos tickets as explained above
 you will now log in to the cluster.
 
-A Dardel login looks like this:
+<!--- A Dardel login looks like this:
 
-> ![image](../static/images/Windows_Login/PuTTY_snapshot_1.png)
+> ![image](../static/images/Windows_Login/PuTTY_snapshot_1.png) --->
 
 The path to your PDC home directory from Windows is
 `\\afs\pdc.kth.se\home\u\username` with `u` as the first letter in your username.

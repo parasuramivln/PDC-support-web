@@ -68,7 +68,7 @@ Several keys can be added in the PDC login portal. You can add further keys or d
 
 Once your SSH public key is properly registered, you can login from a terminal, or by using Putty.
 
-### Linux and mac OS
+### Linux and macOS
 
 Open a terminal to login with
 
@@ -87,6 +87,11 @@ When connecting for the first time, your ssh client will write:
 *The authenticity of host ‘dardel.pdc.kth.se (130.237.230.204)’ can’t be established.*
 
 and display an ED22519, ECDSA, or a RSA key fingerprint. You should then compare that the fingerprint matches with one of the fingerprints stated on this webpage.
+
+If the above commands result in a _Permission Denied_ error, you can try
+```
+ssh -i <private-key> <your-PDC-username>@dardel.pdc.kth.se
+```
 
 ### Windows
 
@@ -122,13 +127,14 @@ RSA key fingerprint is MD5:15:e7:9e:4a:42:4d:61:29:dd:a3:2c:b9:b3:ef:e0:9d
 ECDSA key fingerprint is MD5:8c:62:70:4c:b8:f2:c4:ab:14:43:b7:31:ba:c3:c9:52
 ```
 
-## Users which do not have a SUPR account
+## Users who do not have a SUPR account
 
 For users without SUPR account currently only Kerberos login is officially supported. If you are in SUPR, but your SUPR account is not properly linked to PDC, please contact PDC support ([support@pdc.kth.se](mailto:support@pdc.kth.se)).
 
 ## Configuring ssh keys and kerberos login
 
 It is possible to have both authentication methods enabled at the same time and use whichever one you prefer when connecting.
+
 If you have configured your **config** file according to instructions on the [SSH](configuration.md#ssh) page
 you need to add the following **before** your kerberos configuration in the config file.
 
