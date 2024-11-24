@@ -5,8 +5,8 @@ https://tddft.org/programs/libxc/
 
 To use this module do
 ```
-module load PDC
-module load libxc/5.1.6-cpeGNU-21.09
+ml PDC/<version>
+ml libxc/6.2.2-cpeGNU-23.12
 ```
 
 Please consult the official Libxc documentation for more details
