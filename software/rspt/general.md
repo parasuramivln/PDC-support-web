@@ -6,10 +6,10 @@ https://www.physics.uu.se/research/materials-theory/ongoing-research/code-develo
 To display info on which environment variables are set when loading the module, use
 ```
 ml PDC/<version>
-ml show rspt/20211004
+ml show rspt/20231004
 To load the RSPt module
 ml PDC/<version>
-ml rspt/20211004
+ml rspt/20231004
 ```
 The binaries are found in the ``$RSPT_HOME/bin`` directory.
 Examples and tests are provided in ``$RSPT_EXAMPLES``.
@@ -17,8 +17,7 @@ The manual is found in ``$RSPT_DOCS``.
 ```
 # Running on the Batch system
 Sample job script
-#!/bin/bash -l
-# The -l above is required to get the full environment with modules
+#!/bin/bash
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
@@ -43,7 +42,7 @@ Sample job script
 #SBATCH -n 256
 
 ml PDC/<version>
-ml rspt/20230120-cpeGNU-22.06
+ml rspt/20231004-cpeGNU-23.12
 
 echo "Script initiated at `date` on `hostname`"
 
