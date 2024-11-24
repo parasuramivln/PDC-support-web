@@ -7,12 +7,12 @@ The Elk installation contained in this module was built with support for the pro
 To display info on which environment variables are set when loading the module, use
 ```
 ml PDC/<version>
-ml show elk/8.8.26-cpeGNU-22.06
+ml show elk/10.0.15-cpeGNU-23.12
 ```
 To load the Elk module
 ```
 ml PDC/<version>
-ml elk/8.8.26-cpeGNU-22.06
+ml elk/10.0.15-cpeGNU-23.12
 ```
 The species files are found in ``EBROOTELK/species``
 Examples are provided in ``$EBROOTELK/examples``
@@ -21,8 +21,7 @@ Examples are provided in ``$EBROOTELK/examples``
 Sample job script to queue an Elk job with 16 MPI ranks, and 8 openMP threads
 
 ```
-#!/bin/bash -l
-# The -l above is required to get the full environment with modules
+#!/bin/bash
 
 # Set the allocation to be charged for this job
 # not required if you have set a default allocation
@@ -42,9 +41,10 @@ Sample job script to queue an Elk job with 16 MPI ranks, and 8 openMP threads
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=16
 
-ml PDC/<version>
-ml elk/8.8.26-cpeGNU-22.06
+ml PDC/23.12
+ml elk/10.0.15-cpeGNU-23.12
 
+export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
 export OMP_NUM_THREADS=8
 export OMP_PLACES=cores
 export OMP_PROC_BIND=false
