@@ -4,9 +4,7 @@ is based on density-functional theory, plane waves, and pseudopotentials.  For
 more information see http://www.quantum-espresso.org and
 http://docs.snic.se/wiki/Quantum_Espresso.
 
-
 ## How to use
-
 
 # General considerations
 - You should **always** use the option ``disk_io=low``. With this option the wave functions are only written at the end of the job rather than after every intermediate step. This will substantially reduce the load on the disk systems and make your job run faster.
