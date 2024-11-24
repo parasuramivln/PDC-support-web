@@ -9,7 +9,7 @@ ml spider uppasd
 To load the 6.0.2 version of the program
 ```
 ml PDC/<version>
-ml uppasd/6.0.2-cpeGNU-22.06
+ml uppasd/6.0.2-cpeGNU-23.12
 ```
 The binary is ``sd``
 Examples are provided in ``$EBROOTUPPASD/examples``
@@ -25,12 +25,10 @@ Sample job script to queue an UppASD job with 16 openMP threads on cores on the 
 #SBATCH -J myjob              # The name of the script is myjob
 #SBATCH -t 02:00:00           # 2 hours wall-clock time
 #SBATCH -p shared             # The partition
-#SBATCH -N 1                  # Number of nodes
-#SBATCH -n 1                  # Number of tasks
 #SBATCH -c 16                 # Number of cpus per task
 
 ml PDC/<version>
-ml uppasd/6.0.2-cpeGNU-22.06
+ml uppasd/6.0.2-cpeGNU-23.12
 
 export OMP_NUM_THREADS=16
 
