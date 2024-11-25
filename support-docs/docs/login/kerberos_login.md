@@ -90,3 +90,7 @@ with the following information:
   ```default
   ssh -vvv -o GSSAPIAuthentication=yes <PDC username>@<cluster>.pdc.kth.se
   ```
+
+!!! > [!NOTE]
+> If you are using **Conda environments** generation of kerberos tickets via `kinit` will not work. Please, make sure to deactivate your Conda environment before generating tickets.
+
