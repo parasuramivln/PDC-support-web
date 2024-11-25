@@ -18,39 +18,37 @@ keywords:
 The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic
 scale materials modelling, e.g. electronic structure calculations and
 quantum-mechanical molecular dynamics, from first principles.
-For more information see: http://vasp.at
+For more information see the VASP home page [https://vasp.at](https://vasp.at)
+and the [VASP wiki](https://www.vasp.at/wiki).
 
 # Licenses
 VASP is not free software and requires a software license.
 If you want to use VASP please contact us with information
 of the e-mail address that you have listed in the VASP global portal.
 
-## How to use
+## How to use VASP
 
+## General observations
+- VASP is not helped by hyper-threading
+- Running on fewer than 128 tasks per node allocates more memory to each MPI task. This can in some cases improve performance and is necessary if your job crashes with an out-of-memory (OOM) error. Further information can be found on the VASP wiki pages [Memory_requirements](https://www.vasp.at/wiki/index.php/Memory_requirements) and [Not_enough_memory](https://www.vasp.at/wiki/index.php/Not_enough_memory).
 
-# General observations
-- VASP is not helped by hyper-threading (64 virtual cores per compute node).
-- No GPU/OpenMP-support.
-- Running on fewer than 32 cores per node allocates more memory to each MPI task. This can in some cases improve performance and is necessary if your job crashes with an OOM error. See the example submit script below on how to do this correctly.
-
-## NPAR, NCORE and NSIM
-From initial testing, we recommend:
-```
-- NPAR = number of compute nodes
-- NCORE = cores / node, typically 16,24 or 32.
-- NSIM = 2
-- KPAR = number of compute nodes (if applicable)
-```
+## Parallelization settings
+Parallelization over k-points is recommended when it is possible to do so. In practice,
+KPAR should be set to be equal to the number of nodes. Please also make sure that the
+k-points can be evenly distributed over nodes. For example, a calculation with 15 k-points
+can run on 15 nodes with KPAR=15. NCORE determines the number of cores that work on an
+individual orbital. A recommended value for NCORE is 16.
 
 ## How to choose the number of cores
-Rule of thumb:
+### Rule of thumb
 - 1 atom per core = Good
 - 0.5 atom per core = Could work (but bad efficiency and time wasted)
 - <0.5 atom per core = Don't do it
-Explanation of above:
-The number of bands is more important than the number of atoms, but typically
+### Explanation of above
+- The number of bands is more important than the number of atoms, but typically
 you have about 4 bands/atom in VASP.
-To choose a good number of cores, you can use this checklist:
+
+### Checklist:
 - Check how many you have in the calculation. Let's call this "NB".
 - Cores = NB is best you can do.
 - For better efficiency, typically 90%+, aim for at least 4 bands per core, i.e. Cores = NB/4
@@ -60,10 +58,10 @@ To choose a good number of cores, you can use this checklist:
 bands to make the number of cores more even, .e.g we don't want a prime number.
 Good numbers are multiple of 4,8,12,16 etc. For example, 512 bands is better
 than 501 (=3x167).
-- Calculate the number of nodes necessary, e.g. 512 cores (32 cores/node) = 16 compute nodes.
+- Calculate the number of nodes necessary, e.g. 512 cores (128 cores/node) = 4 compute nodes.
 - For a wide calculation with less than 4 bands per core, try decreasing the
-number of cores/node to 24/c node, or even 16c/node. You may also have to do
-this get memory available for each MPI rank.
+  number of cores per node to 64, or even 32. You may also have to do this get
+  memory available for each MPI rank.
 
 ## Vasp Filenames
 - **vasp** : this is normal regular VASP version for calculations using >1 k-point.
@@ -71,41 +69,80 @@ this get memory available for each MPI rank.
 - **vasp-noncollinear** : VASP for noncollinear and spin-orbit coupling calculations.
 
 ## BEEF functionals
-This version of VASP has been compiled with support for BEEF functionals.
-See https://confluence.slac.stanford.edu/display/SUNCAT/BEEF+Functional+Software.
+This version of VASP has been compiled with support for [BEEF functionals](https://confluence.slac.stanford.edu/display/SUNCAT/BEEF+Functional+Software).
 
-## VASP TST Tools
-The VTST extension to VASP enables finding saddle points and evaluating
+## VASP VTST Tools
+The [VTST](http://theory.cm.utexas.edu/vtsttools) extension to VASP enables finding saddle points and evaluating
 transition state theory (TST) rate constants with VASP.
-Full documentation can be found at http://theory.cm.utexas.edu/vtsttools/
 
 ## VTST Scripts
-A number of Perl scripts are available to perform common tasks to
+The [VTST Perl scripts](https://theory.cm.utexas.edu/vtsttools/scripts.html) are available to perform common tasks to
 help with VASP calculations, and particularly with transition state finding.
-These are documented at http://theory.cm.utexas.edu/vtsttools/scripts.html and the path to the scripts is added to your PATH variable
-when you load the vasp/5.4.4 module.
 
 ## VASPsol
-VASPsol is an implementation of an implicit solvation model that describes the effect of electrostatics, cavitation, and dispersion on the interaction between a solute and solvent.
-Full documentation on how to use VASPsol can be at https://github.com/henniggroup/VASPsol/blob/master/docs/USAGE.md. In short:
+[VASPsol](https://github.com/henniggroup/VASPsol) is an implementation of an implicit solvation model that describes the effect of electrostatics, cavitation, and dispersion on the interaction between a solute and solvent.
+Full documentation on how to use [VASPsol documentation](https://github.com/henniggroup/VASPsol/blob/master/docs/USAGE.md).
+### Short how to do
 - Do a vacuum calculation for your system first and save the wavefunction file WAVECAR by specifying LWAVE = .TRUE. in the INCAR file.
 - Start the solvation calculation from the vacuum WAVECAR, specify ISTART = 1 in the INCAR file.
 - The solvation parameters are read from the INCAR file.
 - In the simplest case the only parameter that need to be set is the solvation flag LSOL = .TRUE.
 
-## Using vdW functionals
-To use one of the nonlocal vdW functionals one needs to put the file vdw_kernel.bindat into the run directory (along with INCAR, POSCAR, POTCAR and KPOINTS). This file can be copied to your directory like this:
-``cp /pdc/vol/vasp/data/vdw_kernel.bindat .``
+## Potential files and vdW kernel
+Projector augmented wave (PAW) potentials can be found at ``/pdc/software/23.12/other/vasp/potpaw-64/``
+
+To use one of the nonlocal vdW functionals one needs to put the file vdw_kernel.bindat into the run directory (along with INCAR, POSCAR, POTCAR and KPOINTS). This file can be found at ``/pdc/software/23.12/other/vasp/vdw_kernel/vdw_kernel.bindat``.
 
 ## Running Vasp
-Load the appropriate module
-``module load vasp/5.4.4``
-Loading **vasp module** module might generate a module conflict for **cray-mpich/7.0.4**. Go ahead and do  ``module sw cray-mpich/7.0.4 cray-mpich/7.2.2`` or ``module unload cray-mpich/7.0.4`` before loading **vasp module** again.
-For an interactive run execute:
-``srun -n <cores> vasp``
-**OR**
-launch a job script (*vasp.run*) for a background execution
-``sbatch ./vasp.run``
-Here is an example of a job script (*vasp.run*)
-If your job requires a lot of memory it can be necessary to use fewer cores per node than the available 32. Here is an example of how to do this correctly using the -N flag to aprun, where a total of 64 cores distributed over 4 nodes (16 on each) are used
+Here is an example of a job script requesting 128 MPI processes per node:
+```
+#!/bin/bash
+
+#SBATCH -A naissYYYY-X-XX
+#SBATCH -J my_vasp_job
+#SBATCH -t 01:00:00
+#SBATCH -p main
+
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=128
+
+module load PDC/23.12
+module load vasp/6.4.2-vanilla
+
+export OMP_NUM_THREADS=1
+
+srun vasp
+```
+Since OpenMP is supported by this module, you can also submit a job
+requesting 64 MPI processes per node and 2 OpenMP threads per MPI
+process, using the job script below. Please note that in this case
+you need to specify ``--cpus-per-task``, ``OMP_NUM_THREADS``, and ``OMP_PLACES``,
+and that the value of ``--cpus-per-task`` is equal to 2x ``OMP_NUM_THREADS``,
+becasue AMD's simultaneous multithreading (SMT) is enabled.
+
+Please also note that it is necessary set the ``SRUN_CPUS_PER_TASK``
+environment variable in the job script so that ``srun`` can work as expected,
+see [SLURM documentation](https://slurm.schedmd.com/srun.html).
+```
+#!/bin/bash
+
+#SBATCH -A naissYYYY-X-XX
+#SBATCH -J my_vasp_job
+#SBATCH -t 01:00:00
+#SBATCH -p main
+
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=64
+#SBATCH --cpus-per-task=4
+
+module load PDC/23.12
+module load vasp/6.4.2-vanilla
+
+export OMP_NUM_THREADS=2
+export OMP_PLACES=cores
+
+export SRUN_CPUS_PER_TASK=$SLURM_CPUS_PER_TASK
+
+srun vasp
+```
 

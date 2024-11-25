@@ -15,11 +15,13 @@ keywords:
 
 ## General information
 
+FLEUR is a feature-full, freely available FLAPW (full-potential linearized augmented planewave) code, based on density-functional theory. More information at [https://www.flapw.de](https://www.flapw.de/).
+
 The FLEUR module can be loaded with
 
 ```
 ml PDC/<version>
-ml fleur/max7.0-cpeGNU-23.03
+ml fleur/max7.0-cpeGNU-23.12
 ```
 FLEUR input files are prepared in two steps. The first step is to prepare an input file containing the basic structural input for the system. The second step is to feed this input file to the input generator executable inpgen which then will produce the full set of FLEUR input files needed in order to run the main FLEUR executable fleur_MPI.
 
@@ -47,8 +49,8 @@ To run a FLEUR calculation as a batch job, the following example script will run
 #SBATCH --ntasks-per-node=128
 #SBATCH -t 00:10:00
 
-ml PDC/<version>
-ml fleur/max7.0-cpeGNU-23.03
+ml PDC/23.12
+ml fleur/max7.0-cpeGNU-23.12
 
 # Run first the input generator
 srun -n 1 inpgen -f input.file > inpgen.log
@@ -56,5 +58,5 @@ srun -n 1 inpgen -f input.file > inpgen.log
 # Run the parallel version of FLEUR
 srun fleur_MPI > out.log
 ```
-For reference see the FLEUR user guide and tutorials.
+For reference see the FLEUR [user guide and tutorials](https://www.flapw.de/MaX-7.0/documentation/userGuideOverview).
 
