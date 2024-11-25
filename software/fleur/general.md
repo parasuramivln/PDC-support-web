@@ -1,3 +1,5 @@
+FLEUR is a feature-full, freely available FLAPW (full-potential linearized augmented planewave) code, based on density-functional theory. More information at [https://www.flapw.de](https://www.flapw.de/).
+
 The FLEUR module can be loaded with
 
 ```
@@ -39,4 +41,4 @@ srun -n 1 inpgen -f input.file > inpgen.log
 # Run the parallel version of FLEUR
 srun fleur_MPI > out.log
 ```
-For reference see the FLEUR user guide and tutorials.
+For reference see the FLEUR [user guide and tutorials](https://www.flapw.de/MaX-7.0/documentation/userGuideOverview).

@@ -1,5 +1,4 @@
-Elk is an all-electron full-potential linearised augmented-planewave (FP-LAPW) code. Designed to be as developer friendly as possible so that new developments in the field of density functional theory (DFT) can be added quickly and reliably.
-http://elk.sourceforge.net/
+Elk is an all-electron full-potential linearised augmented-planewave (FP-LAPW) code [https://elk.sourceforge.net](https://elk.sourceforge.net). Designed to be as developer friendly as possible so that new developments in the field of density functional theory (DFT) can be added quickly and reliably.
 
 ## How to use
 
@@ -58,4 +57,4 @@ srun -n 16 elk > out.log
 echo "Script finished at `date` on `hostname`"
 ```
 
-For information on how to submit jobs on Dardel, see `Queueing jobs <https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html>`_ .
+For information on how to submit jobs on Dardel, see [Queueing jobs](https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html).

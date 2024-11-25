@@ -1,7 +1,8 @@
 The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic
 scale materials modelling, e.g. electronic structure calculations and
 quantum-mechanical molecular dynamics, from first principles.
-For more information see: http://vasp.at
+For more information see the VASP home page [https://vasp.at](https://vasp.at)
+and the [VASP wiki](https://www.vasp.at/wiki).
 
 # Licenses
 VASP is not free software and requires a software license.
@@ -12,7 +13,7 @@ of the e-mail address that you have listed in the VASP global portal.
 
 ## General observations
 - VASP is not helped by hyper-threading
-- Running on fewer than 128 tasks per node allocates more memory to each MPI task. This can in some cases improve performance and is necessary if your job crashes with an out-of-memory (OOM) error. Further information from the VASP wiki can be found at https://www.vasp.at/wiki/index.php/Memory_requirements and at https://www.vasp.at/wiki/index.php/Not_enough_memory.
+- Running on fewer than 128 tasks per node allocates more memory to each MPI task. This can in some cases improve performance and is necessary if your job crashes with an out-of-memory (OOM) error. Further information can be found on the VASP wiki pages [Memory_requirements](https://www.vasp.at/wiki/index.php/Memory_requirements) and [Not_enough_memory](https://www.vasp.at/wiki/index.php/Not_enough_memory).
 
 ## Parallelization settings
 Parallelization over k-points is recommended when it is possible to do so. In practice,
@@ -22,14 +23,15 @@ can run on 15 nodes with KPAR=15. NCORE determines the number of cores that work
 individual orbital. A recommended value for NCORE is 16.
 
 ## How to choose the number of cores
-Rule of thumb:
+### Rule of thumb
 - 1 atom per core = Good
 - 0.5 atom per core = Could work (but bad efficiency and time wasted)
 - <0.5 atom per core = Don't do it
-Explanation of above:
-The number of bands is more important than the number of atoms, but typically
+### Explanation of above
+- The number of bands is more important than the number of atoms, but typically
 you have about 4 bands/atom in VASP.
-To choose a good number of cores, you can use this checklist:
+
+### Checklist:
 - Check how many you have in the calculation. Let's call this "NB".
 - Cores = NB is best you can do.
 - For better efficiency, typically 90%+, aim for at least 4 bands per core, i.e. Cores = NB/4
@@ -50,32 +52,29 @@ than 501 (=3x167).
 - **vasp-noncollinear** : VASP for noncollinear and spin-orbit coupling calculations.
 
 ## BEEF functionals
-This version of VASP has been compiled with support for BEEF functionals.
-See https://confluence.slac.stanford.edu/display/SUNCAT/BEEF+Functional+Software.
+This version of VASP has been compiled with support for [BEEF functionals](https://confluence.slac.stanford.edu/display/SUNCAT/BEEF+Functional+Software).
 
-## VASP TST Tools
-The VTST extension to VASP enables finding saddle points and evaluating
+## VASP VTST Tools
+The [VTST](http://theory.cm.utexas.edu/vtsttools) extension to VASP enables finding saddle points and evaluating
 transition state theory (TST) rate constants with VASP.
-Full documentation can be found at http://theory.cm.utexas.edu/vtsttools/
 
 ## VTST Scripts
-A number of Perl scripts are available to perform common tasks to
+The [VTST Perl scripts](https://theory.cm.utexas.edu/vtsttools/scripts.html) are available to perform common tasks to
 help with VASP calculations, and particularly with transition state finding.
-These are documented at http://theory.cm.utexas.edu/vtsttools/scripts.html and the path to the scripts is added to your PATH variable
-when you load the vasp/5.4.4 module.
 
 ## VASPsol
-VASPsol is an implementation of an implicit solvation model that describes the effect of electrostatics, cavitation, and dispersion on the interaction between a solute and solvent.
-Full documentation on how to use VASPsol can be at https://github.com/henniggroup/VASPsol/blob/master/docs/USAGE.md. In short:
+[VASPsol](https://github.com/henniggroup/VASPsol) is an implementation of an implicit solvation model that describes the effect of electrostatics, cavitation, and dispersion on the interaction between a solute and solvent.
+Full documentation on how to use [VASPsol documentation](https://github.com/henniggroup/VASPsol/blob/master/docs/USAGE.md).
+### Short how to do
 - Do a vacuum calculation for your system first and save the wavefunction file WAVECAR by specifying LWAVE = .TRUE. in the INCAR file.
 - Start the solvation calculation from the vacuum WAVECAR, specify ISTART = 1 in the INCAR file.
 - The solvation parameters are read from the INCAR file.
 - In the simplest case the only parameter that need to be set is the solvation flag LSOL = .TRUE.
 
 ## Potential files and vdW kernel
-Projector augmented wave (PAW) potentials can be found at /pdc/software/23.12/other/vasp/potpaw-64/
+Projector augmented wave (PAW) potentials can be found at ``/pdc/software/23.12/other/vasp/potpaw-64/``
 
-To use one of the nonlocal vdW functionals one needs to put the file vdw_kernel.bindat into the run directory (along with INCAR, POSCAR, POTCAR and KPOINTS). This file can be found at /pdc/software/23.12/other/vasp/vdw_kernel/vdw_kernel.bindat .
+To use one of the nonlocal vdW functionals one needs to put the file vdw_kernel.bindat into the run directory (along with INCAR, POSCAR, POTCAR and KPOINTS). This file can be found at ``/pdc/software/23.12/other/vasp/vdw_kernel/vdw_kernel.bindat``.
 
 ## Running Vasp
 Here is an example of a job script requesting 128 MPI processes per node:
@@ -105,8 +104,8 @@ and that the value of ``--cpus-per-task`` is equal to 2x ``OMP_NUM_THREADS``,
 becasue AMD's simultaneous multithreading (SMT) is enabled.
 
 Please also note that it is necessary set the ``SRUN_CPUS_PER_TASK``
-environment variable in the job script so that ``srun`` can work as expected.
-(See https://slurm.schedmd.com/srun.html)
+environment variable in the job script so that ``srun`` can work as expected,
+see [SLURM documentation](https://slurm.schedmd.com/srun.html).
 ```
 #!/bin/bash
 

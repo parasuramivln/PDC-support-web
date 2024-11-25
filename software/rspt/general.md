@@ -1,5 +1,4 @@
-The Relativistic Spin Polarized tookit (RSPt) is a code for electronic structure calculations based on the Full-Potential Linear Muffin-Tin Orbital (FP-LMTO) method.
-https://www.physics.uu.se/research/materials-theory/ongoing-research/code-development/rspt-main
+The Relativistic Spin Polarized tookit (RSPt) is a code for electronic structure calculations based on the Full-Potential Linear Muffin-Tin Orbital (FP-LMTO) method. For more information see [https://www.uu.se/en/department/physics-and-astronomy/research/materials-theory/code-development](https://www.uu.se/en/department/physics-and-astronomy/research/materials-theory/code-development).
 
 ## How to use
 
@@ -51,4 +50,4 @@ runs "srun -n 256 rspt" 1e-09 100
 echo "Script finished at `date` on `hostname`"
 ```
 
-For information on how to submit jobs on Dardel, see `Queueing jobs <https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html>`_.
+For information on how to submit jobs on Dardel, see [Queueing jobs](https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html).

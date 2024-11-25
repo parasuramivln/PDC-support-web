@@ -1,14 +1,13 @@
 Quantum ESPRESSO is an integrated suite of open-Source computer codes for
 electronic-structure calculations and materials modeling at the nanoscale. It
 is based on density-functional theory, plane waves, and pseudopotentials.  For
-more information see http://www.quantum-espresso.org and
-http://docs.snic.se/wiki/Quantum_Espresso.
+more information see [https://www.quantum-espresso.org](https://www.quantum-espresso.org).
 
 ## How to use
 
 # General considerations
 - You should **always** use the option ``disk_io=low``. With this option the wave functions are only written at the end of the job rather than after every intermediate step. This will substantially reduce the load on the disk systems and make your job run faster.
-- Also it is **NOT allowed** to run the phonon part of Quantum ESPRESSO (i.e.  ``ph.x``) on Dardel. This is because the phonon part does not seem to have the equivalent of ``disk_io=low`` and therefore creates more IO than the shared Lustre system can handle.
+- Also it is **NOT allowed** to run the phonon part of Quantum ESPRESSO (i.e.  ``ph.x``) on Dardel. This is because the phonon part does not seem to have the equivalent of ``disk_io=low`` and therefore creates more IO than the shared Lustre file system can handle.
 
 ## Running Quantum ESPRESSO
 To use this module do

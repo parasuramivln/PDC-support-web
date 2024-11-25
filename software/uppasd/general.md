@@ -1,5 +1,4 @@
-The Uppsala Atomistic Spin Dynamics (UppASD) software package is a simulation suite to study magnetization dynamics by means of the atomistic version of the Landau-Lifshitz-Gilbert (LLG) equation.
-https://github.com/UppASD/UppASD
+The Uppsala Atomistic Spin Dynamics (UppASD) software package is a simulation suite to study magnetization dynamics by means of the atomistic version of the Landau-Lifshitz-Gilbert (LLG) equation. For more information see [https://github.com/UppASD/UppASD](https://github.com/UppASD/UppASD).
 
 ## How to use
 
@@ -13,10 +12,10 @@ ml uppasd/6.0.2-cpeGNU-23.12
 ```
 The binary is ``sd``
 Examples are provided in ``$EBROOTUPPASD/examples``
-The code is documented in the `UppASD manual <https://uppasd.github.io/UppASD-manual>`_ and in technical notes in the directory ``$UPPASD_DOCS``.
-A tutorial with examples and exercises on atomistic spin-dynamics are contained in the `UppASD tutorial <https://uppasd.github.io/UppASD-tutorial>`_.
+The code is documented in the [UppASD manual](https://uppasd.github.io/UppASD-manual) and in technical notes in the directory ``$UPPASD_DOCS``.
+A tutorial with examples and exercises on atomistic spin-dynamics are contained in the [UppASD tutorial](https://uppasd.github.io/UppASD-tutorial).
 
-# Running on the batch system
+## Running on the batch system
 Sample job script to queue an UppASD job with 16 openMP threads on cores on the shared partition of Dardel
 
 ```
@@ -39,7 +38,7 @@ sd > out.log
 echo "Script finished at `date` on `hostname`"
 ```
 
-For information on how to submit jobs on Dardel, see `Queueing jobs <https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html>`_ .
+For information on how to submit jobs on Dardel, see [Queueing jobs](https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html).
 
 ## User Graphic Interface
 A `Python` based `QT` GUI for the code is available at ``$EBROOTUPPASD/ASD_GUI``.
@@ -47,6 +46,8 @@ This allows for:
 - Visualization of outputs via `VTK`.
 - Plotting of several quantities via integrated `Matplotlib` functionalities.
 - Automatic generation of input files for `UppASD`.
+
+The output from UppASD simulations are supported by the [SpinView](https://mxjk851.github.io/SpinView/) interactive visual analysis tool for multi-scale computational magnetism.
 
 ## Tools for preprocessing and postprocessing
 A collection of scripts for preprocessing and postprocessing of UppASD input and output files can be found in ``$EBROOTUPPASD/ASD_Tools``.

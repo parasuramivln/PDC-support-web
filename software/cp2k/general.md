@@ -1,4 +1,4 @@
-CP2K is a program to perform atomistic and molecular simulations of solid state, liquid, molecular, and biological systems. For more information please visit: http://www.cp2k.org
+CP2K is a program to perform atomistic and molecular simulations of solid state, liquid, molecular, and biological systems. For more information please visit [https://www.cp2k.org](https://www.cp2k.org).
 
 ## How to use
 
@@ -49,8 +49,7 @@ export OMP_STACKSIZE=256M
 ulimit -Ss unlimited
 ```
 to the job script.
-For the CP2K benchmark case
-`H2O-dft-ls.NREP4.inp <https://github.com/cp2k/cp2k/blob/master/benchmarks/QS_DM_LS/H2O-dft-ls.NREP4.inp>`_
+For the CP2K benchmark case [H2O-dft-ls.NREP4.inp](https://github.com/cp2k/cp2k/blob/master/benchmarks/QS_DM_LS/H2O-dft-ls.NREP4.inp)
 the optimal setting for running on 8 nodes on Dardel is
 
 ```
@@ -103,7 +102,6 @@ The executables for Dardel GPU nodes have been built with backend for AMD GPUs, 
 
 To load the CP2K module
 
-.. code-block:: text
 ```
 ml PDC/23.12
 ml cp2k/2024.3-cpeGNU-23.12-gpu
@@ -124,8 +122,8 @@ sbatch jobscriptCP2K.sh
 Please consult the official CP2K documentation for more details
 https://www.cp2k.org/
 
-# Known issue
+## Known issue
 If geometry optimization got stuck in first optimization step, consider adding
 ``PREFERRED_DIAG_LIBRARY SL``
 in the ``&GLOBAL`` section.
-See https://github.com/cp2k/cp2k/issues/1696 for details.
+See [https://github.com/cp2k/cp2k/issues/1696](https://github.com/cp2k/cp2k/issues/1696) for details.
