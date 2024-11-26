@@ -16,10 +16,9 @@ keywords:
 
 ## General information
 
-Sparse Fast Fourier Transform (SpFFT) is A 3D FFT library for sparse frequency domain data written in C++ with support for MPI, OpenMP, CUDA and ROCm. For more information see https://github.com/eth-cscs/SpFFT.
+Sparse Fast Fourier Transform (SpFFT) is A 3D FFT library for sparse frequency domain data written in C++ with support for MPI, OpenMP, CUDA and ROCm. For more information see the [SpFFT homepage](https://github.com/eth-cscs/SpFFT).
 
 ## How to use
-
 You can check available SpFFT modules using
 ml spider heffte
 For example, load the module for the SpFFT library 1.1.0 with GPU backend
