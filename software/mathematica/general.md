@@ -2,10 +2,10 @@ Mathematica is an application for scientific calculation and visualization featu
 **Mathematica is licensed software. In order to use Mathematica you need a license.**
 
 # External links
-[Wolfram Mathematica website](http://http://www.wolfram.com/mathematica/)
-[Wolfram learning resources](https://www.wolfram.com/wolfram-u)
-[Mathematica 15-minute video tutorial](https://wolfram.com/wolfram-u/courses/wolfram-language/hands-on-start-to-mathematica-wl005/)
-[Mathematica online course with live Q&A](https://www.wolfram.com/wolfram-u/courses/wolfram-language/mathematica-training-tutorials-hos)
+- [Wolfram Mathematica website](http://http://www.wolfram.com/mathematica/)
+- [Wolfram learning resources](https://www.wolfram.com/wolfram-u)
+- [Mathematica 15-minute video tutorial](https://wolfram.com/wolfram-u/courses/wolfram-language/hands-on-start-to-mathematica-wl005/)
+- [Mathematica online course with live Q&A](https://www.wolfram.com/wolfram-u/courses/wolfram-language/mathematica-training-tutorials-hos)
 
 ## How to use
 
@@ -45,7 +45,7 @@ ssh -X nid001015
 and then start Mathematica with
 ```
 ml PDC/<version>
-ml mathematica/13.0.1
+ml mathematica/14.0.0
 mathematica
 ```
 In case you do not need a full node with 128 cores, you could request
@@ -59,7 +59,25 @@ salloc -n 24 -t 1:00:00 -A pdc.staff -p shared
 ## Running parallel batch jobs
 You can also submit parallel workflows to the SLURM queueing system.
 The following job script allocates 16 cores on Dardel and runs one Mathematica
-program. Mathematica will parallelize the computation over different cores of the node.
+program.
+```
+#!/bin/bash
+
+#SBATCH -A pdc.staff
+#SBATCH -J ker
+#SBATCH -t 01:00:00
+#SBATCH -p shared
+#SBATCH -c 16
+
+# load the Mathematica module
+ml PDC/23.12
+ml mathematica/14.0.0
+
+# Run Mathematica with the text script <routine name>.m
+math -script ker.m
+
+```
+Mathematica will parallelize the computation over different cores of the node.
 Update the SLURM directives to set your project ID and
 the number of nodes and hours that you wish to allocate,
 and save the script as ``jobscriptMathematica.sh``.
