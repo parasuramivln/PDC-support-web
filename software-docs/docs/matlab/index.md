@@ -64,7 +64,7 @@ cores in the shared partition. These cores are shared with other users,
 with the amount of memory provided proportional to the number of cores
 awarded.
 ```
-salloc -n 24 -t 1:00:00 -A pdc.staff -p shared
+salloc -c 24 -t 1:00:00 -A pdc.staff -p shared
 ```
 In the following example, a parallel pool of 24 workers is opened and
 a function, parallel_example (described further below), is called
@@ -105,7 +105,7 @@ program.
 #SBATCH -A naissYYYY-X-XX
 #SBATCH -J myjob
 #SBATCH -p shared
-#SBATCH -n 16
+#SBATCH -c 16
 #SBATCH -t 10:00:00
 
 # Load the MATLAB module
