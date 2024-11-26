@@ -55,7 +55,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 | [Libxc](libxc/index.md) | Dardel/cpe23.12 | 6.2.2 |
 | [Linaro-forge](linaro-forge/index.md) | Dardel/cpe23.12 | 24.0 |
 | [Mathematica](mathematica/index.md) | Dardel/cpe23.12 | 14.0.0 |
-| [Matlab](matlab/index.md) | Dardel/cpe23.12 | r2024a |
+| [Matlab](matlab/index.md) | Dardel/cpe23.12 | r2024a, r2024b |
 || Dardel/cpe23.03 | r2024a |
 | [Mpi4py](mpi4py/index.md) | Dardel/cpe23.12 | 3.1.6 |
 | [Namd](namd/index.md) | Dardel/cpe23.03 | 3.06b, 2.14 |
