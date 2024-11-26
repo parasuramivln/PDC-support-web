@@ -1,20 +1,24 @@
 MPI for Python (mpi4py) provides bindings of the Message Passing Interface
 (MPI) standard for the Python programming language, allowing any Python
-program to exploit multiple processors.
-At PDC, mpi4py is installed into conda environments available through
-Anaconda modules for both Python2 and Python3.
+program to exploit multiple processors. For more information see the
+[mpi4py homepage](https://mpi4py.readthedocs.io).
 
+For an introduction to parallel programming in Python, see the lesson
+[Parallel programming](https://aaltoscicomp.github.io/python-for-scicomp/parallel/)
+in the course
+[Python for Scientific Computing](https://aaltoscicomp.github.io/python-for-scicomp/).
+
+For mpi4py, see also the blog posts
+[mpi4py (part 1)](https://www.kth.se/blogs/pdc/2019/08/parallel-programming-in-python-mpi4py-part-1) and
+[mpi4py (part 2)](https://www.kth.se/blogs/pdc/2019/11/parallel-programming-in-python-mpi4py-part-2).
 
 ## How to use
-
-MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard
-for the Python programming language, allowing any Python program to exploit multiple processors.
-This is version 3.1.3 built with ggc11.2 and python3.8.
-# To load the module
-
+To load an mpi4py module
 ```
 ml PDC/<version>
 ml mpi4py/3.1.4-py39
-# To show info on what path and environment variables are set by the module
+```
+To show info on what path and environment variables are set by the module
+```
 ml show mpi4py/3.1.4-py39
 ```
