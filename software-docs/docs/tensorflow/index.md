@@ -9,25 +9,25 @@ keywords:
 
 | Resource | Version |
 |---|---|
+| Dardel/cpe23.12 | 2.12 |
 | Dardel/cpe23.03 | 2.12 |
 
 ## General information
 
-TensorFlow™ is an open source software library for machine learning, deep learning and other numerical computations using data flow graphs.
+TensorFlow™ is an open source software library for machine learning, deep learning
+and other numerical computations using data flow graphs. For more information see
+the [TensorFlow homepage](https://www.tensorflow.org/).
 
 ## How to use
-
-
-# Instructions for using Tensorflow at PDC
-Tensorflow 2.10 is available as a singularity container at PDC.
-The container includes TensorFlow 2.10 with support for
-AMD GPUs using Rocm-5.4.
+Tensorflow 2.12 is available as a singularity container at PDC.
+The container includes TensorFlow 2.12 with support for
+AMD GPUs using Rocm-5.6.
 In order to run the Tensorflow container, first allocate
 a GPU node. Then, load the PDC and the singularity
 modules.
 ```
 ml add PDC
-ml add singularity/3.10.4-cpeGNU-22.06
+ml add singularity/4.1.1-cpeGNU-23.12
 ```
 PDC containers are placed at */pdc/software/sing_hub**.
 They can also be reached by invoking *PDC_SHUB*.
@@ -37,7 +37,7 @@ ls $PDC_SHUB
 Now that singularity is loaded, we can for example open a shell session
 within the container with:
 ```
-singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.4-tf2.10
+singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.6-tf2.12
 ```
 The **--rocm** flag tells singularity to use the GPUs, and the **-B** flag tells singularity to
 mount */cfs/klemming* into the container, thereby, making it possible to access files placed outside
@@ -51,7 +51,7 @@ from the terminal.
 Tensorflow models can also be run directly without the need of opening a shell in the container using
 the following command:
 ```
-singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.4-tf2.10 python3 <TF_script.py>
+singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.6-tf2.12 python3 <TF_script.py>
 ```
 
 ## Installing additional Python packages
@@ -60,6 +60,7 @@ Users cannot write into singularity containers, and therefore,
 users cannot install additional python packages directly into the container.
 So if you need additional python packages, you can add them via one
 of these two following methods:
+##
 - Download the Tensorflow singularity container to your local machine where you have a local
 installation of singularity. Then, update the image there installing the packages
 needed, and afterwards upload the image to Dardel again.
