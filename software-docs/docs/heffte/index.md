@@ -14,10 +14,9 @@ keywords:
 
 ## General information
 
-The Highly Efficient FFT for Exascale (HeFFTe) library delivers algorithms for distributed fast-Fourier transforms in on a heterogeneous systems, targeting the upcoming exascale machines. For more information visit https://icl-utk-edu.github.io/heffte
+The Highly Efficient FFT for Exascale (HeFFTe) library delivers algorithms for distributed fast-Fourier transforms in on a heterogeneous systems, targeting the upcoming exascale machines. For more information see the [HeFFTe homepage](https://icl-utk-edu.github.io/heffte).
 
 ## How to use
-
 You can check available HeFFTe modules using
 ```
 ml spider heffte
