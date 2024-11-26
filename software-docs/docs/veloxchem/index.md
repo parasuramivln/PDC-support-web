@@ -23,7 +23,7 @@ For more information see: https://veloxchem.org/
 
 This is a release candidate of VeloxChem 1.0.
 For a list of features in VeloxChem, see
-`VeloxChem homepage <https://veloxchem.org/docs/intro.html>`_.
+[VeloxChem homepage](https://veloxchem.org/).
 
 # Running VeloxChem
 Here is an example of a job script

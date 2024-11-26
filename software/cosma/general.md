@@ -1,4 +1,4 @@
-COSMA is a parallel, high-performance, GPU-accelerated, matrix-matrix multiplication algorithm that is communication-optimal for all combinations of matrix dimensions, number of processors and memory sizes, without the need for any parameter tuning. For more information see https://github.com/eth-cscs/COSMA.
+COSMA is a parallel, high-performance, GPU-accelerated, matrix-matrix multiplication algorithm that is communication-optimal for all combinations of matrix dimensions, number of processors and memory sizes, without the need for any parameter tuning. For more information see the [COSMA homepage](https://github.com/eth-cscs/COSMA).
 
 ## How to use
 
