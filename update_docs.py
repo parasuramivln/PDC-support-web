@@ -32,13 +32,9 @@ def check_mkdocs(python_exe):
 
 def check_hugo():
     print("Checking Hugo ...")
-<<<<<<< HEAD
-    get_command_output(["hugo", "-h"])
-=======
     if shutil.which("hugo") is None:
         print("*** Hugo was not found!")
         exit(1)
->>>>>>> 5383564 (fixed for update on KTH provided pages)
     print("OK\n")
 
 def check_git_status():
