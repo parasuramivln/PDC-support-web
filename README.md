@@ -65,3 +65,6 @@ and navigate to http://127.0.0.1:8000/
 
 In order to publish these documents to the official PDC webportal you need to have those specific access rights to KTH ITA.
 Publishing is achieve by running command `make public` 
+This folder also contains the file `index_redirect.html` which is a HTML to redirect traffic from the KTH polopoly sites
+to the actual documentation written here.
+ 

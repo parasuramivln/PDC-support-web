@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import subprocess
+import shutil
 import time
 import sys
 import re
@@ -8,7 +9,7 @@ from datetime import datetime
 
 def print_help_and_exit():
     script_name = Path(__file__).name
-    print("\n*** Usage: python3 {} (software | support)\n".format(script_name))
+    print("\n*** Usage: python3 update_docs.py\n")
     sys.exit(1)
 
 def get_command_output(command, exit_after_failure=True):
@@ -31,7 +32,13 @@ def check_mkdocs(python_exe):
 
 def check_hugo():
     print("Checking Hugo ...")
+<<<<<<< HEAD
     get_command_output(["hugo", "-h"])
+=======
+    if shutil.which("hugo") is None:
+        print("*** Hugo was not found!")
+        exit(1)
+>>>>>>> 5383564 (fixed for update on KTH provided pages)
     print("OK\n")
 
 def check_git_status():
@@ -144,7 +151,7 @@ def main(target, html_path):
     afs_path_to_target_tmp = afs_path_to_htdocs + "/{}-tmp".format(target)
 
     # permanent path for storing the pages
-    afs_path_to_target_latest = afs_path_to_htdocs + "/{}".format(target)
+    afs_path_to_target_latest = afs_path_to_htdocs + "/{}-latest".format(target)
 
     # temporary path for storing old built pages
     afs_path_to_target_old = afs_path_to_htdocs + "/{}-old".format(target)
@@ -186,4 +193,4 @@ def main(target, html_path):
     print("Please do not forget to push your changes to central repository.")
 
 if __name__ == "__main__":
-    main("docs", "web/public")
+    main("doc", "web/public")
