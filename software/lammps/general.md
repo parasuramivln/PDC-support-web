@@ -1,15 +1,15 @@
 Lammps is a molecular dynamics simulator which can model particles at various scales and is distributed by Sandia National Laboratories.
-For more information see: https://www.lammps.org/
+For more information see the [LAMMPS homepage](https://www.lammps.org).
 
 ## How to use
 
 The LAMMPS module can be loaded with
 ```
 ml PDC/<version>
-ml lammps/15Sep2022-cpeGNU-22.06
+ml lammps/2Aug2023-cpeGNU-23.12
 ```
 
-This will add the LAMMPS bin directory to your PATH, so that LAMMPS can be started with the command :code:`lmp_mpi` or :code:`lmp_omp`.
+This will add the LAMMPS bin directory to your PATH, so that LAMMPS can be started with the command `lmp_mpi` or `lmp_omp`.
 Below is an example batch script for a LAMMPS job:
 
 ```
@@ -30,13 +30,13 @@ Below is an example batch script for a LAMMPS job:
 #SBATCH --ntasks-per-node=128
 
 ml PDC/<version>
-ml lammps/20210310
+ml lammps/2Aug2023-cpeGNU-23.12
 
 # Run with the file infile as input and write to outfile
 srun lmp < infile > outfile
 ```
 
-This will run LAMMPS (:code:`lmp`) with 256 cores (2 nodes), and will read the input specified in :code:`infile` and write to :code:`outfile` in the directory the job was submitted. Submit the batch script with the :code:`sbatch` command, see also the `How to run jobs <https://www.pdc.kth.se/support/documents/run_jobs/job_scheduling.html>`_.
+This will run LAMMPS (`lmp`) with 256 cores (2 nodes), and will read the input specified in `infile` and write to `outfile` in the directory the job was submitted. Submit the batch script with the `sbatch` command, see also the [How to run jobs](https://www.pdc.kth.se/support/documents/run_jobs/job_scheduling.html).
 
-# More information
+## More information
 For more information, refer to the [LAMMPS manual](https://docs.lammps.org/Manual.html).
