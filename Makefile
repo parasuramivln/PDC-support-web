@@ -26,7 +26,6 @@ serve:
 	hugo server --source "web"
 
 public:
-	make build
 	python3 update_docs.py
 
 # Optional: Clean the site directory

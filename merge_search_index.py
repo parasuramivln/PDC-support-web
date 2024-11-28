@@ -28,3 +28,4 @@ with open(SOFTWARE_INDEX, 'w') as f:
     json.dump(merged_index, f, indent=4)
 with open(SUPPORT_INDEX, 'w') as f:
     json.dump(merged_index, f, indent=4)
+#-------------------------------------------------------------------------------

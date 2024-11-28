@@ -12,6 +12,7 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - attr_list
+  - pymdownx.magiclink
 nav:
   - Home: index.md
   - Site Map: site_map.md

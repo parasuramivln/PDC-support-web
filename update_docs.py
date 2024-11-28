@@ -6,12 +6,12 @@ import sys
 import re
 from pathlib import Path
 from datetime import datetime
-
+#-------------------------------------------------------------------------------
 def print_help_and_exit():
     script_name = Path(__file__).name
     print("\n*** Usage: python3 update_docs.py\n")
     sys.exit(1)
-
+#-------------------------------------------------------------------------------
 def get_command_output(command, exit_after_failure=True):
     try:
         output = subprocess.check_output(command, stderr=subprocess.STDOUT)
@@ -24,19 +24,19 @@ def get_command_output(command, exit_after_failure=True):
         else:
             return ""
     return output.decode("utf-8")
-
+#-------------------------------------------------------------------------------
 def check_mkdocs(python_exe):
     print("Checking mkDocs ...")
     get_command_output([python_exe, "-c", "import mkdocs"])
     print("OK\n")
-
+#-------------------------------------------------------------------------------
 def check_hugo():
     print("Checking Hugo ...")
     if shutil.which("hugo") is None:
         print("*** Hugo was not found!")
         exit(1)
     print("OK\n")
-
+#-------------------------------------------------------------------------------
 def check_git_status():
     print("Checking git status ...")
     output = get_command_output(["git", "status", "--porcelain"])
@@ -45,7 +45,7 @@ def check_git_status():
         print(output)
         sys.exit(1)
     print("OK\n")
-
+#-------------------------------------------------------------------------------
 def check_local_kerberos_ticket():
     print("Checking Kerberos ticket ...")
     ticket_found = False
@@ -62,7 +62,7 @@ def check_local_kerberos_ticket():
         sys.exit(1)
     print("{}@KTH.SE\n".format(kth_username))
     return kth_username
-
+#-------------------------------------------------------------------------------
 def select_kth_ubuntu_host(kth_username):
     print("Selecting KTH Shell server ...")
     avail_hosts = [
@@ -80,7 +80,7 @@ def select_kth_ubuntu_host(kth_username):
     else:
         print("\n*** Error: Could not find available KTH Shell server.\n")
         sys.exit(1)
-
+#-------------------------------------------------------------------------------
 def check_pdc_admins_membership(kth_username, kth_ubuntu_host):
     print("Checking www-pdc-admins membership ...")
     output = get_command_output([
@@ -98,20 +98,20 @@ def check_pdc_admins_membership(kth_username, kth_ubuntu_host):
                 kth_username))
         sys.exit(1)
     print("User {} is a member of www-pdc-admins\n".format(kth_username))
-
+#-------------------------------------------------------------------------------
 def check_forwarded_kerberos_ticket(kth_username, kth_ubuntu_host):
     print("Checking forwarded Kerberos ticket ...")
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "klist", "-Af"])
     time.sleep(0.2)
     print("OK\n")
-
+#-------------------------------------------------------------------------------
 def make_html():
     print("Making html (may take some time) ...")
     get_command_output(["make", "clean"])
     get_command_output(["make", "build"])
     print("done.\n")
-
+#-------------------------------------------------------------------------------
 def upload_html_files(kth_username, kth_ubuntu_host, html_path, afs_path_to_target):
     file_list = [
         str(x) for x in html_path.iterdir() if (x.is_file() or x.is_dir())
@@ -120,22 +120,22 @@ def upload_html_files(kth_username, kth_ubuntu_host, html_path, afs_path_to_targ
         ["scp", "-r"] + file_list +
         ["{}@{}:{}".format(kth_username, kth_ubuntu_host, afs_path_to_target)])
     time.sleep(0.2)
-
+#-------------------------------------------------------------------------------
 def move_folder(kth_username, kth_ubuntu_host, html_path, trash_path):
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "mv", "-f", html_path, trash_path])
     time.sleep(0.2)
-
+#-------------------------------------------------------------------------------
 def copy_folder(kth_username, kth_ubuntu_host, tmp_path, latest_path):
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "cp", "-r", tmp_path, latest_path])
     time.sleep(0.2)
-
+#-------------------------------------------------------------------------------
 def delete_folder(kth_username, kth_ubuntu_host, latest_path):
     get_command_output(
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "rm", "-rf", latest_path])
     time.sleep(0.2)
-
+#-------------------------------------------------------------------------------
 def main(target, html_path):
     print("Copying files from {} to {}".format(html_path, target))
 
@@ -187,6 +187,7 @@ def main(target, html_path):
     print("{} webpage has been updated at https://support.pdc.kth.se/{}".format(
         target.capitalize(), target))
     print("Please do not forget to push your changes to central repository.")
-
+#-------------------------------------------------------------------------------
 if __name__ == "__main__":
     main("doc", "web/public")
+#-------------------------------------------------------------------------------
