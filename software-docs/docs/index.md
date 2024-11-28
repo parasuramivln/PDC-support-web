@@ -58,7 +58,9 @@ PDC takes no responsibility for the correctness of results produced with the bin
 | [Matlab](matlab/index.md) | Dardel/cpe23.12 | r2024a, r2024b |
 || Dardel/cpe23.03 | r2024a |
 | [Mpi4py](mpi4py/index.md) | Dardel/cpe23.12 | 3.1.6 |
-| [Namd](namd/index.md) | Dardel/cpe23.03 | 3.06b, 2.14 |
+| [Namd](namd/index.md) | Dardel-GPU/cpe23.12.gpu | 3.0b-rocm |
+|| Dardel/cpe23.12 | 3.0b |
+|| Dardel/cpe23.03 | 3.06b, 2.14 |
 | [Nwchem](nwchem/index.md) | Dardel/cpe23.12 | 7.0.2 |
 | [Octopus](octopus/index.md) | Dardel/cpe23.12 | 14.0 |
 || Dardel/cpe23.03 | 14.0 |

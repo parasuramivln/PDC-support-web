@@ -1,4 +1,10 @@
 resources:
+  - resource: cpe23.12.gpu
+    versions:
+      - version: 3.0b-rocm
+  - resource: cpe23.12
+    versions:
+      - version: 3.0b
   - resource: cpe21.11
     versions:
       - version: 2.14
