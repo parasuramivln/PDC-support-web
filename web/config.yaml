@@ -5,18 +5,21 @@ title: "PDC Center for High Performance Computing"
 
 menu:
   main:
+    - name: "PDC"
+      url: "https://www.pdc.kth.se"
+      weight: 1
     - name: "Support"
       url: "/support/"
-      weight: 1
+      weight: 2
     - name: "Applications"
       url: "/applications"
-      weight: 2
+      weight: 3
     - name: "System statistics"
       url: "/stats"
-      weight: 3
+      weight: 4
     - name: "System status"
       url: "/status"
-      weight: 4
+      weight: 5
 
 markup:
   goldmark:
