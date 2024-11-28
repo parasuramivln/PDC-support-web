@@ -1,4 +1,4 @@
-GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. It provides extremely high performance compared to all other programs through custom algorithmic optimizations. More information on the [GROMACS homepage](https://www.gromacs.org).
+GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. It provides extremely high performance through custom algorithmic optimizations. More information on the [GROMACS homepage](https://www.gromacs.org).
 Several versions of GROMACS are installed at PDC. Generally, it is recommended to use the most recent version since it can be expected to be faster,
 more stable and less memory demanding.
 Information on how to run GROMACS on AMD GPU nodes of an HPE Cray EX cluster can be found in [How to run GROMACS efficiently on the LUMI supercomputer](https://zenodo.org/records/10683366).
@@ -8,9 +8,20 @@ Information on how to run GROMACS on AMD GPU nodes of an HPE Cray EX cluster can
 GROMACS is highly tuned for quite efficient use of HPC resources.
 Special assembly kernels make its core compute engine one of the fastest MD
 simulation programs.
-In order to use this module, you need to
+
+## How to user
+You can check for available GROMACS modules with
+```
+ml spider gromacs
+```
+
+For example, to load the module for GROMACS 2024.2/
 ```
 ml PDC/<version>
+ml gromacs/2024.2-cpeGNU-23.12
+```
+To see what environment variables are set when loading the module
+```
 ml gromacs/2024.2-cpeGNU-23.12
 ```
 Preprocessing input files (molecular topology, initial coordinates and
