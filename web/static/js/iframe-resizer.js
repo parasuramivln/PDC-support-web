@@ -24,3 +24,8 @@ function resizeIframe(iframe) {
         console.error('Iframe with ID ' + frameId + ' not found.');
     }
 }
+
+function toggleMenu() {
+    const nav = document.querySelector('nav ul');
+    nav.classList.toggle('open');
+}

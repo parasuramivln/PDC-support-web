@@ -48,7 +48,7 @@
     * [Authentication process details](login/ssh_login.md#authentication-process-details)
     * [In the login portal](login/ssh_login.md#in-the-login-portal)
     * [Log in to PDC resources](login/ssh_login.md#log-in-to-pdc-resources)
-    * [Users which do not have a SUPR account](login/ssh_login.md#users-which-do-not-have-a-supr-account)
+    * [Users which do not have a SUPR account](login/ssh_login.md#users-who-do-not-have-a-supr-account)
     * [Configuring ssh keys and kerberos login](login/ssh_login.md#configuring-ssh-keys-and-kerberos-login)
     * [Debugging](login/ssh_login.md#debugging)
 * [Generating SSH keys](login/ssh_keys.md)

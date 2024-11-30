@@ -1,10 +1,12 @@
 <header>
-    <div style="display: flex; align-items: center; justify-content: left; gap: 20px; height: 100px;">
+    <div style="display: flex; align-items: center; justify-content: flex-start; height: 100px;">
         <a href="https://www.kth.se/" style="margin-right: 20px;">
             <img src="https://www.kth.se/img/logotype-white-6f02f4554cba157ca832fa452bf242a4.svg" alt="KTH Logo" style="height: 70px;">
         </a>
-        <div>
-        <h2 style="color: white; margin: 10px; font-size: 30px;">{{ .Site.Title }}</h2>
+        <h2 style="color: white; margin: 0; font-size: 30px;">{{ .Site.Title }}</h2>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
                 {{ range .Site.Menus.main }}
@@ -12,6 +14,5 @@
                 {{ end }}
             </ul>
         </nav>
-        </div>
     </div>
 </header>

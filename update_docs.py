@@ -121,9 +121,10 @@ def upload_html_files(kth_username, kth_ubuntu_host, html_path, afs_path_to_targ
         ["{}@{}:{}".format(kth_username, kth_ubuntu_host, afs_path_to_target)])
     time.sleep(0.2)
 #-------------------------------------------------------------------------------
-def move_folder(kth_username, kth_ubuntu_host, html_path, trash_path):
+def move_folder(kth_username, kth_ubuntu_host, html_path, trash_path, exit_after_failure=True):
     get_command_output(
-        ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "mv", "-f", html_path, trash_path])
+        ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "mv", "-f", html_path, trash_path],
+        exit_after_failure)
     time.sleep(0.2)
 #-------------------------------------------------------------------------------
 def copy_folder(kth_username, kth_ubuntu_host, tmp_path, latest_path):
@@ -136,7 +137,7 @@ def delete_folder(kth_username, kth_ubuntu_host, latest_path):
         ["ssh", "{}@{}".format(kth_username, kth_ubuntu_host), "rm", "-rf", latest_path])
     time.sleep(0.2)
 #-------------------------------------------------------------------------------
-def main(target, html_path):
+def main(gittest, target, html_path):
     print("Copying files from {} to {}".format(html_path, target))
 
     # Path for source documentation
@@ -162,7 +163,8 @@ def main(target, html_path):
     check_pdc_admins_membership(kth_username, kth_ubuntu_host)
     check_forwarded_kerberos_ticket(kth_username, kth_ubuntu_host)
 
-    check_git_status()
+    if gittest:
+        check_git_status()
     make_html()
 
     time_string = datetime.now().isoformat(sep='T', timespec='microseconds')
@@ -174,7 +176,7 @@ def main(target, html_path):
     upload_html_files(kth_username, kth_ubuntu_host, html_path, afs_path_to_target_tmp)
 
     # Move current pages to old
-    move_folder(kth_username, kth_ubuntu_host, afs_path_to_target_latest, afs_path_to_target_old)
+    move_folder(kth_username, kth_ubuntu_host, afs_path_to_target_latest, afs_path_to_target_old, exit_after_failure=False)
 
     # Move new pages to current
     move_folder(kth_username, kth_ubuntu_host, afs_path_to_target_tmp, afs_path_to_target_latest)
@@ -189,5 +191,17 @@ def main(target, html_path):
     print("Please do not forget to push your changes to central repository.")
 #-------------------------------------------------------------------------------
 if __name__ == "__main__":
-    main("doc", "web/public")
+    gittest = True
+    if len(sys.argv) > 1:
+        for idx, arg in enumerate(sys.argv):
+            if arg == "-h":
+                print("Usage: create <command> ...\n")
+                print("\n-h")
+                print("Help")
+                print("\n-g")
+                print("Committed git repository is not needed")
+                sys.exit(0)
+            if arg == "-g":
+                gittest = False
+    main(gittest, "doc", "web/public")
 #-------------------------------------------------------------------------------
