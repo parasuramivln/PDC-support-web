@@ -67,6 +67,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 || Dardel/cpe23.03 | 14.0 |
 | [Openfoam](openfoam/index.md) | Dardel/cpe23.12 | 2406, 2312, 2012, 11, 10, 9, 7, 6 |
 | [Orca](orca/index.md) | Dardel/cpe23.12 | 6.0.0, 5.0.3, 5.0.4 |
+| [Paraview](paraview/index.md) | Dardel/cpe23.12 | 5.12.0 |
 | [Plumed](plumed/index.md) | Dardel/cpe23.12 | 2.9.0, 2.9.2 |
 | [Python](python/index.md) | Dardel/cpe23.12 | 2024.02-1 |
 | [Quantum-espresso](quantum-espresso/index.md) | Dardel/cpe23.12 | 7.3 |

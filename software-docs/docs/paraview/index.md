@@ -1,3 +1,19 @@
+---
+title: Information about paraview
+keywords:
+  - Tools
+  - Visualization
+---
+# Paraview
+
+## Installed versions
+
+| Resource | Version |
+|---|---|
+| Dardel/cpe23.12 | 5.12.0 |
+
+## General information
+
 Paraview uses a client/server model to do parallel visualisation, and has a flexible way to connect the client (which normally runs on  your local computer i.e. the one your keyboard is connected to) to the server (which can run in parallel on PDC machines).  
 For more information see: [http://www.paraview.org](http://www.paraview.org)
 

@@ -100,12 +100,14 @@ nav:
     - Fenics: fenics/index.md
     - Mathematica: mathematica/index.md
     - Matlab: matlab/index.md
+    - Paraview: paraview/index.md
     - R: r/index.md
     - Scalasca: scalasca/index.md
     - Score-p: score-p/index.md
     - Singularity: singularity/index.md
     - Vmd: vmd/index.md
   - Visualization:
+    - Paraview: paraview/index.md
     - Vmd: vmd/index.md
   - Misc:
     - Gromosxx: gromosxx/index.md
