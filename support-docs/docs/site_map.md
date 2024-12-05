@@ -39,6 +39,7 @@
         * [Apply via a SUPR account](getting_access/get_access.md#apply-via-a-supr-account)
         * [Apply via PDC webpage](getting_access/get_access.md#apply-via-pdc-webpage)
         * [Request class access](getting_access/get_access.md#request-class-access)
+* [Software Development Assistance](getting_access/dev_support.md)
 
 # How to Login
 

@@ -1,5 +1,9 @@
 # Software Development Assistance
 
+!!! Beta testing
+
+    Please note that the following description and service offering is currently in beta testing. This means we are actively testing the feature. At this time, applications for development assistance are not open, as we are exclusively inviting and testing this process with a select few projects.
+
 We are excited to offer time limited assistance to support your software development needs. Our goal is to help you develop software that is not only robust and reliable but also capable of running and scaling effectively on High-Performance Computing (HPC) infrastructure.
 
 ## A Collaborative Endeavor

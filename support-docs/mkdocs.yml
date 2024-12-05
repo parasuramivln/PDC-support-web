@@ -22,6 +22,7 @@ nav:
     - Introduction: basics/introduction.md
   - Requesting resources: 
     - Getting Access: getting_access/get_access.md
+    - Software Development Assistance: getting_access/dev_support.md
   - How to Login: 
     - How to log in with SSH keys: login/ssh_login.md
     - Generating SSH keys: login/ssh_keys.md
