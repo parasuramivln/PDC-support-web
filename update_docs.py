@@ -203,5 +203,5 @@ if __name__ == "__main__":
                 sys.exit(0)
             if arg == "-g":
                 gittest = False
-    main(gittest, "doc", "web/public")
+    main(gittest, "docs/doc", "web/public")
 #-------------------------------------------------------------------------------
