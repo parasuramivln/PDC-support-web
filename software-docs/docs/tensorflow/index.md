@@ -9,8 +9,7 @@ keywords:
 
 | Resource | Version |
 |---|---|
-| Dardel/cpe23.12 | 2.12 |
-| Dardel/cpe23.03 | 2.12 |
+| Dardel/cpe23.12 | 2.13 |
 
 ## General information
 
@@ -19,9 +18,9 @@ and other numerical computations using data flow graphs. For more information se
 the [TensorFlow homepage](https://www.tensorflow.org/).
 
 ## How to use
-Tensorflow 2.12 is available as a singularity container at PDC.
-The container includes TensorFlow 2.12 with support for
-AMD GPUs using Rocm-5.6.
+Tensorflow 2.13 is available as a singularity container at PDC.
+The container includes TensorFlow 2.13 with support for
+AMD GPUs using Rocm-5.7.
 In order to run the Tensorflow container, first allocate
 a GPU node. Then, load the PDC and the singularity
 modules.
@@ -37,7 +36,7 @@ ls $PDC_SHUB
 Now that singularity is loaded, we can for example open a shell session
 within the container with:
 ```
-singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.6-tf2.12
+singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.7-tf2.13-dev
 ```
 The **--rocm** flag tells singularity to use the GPUs, and the **-B** flag tells singularity to
 mount */cfs/klemming* into the container, thereby, making it possible to access files placed outside
@@ -51,7 +50,7 @@ from the terminal.
 Tensorflow models can also be run directly without the need of opening a shell in the container using
 the following command:
 ```
-singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.6-tf2.12 python3 <TF_script.py>
+singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.7-tf2.13-dev python3 <TF_script.py>
 ```
 
 ## Installing additional Python packages
@@ -71,3 +70,4 @@ Remember that if you install additional python packages outside the default pyth
 directories, you need to update the **PYTHONPATH** variable with the path where
 those new packages are before you run the container.
 
+When installing new packages it is advisable to add the condition `numpy==1.22.4` in order to prevent pip from upgrading the version of numpy in the container, which would cause compatibility problems.
