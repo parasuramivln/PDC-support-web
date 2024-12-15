@@ -70,4 +70,8 @@ Remember that if you install additional python packages outside the default pyth
 directories, you need to update the **PYTHONPATH** variable with the path where
 those new packages are before you run the container.
 
-When installing new packages it is advisable to add the condition `numpy==1.22.4` in order to prevent pip from upgrading the version of numpy in the container, which would cause compatibility problems.
+When installing new packages it is advisable to add the condition `numpy==1.22.4` to `pip install` in order to prevent pip from upgrading the version of numpy in the container, which would cause compatibility problems. Example:
+```
+pip install matplotlib numpy==1.22.4
+```
+

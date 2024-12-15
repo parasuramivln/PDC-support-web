@@ -88,8 +88,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 || Dardel-GPU/cpe23.12.gpu | 1.5.5 |
 | [Starccm+](starccm+/index.md) | Dardel/cpe23.12 | 19.06.008-dp, 19.04.007-dp, 19.02.013-dp, 19.02.009-dp, 19.02.009, 18.06.006-dp, 18.02.008-dp, 18.02.008, 17.06.008-dp, 17.06.008 |
 || Dardel/cpe23.03 | 19.02.009 |
-| [Tensorflow](tensorflow/index.md) | Dardel/cpe23.12 | 2.12 |
-|| Dardel/cpe23.03 | 2.12 |
+| [Tensorflow](tensorflow/index.md) | Dardel/cpe23.12 | 2.13 |
 | [Uppasd](uppasd/index.md) | Dardel/cpe23.12 | 6.0.2 |
 || Dardel/cpe23.03 | 6.0.2 |
 | [Vasp](vasp/index.md) | Dardel/cpe23.12 | 6.3.2-wannier90, 6.4.3-vanilla, 5.4.4-wannier90, 6.2.1-vanilla, 6.3.2-vanilla, 6.4.2-vanilla, 6.2.1-wannier90, 6.2.1-vtst-dftd4, 5.4.4-vanilla, 5.4.4-vtst |
