@@ -70,6 +70,7 @@ nav:
     - Elpa: elpa/index.md
     - Heffte: heffte/index.md
     - Mpi4py: mpi4py/index.md
+    - Pytorch: pytorch/index.md
     - Spfft: spfft/index.md
     - Spla: spla/index.md
     - Tensorflow: tensorflow/index.md

@@ -5,33 +5,38 @@ PyTorch provides two high-level features:
 
 
 ## How to use
-
-
-# Instructions for using pytorch at PDC
 PyTorch is installed as a singularity container at PDC.
-The container includes PyTorch 1.13.0 with support for
-AMD GPUs using Rocm-5.4.
+The container includes PyTorch 2.0.1 with support for
+AMD GPUs using Rocm-5.7.
 In order to run the PyTorch container, first allocate
 a GPU node. Then, load the PDC and the singularity
 modules.
+```
 ml add PDC
-ml add singularity/3.10.4-cpeGNU-22.06
+ml add singularity/4.1.1-cpeGNU-23.12
+```
 PDC containers are placed at */pdc/software/sing_hub**.
 They can also be reached by invoking *PDC_SHUB*.
+```
 ls $PDC_SHUB
+```
 Now that singularity is loaded, we can for example open a shell session
 within the container with:
-singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.4_ubuntu20.04_py3.8_pytorch
+singularity shell --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.7_ubuntu22.04_py3.10_pytorch_2.0.1
 The **--rocm** flag tells singularity to use the GPUs, and the **-B** flag tells singularity to
 mount */cfs/klemming* into the container, thereby, making it possible to access files placed outside
 it.
 After the command, a prompt like this will appear:
+```
 Singularity>
+```
 Which means that we are inside the container, and now we can use **python** to run our PyTorch scripts
 from the terminal.
 PyTorch models can also be run directly without the need of opening a shell in the container using
 the following command:
-singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.4_ubuntu20.04_py3.8_pytorch python3 <pytorch_script.py>
+```
+singularity exec --rocm -B /cfs/klemming /pdc/software/resources/sing_hub/rocm5.7_ubuntu22.04_py3.10_pytorch_2.0.1 python3 <pytorch_script.py>
+```
 
 ## Installing additional Python packages
 There are some restrictions regarding singularity on Dardel.
@@ -49,3 +54,7 @@ Remember that if you install additional python packages outside the default pyth
 directories, you need to update the **PYTHONPATH** variable with the path where
 those new packages are before you run the container.
 
+When installing new packages it is advisable to add the condition `numpy==1.21.2` to `pip install` in order to prevent pip from upgrading the version of numpy in the container, which would cause compatibility problems. Example:
+```
+pip install matplotlib numpy==1.21.2
+```

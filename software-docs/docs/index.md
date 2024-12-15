@@ -70,6 +70,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 | [Paraview](paraview/index.md) | Dardel/cpe23.12 | 5.12.0 |
 | [Plumed](plumed/index.md) | Dardel/cpe23.12 | 2.9.0, 2.9.2 |
 | [Python](python/index.md) | Dardel/cpe23.12 | 2024.02-1 |
+| [Pytorch](pytorch/index.md) | Dardel/cpe23.12 | 2.0.1 |
 | [Quantum-espresso](quantum-espresso/index.md) | Dardel/cpe23.12 | 7.3 |
 || Dardel/cpe23.03 | 7.2, 7.3 |
 | [R](r/index.md) | Dardel/cpe23.12 | 4.4.1, 4.1.2 |
