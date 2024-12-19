@@ -9,15 +9,16 @@ function loadPage(iframe) {
         urlParams = new URLSearchParams(window.location.search);
         section = urlParams.get('section');
         sub =  urlParams.get('sub');
+        fragment = window.location.hash;
         if (sub) {
             if (window.location.href.includes('/doc/support'))
                 part_url='/doc/support-docs/';
             if (window.location.href.includes('/doc/applications'))
                 part_url='/doc/software-docs/';
-            iframe.src = part_url + sub;    
+            iframe.src = part_url + sub + fragment;    
             }
         if (section)
-            iframe.src = section;
+            iframe.src = section + fragment;
         loaded=true;
         resizeIframe(iframe)
         }
