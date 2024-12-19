@@ -15,11 +15,16 @@ function loadPage(iframe) {
                 part_url='/doc/support-docs/';
             if (window.location.href.includes('/doc/applications'))
                 part_url='/doc/software-docs/';
-            iframe.src = part_url + sub + fragment;    
+            iframe.src = part_url + sub;    
             }
         if (section)
-            iframe.src = section + fragment;
+            iframe.src = section;
         loaded=true;
+        iframe.onload = function () {
+            if (fragment) {
+                iframe.contentWindow.location.hash = fragment;
+                }
+            };
         resizeIframe(iframe)
         }
     }
