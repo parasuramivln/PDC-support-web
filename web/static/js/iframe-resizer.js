@@ -9,7 +9,6 @@ function loadPage(iframe) {
         urlParams = new URLSearchParams(window.location.search);
         section = urlParams.get('section');
         sub =  urlParams.get('sub');
-        fragment = window.location.hash;
         if (sub) {
             if (window.location.href.includes('/doc/support'))
                 part_url='/doc/support-docs/';
@@ -20,11 +19,6 @@ function loadPage(iframe) {
         if (section)
             iframe.src = section;
         loaded=true;
-        iframe.onload = function () {
-            if (fragment) {
-                iframe.contentWindow.location.hash = fragment;
-                }
-            };
         resizeIframe(iframe)
         }
     }
@@ -34,6 +28,11 @@ function resizeIframe(iframe) {
         iframe.onload = function() {
             var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
             iframe.style.height = iframeDocument.body.scrollHeight + 'px';
+            fragment = window.location.hash;
+                        const targetElement = iframe.contentDocument.querySelector(fragment);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             };
         }
     else {
