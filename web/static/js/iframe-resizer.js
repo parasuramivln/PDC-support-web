@@ -29,7 +29,7 @@ function resizeIframe(iframe) {
             var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
             iframe.style.height = iframeDocument.body.scrollHeight + 'px';
             fragment = window.location.hash;
-                        const targetElement = iframe.contentDocument.querySelector(fragment);
+            targetElement = iframe.contentDocument.querySelector(fragment);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
