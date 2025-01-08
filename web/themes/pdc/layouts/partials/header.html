@@ -3,7 +3,10 @@
         <a href="https://www.kth.se/" style="margin-right: 20px;">
             <img src="https://www.kth.se/img/logotype-white-6f02f4554cba157ca832fa452bf242a4.svg" alt="KTH Logo" style="height: 70px;">
         </a>
-        <h2 style="color: white; margin: 0; font-size: 30px;">{{ .Site.Title }}</h2>
+        <div style="display: flex; flex-direction: column;">
+            <h2 style="color: white; margin: 0 0 5px 0; font-size: 30px;">{{ .Site.Title }}</h2>
+            <h3 style="color: white; margin: 0; font-size: 20px;">{{ .Site.Params.subtitle }}</h3>
+        </div>
     </div>
     <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
         <div class="hamburger" onclick="toggleMenu()">☰</div>

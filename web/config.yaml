@@ -1,7 +1,9 @@
 baseURL: "https://www.pdc.kth.se"
 languageCode: "en-us"
 theme: "pdc"
-title: "PDC Center for High Performance Computing"
+title: "User area"
+params:
+  subtitle: "PDC Center for High Performance Computing"
 
 menu:
   main:
