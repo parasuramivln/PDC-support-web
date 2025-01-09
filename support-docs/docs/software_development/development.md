@@ -252,38 +252,3 @@ ml PDC/23.12
 ml easybuild-user/4.9.1
 ml libxc/6.2.2-cpeGNU-23.12
 ```
-
-## References
-
-*HPE Cray user manuals and reference information*
-
-[The Cray programming environment (CPE)](https://www.hpe.com/us/en/collaterals/collateral.a50002303enw.hpe-cray-programming-environment-brochure.html?rpv=1635512706137/)
-
-[HPE Cray Programming Environment User Guide](https://internal.support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=a00115304en_us/)
-
-[HPE Cray reference information](https://support.hpe.com/connect/s/product?language=en_US&ismnp=0&l5oid=1013083813&kmpmoid=1013083815&cep=on&manualsAndGuidesFilter=66000006%2C66000002)
-
-[HPE Cray Clang C and C++ Quick Reference (13.0) (S-2179)](https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=a00119421en_us)
-
-[HPE Cray Fortran Reference Manual (13.0) (S-3901)](https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=a00119423en_us)
-
-[HPE Performance Analysis Tools User Guide](https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=a00114942en_us/)
-
-<!-- Additional references - consider to mention on other PDC webpage
-https://support.hpe.com/connect/s/product?language=en_US&ismnp=0&l5oid=1013083813&kmpmoid=1013083815&cep=on&manualsAndGuidesFilter=66000035 -->
-
-*References on AMD processors*
-
-[AMD Optimizing C/C++ and Fortran Compilers (AOCC)](https://developer.amd.com/amd-aocc/)
-
-<!-- Are these settings for MKL on AMD processor still available? -->
-
-[Using MKL efficiently](https://documentation.sigma2.no/jobs/mkl.html)
-
-<!-- This guide is on the EPYC Zen 1 CPU. Is there are a new document for Zen 2/3? -->
-
-[Best practice Guide AMD EPYC](https://prace-ri.eu/training-support/best-practice-guides/best-practice-guide-amd-epyc/)
-
-[AMD EPYC product line](https://www.amd.com/en/products/epyc)
-
-[AMD EPYC wiki page](https://en.wikipedia.org/wiki/Epyc)
