@@ -13,3 +13,7 @@ resources:
       - version: 3.3.3
       - version: 3.1.4
       - version: 3.2.2
+  - resource: cpe23.12
+    versions:
+      - version: 3.4.0
+      - version: 3.3.3

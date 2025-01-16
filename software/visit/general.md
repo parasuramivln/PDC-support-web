@@ -1,15 +1,23 @@
 
 # How to use VisIt on PDC machines
-VisIt is an open Source, interactive, scalable, visualization, animation and analysis tool.  VisIt contains a rich set of visualization features to enable users to view a wide variety of data including scalar and vector fields defined on two- and three-dimensional (2D and 3D) structured, adaptive and unstructured meshes. More information see
-https://wci.llnl.gov/simulation/computer-codes/visit/
-To see which versions of VisIt are installed  at PDC log into the machine and type
+VisIt is an open Source, interactive, scalable, visualization, animation and analysis tool.  VisIt contains a rich set of visualization features to enable users to view a wide variety of data including scalar and vector fields defined on two- and three-dimensional (2D and 3D) structured, adaptive and unstructured meshes. 
+
+For more information, visit
+[https://wci.llnl.gov/simulation/computer-codes/visit/](https://wci.llnl.gov/simulation/computer-codes/visit/
+)
+To view the versions of VisIt are installed  at PDC log into the machine and type
+```
 module avail visit
-We recommend using the latest version.
+```
+We recommend using the latest version.  
 
-## How to use
+!!! note load PDC module
+    Please note that the `PDC` module needs to be loaded before loading the `visit` module
+    
+# How to use
 
 
-# Install local client
+## Install local client
 Download and install the 3.2.2 client for your operating system from https://visit-dav.github.io/visit-website/releases-as-tables/. It is important that the client version matches the server version on the cluster.
 
 ## Configure client
