@@ -23,20 +23,24 @@ For more details, look at Ansys web page:
 ## Submitting a Fluent job on Dardel
 Before preparing your script, you need to make a journal file to give tasks to Fluent. It should be in the same directory as your job subbmission script. A sample journal file can be found below
 ```
-# -----------------------------------------------------------
+; -----------------------------------------------------------
+;SAMPLE JOURNAL FILE
 
-## # SAMPLE JOURNAL FILE
-# read case file (*.cas) that had previously been prepared file/read-case fluent.cas
-# read data file (*.dat) in case you are starting simulation from a saved file
-# comment it if you start from zero
+;read case file (*.cas) that had previously been prepared file/read-case fluent.cas
+
+;read data file (*.dat) in case you are starting simulation from a saved file
+;comment it if you start from zero
 file/read-data mycase.dat
-# run 10 iterations
+
+;run 10 iterations
 solve/iterate 10
-# write data
+
+;write data
 file/write-data results.dat
-# exit fluent
+
+;exit fluent
 exit yes
-# ------------------------------------------------------------
+; ------------------------------------------------------------
 ```
 Then you can use the following script for running Ansys/Fluent on Dardel:
 ```
