@@ -11,8 +11,8 @@ python -V
 # Miniconda
 Python has a very large number of optional packages for
 large-scale data processing and scientific computing
-which are not available in the default system Python.
-which is installed as modules on Dardel.
+which are not available in the default system python.
+
 To list available Miniconda modules, type:
 ```
 $ ml PDC/<version>
@@ -24,7 +24,7 @@ For example, to load Miniconda version 2024.07.1 type:
 $ ml miniconda3/24.7.1-0-cpeGNU-23.12
 ```
 
-After loading an miniconda module, the Python version can be printed by:
+After loading a miniconda module, the Python version can be printed by:
 ```
 $ python --version
 Python 3.12.0
@@ -51,6 +51,30 @@ $ source conda.init.sh
 ```
 The base environment will be activated, as indicated by ``(base)`` in front of your
 bash prompt.
+
+A sample ``conda.init.sh`` file can be found below:
+
+```
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('//pdc/software/23.12/eb/software/miniconda3/24.7.1-0-cpeGNU-23.12/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/pdc/software/23.12/eb/software/miniconda3/24.7.1-0-cpeGNU-23.12/etc/profile.d/conda.sh" ]; then
+        . "/pdc/software/23.12/eb/software/miniconda3/24.7.1-0-cpeGNU-23.12/etc/profile.d/conda.sh"
+    else
+        export PATH="/pdc/software/23.12/eb/software/miniconda3/24.7.1-0-cpeGNU-23.12/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+```
+
+!!! Attention
+
+    If the version of the PDC module or the miniconda3 are changed, please update the conda.init.sh file accordingly.
 
 ## Creating your own Python environment
 If you create your own conda environment you would have full control and
@@ -141,11 +165,14 @@ then 'conda activate ...' (see example below)*.
 
 ## Create your own environment
 We recommend that you create a ``~/.condarc`` file with the following lines:
+```
 pkgs_dirs:
 - /cfs/klemming/<project>/username/conda-dirs/pkgs
 envs_dirs:
 - /cfs/klemming/<project>/username/conda-dirs/envs
-Remember to replace ``<project>`` by your project direction and ``username`` by your username.
+```
+Remember to replace ``<project>`` by your project directory and ``username`` by your username.
+
 Then you can create your own conda environment by the following command.
 ```
 $ mkdir -p /cfs/klemming/<project>/username/conda-dirs/pkgs
