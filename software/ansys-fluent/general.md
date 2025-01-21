@@ -14,7 +14,7 @@ module avail fluent
 to list all available versions and make sure that the correct version is loaded in the job script. If the version using which the .cas file was created can't be found in the list of installed versions, please contact PDC (support@pdc.kth.se).
 
 For more details, look at Ansys web page:
-http://www.ansys.com/
+[http://www.ansys.com/](http://www.ansys.com/)
 
 
 # How to use
