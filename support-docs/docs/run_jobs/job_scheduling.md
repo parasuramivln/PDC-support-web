@@ -117,9 +117,9 @@ The cores or memory that is the largest for the job will dictate what is needed.
 
 | Parameter | Description |
 | --- | --- |
-| -n [tasks] | Allocates ntasks |
-| --cpus-per-task=[cores] | Allocates physical [cores]=ntasks*cpu-per-task. (Default: cpus-per-task=1) |
-| --mem=[RAM in Mbytes] | The max amount of RAM allocated for your job |
+| `-n [tasks]` | Allocates ntasks |
+| `--cpus-per-task=[cores]` | Allocates physical [cores]=ntasks*cpu-per-task. (Default: cpus-per-task=1) |
+| `--mem=[RAM in Mbytes]` | The max amount of RAM allocated for your job |
 
 **Example 1:** On a shared node with 128 cores, 256 Gbytes RAM.
 In this case you will receive 20 cores, 40 GBytes RAM
@@ -134,5 +134,5 @@ In this case you will receive 20 cores, 40 GBytes RAM. The amount of cores you a
 ```default
 #SBATCH  -p shared
 #SBATCH  --ntasks=2
-#SBATCH --mem=40000
+#SBATCH --mem=40G
 ```
