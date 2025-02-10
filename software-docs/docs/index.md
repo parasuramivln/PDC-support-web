@@ -26,7 +26,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 | [Abaqus](abaqus/index.md) | Dardel/cpe23.12 | 2024, 2021, 2019 |
 | [Abinit](abinit/index.md) | Dardel/cpe23.12 | 10.0.5, 9.10.3 |
 || Dardel/cpe23.03 | 9.10.3 |
-| [Ansys-fluent](ansys-fluent/index.md) | Dardel/cpe23.12 | 23.1, 21.2 |
+| [Ansys-fluent](ansys-fluent/index.md) | Dardel/cpe23.12 | 24.2, 23.1, 21.2 |
 | [Comsol](comsol/index.md) | Dardel/cpe23.12 | 6.3, 6.2, 6.1, 6.0, 5.6 |
 | [Cosma](cosma/index.md) | Dardel/cpe23.12 | 2.6.6 |
 || Dardel/cpe23.03 | 2.6.6 |
@@ -94,5 +94,6 @@ PDC takes no responsibility for the correctness of results produced with the bin
 || Dardel/cpe23.03 | 6.0.2 |
 | [Vasp](vasp/index.md) | Dardel/cpe23.12 | 6.3.2-wannier90, 6.4.3-vanilla, 5.4.4-wannier90, 6.2.1-vanilla, 6.3.2-vanilla, 6.4.2-vanilla, 6.2.1-wannier90, 6.2.1-vtst-dftd4, 5.4.4-vanilla, 5.4.4-vtst |
 | [Veloxchem](veloxchem/index.md) | Dardel/cpe23.12 | 1.0rc3 |
+| [Visit](visit/index.md) | Dardel/cpe23.12 | 3.4.0, 3.3.3 |
 | [Vmd](vmd/index.md) | Dardel/cpe23.03 | 1.9.3 |
 | [Wannier90](wannier90/index.md) | Dardel/cpe23.12 | 3.1.0 |

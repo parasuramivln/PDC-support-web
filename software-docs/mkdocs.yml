@@ -106,9 +106,11 @@ nav:
     - Scalasca: scalasca/index.md
     - Score-p: score-p/index.md
     - Singularity: singularity/index.md
+    - Visit: visit/index.md
     - Vmd: vmd/index.md
   - Visualization:
     - Paraview: paraview/index.md
+    - Visit: visit/index.md
     - Vmd: vmd/index.md
   - Misc:
     - Gromosxx: gromosxx/index.md
