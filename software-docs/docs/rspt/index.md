@@ -69,3 +69,30 @@ echo "Script finished at `date` on `hostname`"
 
 For information on how to submit jobs on Dardel, see [Queueing jobs](https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html).
 
+## How to build RSPt
+
+The program was installed using EasyBuild https://docs.easybuild.io/en/latest/.
+A build in your local file space can be done with
+
+```bash
+ml PDC/23.12
+ml easybuild-user/4.9.1
+eb rspt-20231004-cpeGNU-23.12.eb --robot
+```
+
+See also [Installing software using EasyBuild](https://support.pdc.kth.se/doc/support-docs/software_development/easybuild/).
+
+## Example input files, and RPSTmake.inc file.
+
+RSPt example input files can be found
+in the directory
+```bash
+$EBROOTRSPT/testsuite
+```
+For the case that you would like to build a custom version
+of RPSt, you can find the `RSPTmake.inc` file which was generated
+when building with EasyBuild at
+```bash
+$EBROOTRSPT/RSPTmake.inc
+```
+
