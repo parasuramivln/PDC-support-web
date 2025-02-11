@@ -74,5 +74,33 @@ srun -n 16 elk > out.log
 echo "Script finished at `date` on `hostname`"
 ```
 
-For information on how to submit jobs on Dardel, see [Queueing jobs](https://www.pdc.kth.se/support/documents/run_jobs/queueing_jobs.html).
+For information on how to submit jobs on Dardel, see [Queueing jobs](https://support.pdc.kth.se/doc/support-docs/run_jobs/job_scheduling/).
+
+## How to build Elk
+
+The program was installed using EasyBuild https://docs.easybuild.io/en/latest/.
+A build in your local file space can be done with
+
+```bash
+ml PDC/23.12
+ml easybuild-user/4.9.1
+eb elk-10.0.15-cpeGNU-23.12.eb --robot
+```
+
+See also [Installing software using EasyBuild](https://support.pdc.kth.se/doc/support-docs/software_development/easybuild/).
+
+## Species files, example input files, and Elk make.inc file.
+
+Elk species files and example input files can be found
+in the directories
+```bash
+$EBROOTELK/species
+$EBROOTELK/examples
+```
+For the case that you would like to build a custom version
+of Elk, you can find the Elk `make.inc` file which was generated
+when building with EasyBuild at
+```bash
+$EBROOTELK/make.inc
+```
 
