@@ -6,6 +6,8 @@
 
 ### I get “Disk quota exceeded” in my project directory even though the storage quota is not full
 
+You can use the `projinfo` command to check the usage of your home directory quota in addition to all the other allocations you are part of. Please check that the storage usage in the home as well as projects directories is under the limit in terms of both the number of files as well as the storage size. Furthermore, you can also check individual quotas as described below.
+
 Check your project quota with:
 
 ```default
@@ -43,9 +45,11 @@ continue to login again using the same password as you did before. If you do not
 
 ### How do I reset my Kerberos password?
 
-You can reset your Kerberos password (i.e. your password to log in to PDC) using the `kpasswd` command.
+If you remember your current Kerberos password (i.e. your password to log in to PDC) and would like to reset it,  you can do so using the `kpasswd` command.
 Just type the command into a terminal and you will be prompted for your old password, and then asked to type
 your new password twice.
+
+If you don't recall your current password, and would like to receive a new one, please submit this form [PDC new password request](https://blackfish.pdc.kth.se/cgi-bin/accounts/password.py)
 
 ### I got “krb5 cc new unique  Credentials cache file permissions incorrect” error when trying to run kinit
 
@@ -173,7 +177,8 @@ This is not an error message and has no impact on the functionality of Kerberos 
 
 On most systems the information where the service to port look up table is located is the file /etc/services. Note that other Kerberos client programs (kx, telnet, rsh) may produce similar messages, but may use other port numbers than 2120 as the correct default.
 
-### Clients entry in database has expired
+
+### Client's entry in database has expired
 
 This message indicates that your Kerberos principal has expired. This happens automatically every other year and means that you can not get any Kerberos tickets and therefore you can not login at PDC.
 
@@ -244,7 +249,7 @@ Usually this depends on user not adding time allocation, or adding it wrongfully
 you should use *-A <allocationid>* and for batch files:
 
 ```default
-#SBATCH -A allocationid
+#SBATCH -A <allocationid>
 ```
 
 You can check the time allocations you are a member of with
@@ -260,7 +265,7 @@ Using *salloc*
 you should  *-p <partition>* and for batch files:
 
 ```default
-#SBATCH -p partition
+#SBATCH -p <partition>
 ```
 
 Here is a complete list of all [Dardel partitions](../run_jobs/job_scheduling.md#dardel-partitions)
@@ -270,11 +275,15 @@ Here is a complete list of all [Dardel partitions](../run_jobs/job_scheduling.md
 If you want to try out PDC resources to make sure it suits your needs, you will need to apply for a PDC account and
 choose time allocation: pdc-test-xxxx , the last one being the current year. By doing that you will be able to submit
 your jobs for an specific period of time and check if it fits your needs.
+
 If you decide to run using PDC resources you
 will then need to apply for a time allocation for yourself.
-**IMPORTANT:** This is only a test allocation and has very limited amount of corehours
 
-### I do not get any e mails when my job is started finished
+!!! note 
+
+  This is only a test allocation and has very limited amount of corehours
+
+### I do not get any e-mails when my job is started finished
 
 By default SLURM send a an e-mail when your job has started/finished
 and if you do not have entered any e-mail address in your script,
@@ -306,4 +315,4 @@ export FI_CXI_DEFAULT_VNI=$(od -vAn -N4 -tu < /dev/urandom)
 
 ### Problems with the cluster
 
-In case of cluster errors, or unavailability, news regard its status are also available at [https://www.pdc.kth.se/cgi-bin/flash/flash.py](https://www.pdc.kth.se/cgi-bin/flash/flash.py)
+In case of cluster errors, or unavailability, news regarding its status are also available at [https://www.pdc.kth.se/cgi-bin/flash/flash.py](https://www.pdc.kth.se/cgi-bin/flash/flash.py)

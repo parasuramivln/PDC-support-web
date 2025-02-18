@@ -4,7 +4,7 @@
 
 This section describes how to acquire Kerberos tickets and log in from different versions of Mac OS X.
 
-**If you are using SSH with an SSH key pair, please refer to the page** [How to log in with SSH keys](ssh_login.md)
+For information on how to login from linux using SSH key based authentication, please refer to [this page](./ssh_login.md#linux-and-macos)
 
 ## KTH Mac OS X
 
@@ -38,6 +38,10 @@ Credentials cache: API:0E4B40BC-F22B-43B8-87E2-BA13538CF042
       Aug 27 08:28:40 2023  Aug 27 18:28:37 2023  krbtgt/NADA.KTH.SE@NADA.KTH.SE
 ```
 
+!!! note
+
+      Using the full path of Kerberos binaries, i.e. `usr/bin/kinit` instead of `kinit` for example, is particularly important if you have an active conda environment in your local computer's shell.
+
 Now you are good to go:
 
 ```default
@@ -47,13 +51,13 @@ ssh -o GSSAPIAuthentication=yes  your-username@dardel.pdc.kth.se
 In this case, dardel prompt should appear:
 
 ```default
-dardel-login-2:~$
+dardel-login-1:~$
 ```
 
 Check that tickets have been forwarded:
 
 ```default
-dardel-login-2:~$ klist
+dardel-login-1:~$ klist
 ```
 
 The output should be similar to this:

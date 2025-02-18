@@ -3,7 +3,7 @@
 # How to reset your Kerberos password
 
 This section describes how to reset your kerberos password
-in different operating systems
+in different operating systems, if you remember your current password.
 
 ## Linux OSX Windows Subsystem for Linux WSL 
 
@@ -11,7 +11,7 @@ Changing your kerberos password is straightforward by using **kpasswd**
 
 * Open your favorite *shell*
 * ```default
-  kpasswd [username]@NADA.KTH.SE
+  $ kpasswd [username]@NADA.KTH.SE
   [username]@NADA.KTH.SE's Password:
   New password for [username]@NADA.KTH.SE:
   Retype New password for [username]@NADA.KTH.SE:
