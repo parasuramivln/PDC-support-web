@@ -1,9 +1,10 @@
 
 # How to login from Linux
 
-There are various flavours of Linux and installing the software does
-differ between distributions.
-Configuration of kerberos is however similar in Linux distributions
+## Kerberos based authentication
+There are various flavours of Linux and installing the software does differ between distributions.
+Configuration of kerberos is however similar in Linux distributions. 
+For information on how to login from linux using SSH key based authentication, please refer to [this page](./ssh_login.md#linux-and-macos)
 
 ## How to login from Ubuntu Debian
 

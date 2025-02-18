@@ -2,8 +2,9 @@
 
 # How to login from Windows
 
-This section describes how to acquire kerberos tickets in Windows
-and log in to PDC.
+## Kerberos based authentication
+
+This section describes how to acquire kerberos tickets in Windows and log in to PDC. For information on how to login from Windows using SSH key based authentication, please refer to [this page](./ssh_login.md#windows)
 
 There are two essentially different ways to log in from Windows:
 
@@ -15,7 +16,7 @@ to be installed by KTH IT department.
 For help with this, please contact [it-support@kth.se](mailto:it-support@kth.se).
 
 
-## Install and configure Kerberos and ssh for Windows
+### Install and configure Kerberos and ssh for Windows
 
 Here are the installers that you need:
 
@@ -157,25 +158,24 @@ As seen in the image below:
 
 > ![image](../static/images/Windows_Login/group14.png)
 
-Before logging in, save your PuTTY config as a profile named dardel:
+Before logging in, save your PuTTY config as a profile named _dardel_:
 
 <!--- 
 > ![image](../static/images/Windows_Login/win10-krb-05-puttyprofile.png)
 --->
 ![image](../static/images/Windows_Login/PuTTY_snapshot_1.png)
 
-Now, click Open. If you have valid Kerberos tickets as explained above
-you will now log in to the cluster.
+Now, click Open. If you have valid Kerberos tickets as explained above you will now log in to the cluster. Please note that selecting a saved profile and changing some settings wouldn't implement these changes to the existing/selected profile. 
 
 <!--- A Dardel login looks like this:
 
 > ![image](../static/images/Windows_Login/PuTTY_snapshot_1.png) --->
 
-The path to your PDC home directory from Windows is
-`\\afs\pdc.kth.se\home\u\username` with `u` as the first letter in your username.
+<!--The path to your PDC home directory from Windows is
+`\\afs\pdc.kth.se\home\u\username` with `u` as the first letter in your username. -->
 
 When you login to Dardel, you would reach your home directory on the LUSTRE file system :
-\`\` cfs/klemming/home/u/username\`\` with `u` as the first letter in your username.
+`cfs/klemming/home/u/username` with `u` as the first letter in your username.
 
 While PuTTY is our recommended SSH client for Windows, it should be possible
 also to use Cygwin. For instructions on using Cygwin, see the section

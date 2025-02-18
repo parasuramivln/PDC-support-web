@@ -97,6 +97,10 @@ ssh -i <private-key> <your-PDC-username>@dardel.pdc.kth.se
 
 To log in with Putty, first follow the instructions on how to generate an SSH key pair, see [Generating SSH keys](ssh_keys.md) and register the public key.
 
+!!! note
+  
+  You can also use other terminal applications such as Windows CMD, Powershell, MobaXterm, etc., following the instructions for linux.
+
 You can then log in to Dardel by specifying *dardel.pdc.kth.se* as Host Name in the Putty main window.
 
 ![image](../static/images/Dardel_SSH/Putty-dardel.png)
@@ -129,7 +133,7 @@ ECDSA key fingerprint is MD5:8c:62:70:4c:b8:f2:c4:ab:14:43:b7:31:ba:c3:c9:52
 
 ## Users who do not have a SUPR account
 
-For users without SUPR account currently only Kerberos login is officially supported. If you are in SUPR, but your SUPR account is not properly linked to PDC, please contact PDC support ([support@pdc.kth.se](mailto:support@pdc.kth.se)).
+For users without SUPR account currently only Kerberos login is officially supported. If you are in SUPR, but your SUPR account is not properly linked to PDC, please contact PDC support ([support@pdc.kth.se](mailto:support@pdc.kth.se)) along with information about your PDC username and the email with which your SUPR account is registered. 
 
 ## Configuring ssh keys and kerberos login
 
