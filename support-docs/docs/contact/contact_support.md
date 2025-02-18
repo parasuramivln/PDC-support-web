@@ -2,7 +2,7 @@
 
 # Contact Support
 
-Before contacting PDC Support, please have a look at the [Support](https://www.pdc.kth.se/support) pages
+Before contacting PDC Support, please have a look at the [Support](https://support.pdc.kth.se/doc/) pages
 to see if your questions are already addressed, and check the current
 [System Alerts](https://www.pdc.kth.se/cgi-bin/flash/flash.py) to see if there is a related issue.
 
@@ -55,7 +55,7 @@ Make sure you provide with adequate information when requesting support from PDC
 
 PDC Support is open for visitors from 09:00-17:00 Monday to Friday (except on public holidays), however,
 please make an appointment first, by mailing us using the information provided above, to be sure that an appropriate person will be available to meet you when you arrive.
-For directions to get to PDC, click [here](https://www.pdc.kth.se/about/visit-pdc).
+For directions to get to PDC, click [here](https://www.pdc.kth.se/about/contact/travelling-to-pdc-1.736521).
 
 ```
 PDC, KTH
