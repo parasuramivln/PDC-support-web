@@ -1,6 +1,6 @@
 
 
-# Frequently Asked Questions  FAQ 
+# Frequently Asked Questions (FAQ)
 
 ## Filesystem
 
@@ -22,26 +22,25 @@ lfs quota -hp $UID /cfs/klemming
 
 ### How can I share files with PDC support?
 
-By default only you have access to your files. But when in contact with support it can be useful to share log files, Makefiles, source code, core files etc.
-There are different ways to do this…
+By default only you have access to your files. But when in contact with support it can be useful to share log files, Makefiles, source code, core files etc. There are different ways to do this
 
 1. Copy the files to your public directory. The public directory is a space in your home directory where everyone has read access. This method is best for small data that is okay to share with all users of the system.
-   : ```default
-     cp my_file $HOME/Public
-     cp -R my_directory $HOME/Public
-     ```
-1. Give access permission to the files directly. We provide the command `support-access` to do this automatically (by setting up [Access Control Lists](../data_management/klemming.md#access-control-lists)). This method works even for large data, and gives access only to PDC staff. It does not work in project directories.
-   : ```default
-     support-access my_file
-     support-access my_directory
-     ```
+```default
+cp my_file $HOME/Public
+cp -R my_directory $HOME/Public
+```
 
+1. Give access permission to the files directly. We provide the command `support-access` to do this automatically (by setting up [Access Control Lists](../data_management/klemming.md#access-control-lists)). This method works even for large data, and gives access only to PDC staff. It does not work in project directories.
+```default
+support-access my_file
+support-access my_directory
+```
 
 ## Kerberos
 
-### I got “kinit  krb5 get init creds  No ENC TS found” error when trying to run kinit
+### I got “kinit  krb5 get init creds No ENCTS found” error when trying to run kinit.
 
-Write an e-mail asking PDC support ([support@pdc.kth.se](mailto:support@pdc.kth.se)) to extend your Kerberos principal. When this has been done you can
+Contact PDC support using the link https://supr.naiss.se/support/?centre_resource=c7 to request an extention of your Kerberos principal. When this has been done you can
 continue to login again using the same password as you did before. If you do not have a valid time allocation this will not be done.
 
 ### How do I reset my Kerberos password?
@@ -57,7 +56,7 @@ If you don't recall your current password, and would like to receive a new one, 
 Please check the output of *klist* command as there may be conflict between Kerberos tickets for different realms.
 Try *kdestroy* and then *kinit* again to get Kerberos ticket for NADA.KTH.SE.
 
-For windows users: If the error persists, please use [Network Identity Manager](https://www.secure-endpoints.com/netidmgr/)
+For Windows users: If the error persists, please use [Network Identity Manager](https://www.secure-endpoints.com/netidmgr/)
 to manage Kerberos tickets. Remember to set default identity by right-clicking the Kerberos principal ending with NADA.KTH.SE,
 and choosing the *Set as default* menu item.
 
@@ -116,7 +115,7 @@ This is most likely caused by a NAT firewall (such as a wideband router used for
 
 **Remedy:** Go to [Firewalls and kerberos](../login/configuration.md#firewalls-and-kerberos) and try the –no-addresses option to kinit or –extra-addresses=xyz.xyz.xyz.xyz with xyz replaced by the IP number of your external NAT interface. This page should give you the address of the external NAT interface in most (but not all) cases.
 
-### Kerberos V5  mk req failed  Server not found in Kerberos database 
+### Kerberos V5 mk req failed Server not found in Kerberos database
 
 This is most often caused by a malfunctioning name server (such as the ones provided by some home consumer ISPs)
 
@@ -160,7 +159,7 @@ protocol for synchronizing clocks over the internet.
 If everything looks right, but it does not work anyway, your computer is probably
 set up for the wrong timezone or the wrong daylight savings time period.
 
-### kinit  krb5 get init creds  time skew  370  larger than max  300 
+### kinit  krb5 get init creds  time skew  370  larger than max  300
 
 This is again caused by the clock on your system being out of sync with the actual time.
 
@@ -177,6 +176,7 @@ This is again caused by the clock on your system being out of sync with the actu
 This is not an error message and has no impact on the functionality of Kerberos under normal circumstances. The message informs the user that the kauth/tcp system service is not registered in the client machine as a known service with an assigned port number. The kauth client program therefore selects the default “standard” connection port 2120 when talking to the PDC Kerberos server. This is the wanted behavior.
 
 On most systems the information where the service to port look up table is located is the file /etc/services. Note that other Kerberos client programs (kx, telnet, rsh) may produce similar messages, but may use other port numbers than 2120 as the correct default.
+
 
 ### Client's entry in database has expired
 
@@ -206,7 +206,7 @@ not part of an active time allocation at PDC, or there is an error in your
 configuration files.
 First of all you should check if you are part of a time allocation on the
 cluster you are trying to log in to by looking it up on SUPR (if your project is managed through SUPR), or by asking your principal investigator/Course
-adminstrator if you have been added as a member to the time allocation.
+administrator if you have been added as a member to the time allocation.
 If you are a member of an active time allocation there could be
 some problems with your configuration files.
 To troubleshoot configuration file problems please try to log in manually…
@@ -243,13 +243,13 @@ PDC Support will send you a confirmation email when your SUPR account has been l
 
 ## Running
 
-### Job submit allocate failed  Invalid partition or qos specification
+### Job submit allocate failed Invalid partition or qos specification
 
 Usually this depends on user not adding time allocation, or adding it wrongfully. Using *salloc*
-you should  *-A <allocationid>* and for batch files:
+you should use *-A <allocationid>* and for batch files:
 
 ```default
-#SBATCH  A  <allocationid> 
+#SBATCH -A <allocationid>
 ```
 
 You can check the time allocations you are a member of with
@@ -265,7 +265,7 @@ Using *salloc*
 you should  *-p <partition>* and for batch files:
 
 ```default
-#SBATCH  -p  <partition> 
+#SBATCH -p <partition>
 ```
 
 Here is a complete list of all [Dardel partitions](../run_jobs/job_scheduling.md#dardel-partitions)
@@ -290,7 +290,7 @@ and if you do not have entered any e-mail address in your script,
 SLURM will automatically send it to the address in  *.forward*
 so it is important that you see that this file has an updated e-mail.
 
-This files resides in
+This file resides in
 
 ```default
 /cfs/klemming/home/<first letter username>/<username>/Public/.forward
