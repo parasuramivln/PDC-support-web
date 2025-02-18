@@ -10,14 +10,14 @@ keywords:
 
 | Resource | Version |
 |---|---|
-| Dardel/cpe23.12 | 2024, 2021, 2019 |
+| Dardel/cpe23.12 | 2025, 2024, 2021, 2019 |
 
 ## General information
 
-Abaqus is a commercial software package for finite element analysis. The Abaqus product suite consists of three core products: Abaqus/Standard, Abaqus/Explicit and Abaqus/CAE. Abaqus/Standard is a general-purpose solver using a traditional implicit integration scheme to solve finite element analyses. Abaqus/Explicit uses an explicit integration scheme to solve highly nonlinear transient dynamic and quasi-static analyses. Abaqus/CAE provides an integrated modelling (preprocessing) and visualization (postprocessing) environment for the analysis products.
+Abaqus is a commercial software package for finite element analysis. The Abaqus product suite consists of three core products: Abaqus/Standard, Abaqus/Explicit and Abaqus/CAE. Abaqus/Standard is a general-purpose solver using a traditional implicit integration scheme to solve finite element analyses. Abaqus/Explicit uses an explicit integration scheme to solve highly nonlinear transient dynamic and quasi-static analyses. Abaqus/CAE provides an integrated modelling (preprocessing) and visualization (postprocessing) environment for the analysis products. Abaqus also provides a good collection of multiphysics capabilities, such as coupled acoustic-structural, piezoelectric, and structural-pore capabilities, making it attractive for production-level simulations where multiple fields need to be coupled.
+Abaqus was initially designed to address non-linear physical behavior; as a result, the package has an extensive range of material models. Its elastomeric (rubberlike) material capabilities are particularly noteworthy. 
 
-Abaqus is used in the automotive, aerospace, and industrial product industries. The product is popular with academic and research institutions due to the wide material modeling capability, and the program's ability to be customized. Abaqus also provides a good collection of multiphysics capabilities, such as coupled acoustic-structural, piezoelectric, and structural-pore capabilities, making it attractive for production-level simulations where multiple fields need to be coupled.
-Abaqus was initially designed to address non-linear physical behavior; as a result, the package has an extensive range of material models. Its elastomeric (rubberlike) material capabilities are particularly noteworthy. For more details, look at SIMULIA's web page:
+For more details, look at SIMULIA's web page:
 [http://www.simulia.com/](http://www.simulia.com/)
 
 
@@ -27,11 +27,12 @@ Abaqus was initially designed to address non-linear physical behavior; as a resu
 module load abaqus
 ```
 
-!!! note load PDC module
+!!! note 
+
     Please note that the `PDC` module needs to be loaded before loading the `abaqus` module
 
 # Submitting an Abaqus job on Dardel
-A script for running Abaqus on Dardel  called abaqus_run.sh is shown below.
+A script for running Abaqus on Dardel is shown below.
 
 ```
 #!/bin/bash 
@@ -71,7 +72,7 @@ abaqus job=$inputFile cpus=64 mp_mode=threads interactive
 ```
 
 Note that this script does not include all the arguments that you can supply to Abaqus, but you should add/modify the script to suit your needs. 
-You can copy this script to your home directory at PDC and save it as `abaqus_run.sh`
+You can copy this script to a directory of choice at PDC and save it as `abaqus_run.sh` for example.
 ```
 sbatch abaqus_run.sh
 ```
@@ -81,5 +82,9 @@ Once the job has finished, you will find the outputs in the same directory as yo
 
     **The script above works for running Abaqus only on a single node containing 128 cores. Contact PDC support if you need to run on more than one node. You might be asked for proof of scaling for more than 128 cores.**
 
-    
+The Abaqus GUI can be launched throgh an interactive session using Thinlinc or X11 forwarding, using the command `abaqus cae -mesa`, after loading the `abaqus` (and `PDC`) module. 
+
+!!! note
+
+    Please note that launching the GUI for abaqus can take a few minutes (sometimesas long as 7-12 minutes), and therefore, it is recommended not to run simulations through the GUI. The GUI can instead be used for quick visualization of results, etc. To run the simulation cases, please follow  the batch job submission procedure described above
 

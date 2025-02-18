@@ -23,7 +23,7 @@ PDC takes no responsibility for the correctness of results produced with the bin
 
 | Software | Cluster | Versions |
 |---|---|---|
-| [Abaqus](abaqus/index.md) | Dardel/cpe23.12 | 2024, 2021, 2019 |
+| [Abaqus](abaqus/index.md) | Dardel/cpe23.12 | 2025, 2024, 2021, 2019 |
 | [Abinit](abinit/index.md) | Dardel/cpe23.12 | 10.0.5, 9.10.3 |
 || Dardel/cpe23.03 | 9.10.3 |
 | [Ansys-fluent](ansys-fluent/index.md) | Dardel/cpe23.12 | 24.2, 23.1, 21.2 |
