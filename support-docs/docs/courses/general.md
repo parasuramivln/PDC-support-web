@@ -5,7 +5,7 @@
 ## Get an account
 
 Before your course/workshop starts, all participants need to have a PDC account.
-Please visit [https://www.kth.se/form/pdc-user-account-request](https://www.kth.se/form/pdc-user-account-request) and request an account
+Please visit [https://blackfish.pdc.kth.se/cgi-bin/accounts/request.py](https://blackfish.pdc.kth.se/cgi-bin/accounts/request.py) and request an account
 **at least one week before the workshop starts**.
 Specify which course/workshop you will be participating in.
 Once we have received your application we will confirm that you are indeed registered
