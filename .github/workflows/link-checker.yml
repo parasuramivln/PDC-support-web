@@ -11,37 +11,35 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.10
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.10"
-    - name: Install dependencies
-      run: 
-        python3 -m pip install --upgrade pip
-        pip install mkdocs mkdocs-material 
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-	      wget "https://github.com/gohugoio/hugo/releases/download/v0.144.1/hugo_0.144.1_Linux-64bit.tar.gz"
-	      tar -xvzf hugo_0.144.1_Linux-64bit.tar.gz
-	      export PATH=`pwd`:$PATH
-    - name: Build docs
-      run:
-        make build
-    - name: Validate JSON
-      uses: docker://orrosenblatt/validate-json-action:latest
-      env:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material 
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          wget "https://github.com/gohugoio/hugo/releases/download/v0.144.1/hugo_0.144.1_Linux-64bit.tar.gz"
+          tar -xvzf hugo_0.144.1_Linux-64bit.tar.gz
+          export PATH="$(pwd):$PATH"
+      - name: Build docs
+        run: make build
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
           INPUT_SCHEMA: .github/workflows/valid_json_schema.json
           INPUT_JSONS: mlc_config.json
-    - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - name: Check Markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           config-file: 'mlc_config.json'
           use-quiet-mode: 'yes'
           use-verbose-mode: 'no'
-
 #    - name: Lint with flake8
 #      run: |
 #        # stop the build if there are Python syntax errors or undefined names
