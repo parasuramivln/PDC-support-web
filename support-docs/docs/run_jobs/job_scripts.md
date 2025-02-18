@@ -47,7 +47,7 @@ The following list explains the most common options specified in job scripts. Fo
 
 
 `#SBATCH --gres=gpu:X`
-: (Currently GPUs are not available on Dardel)
+:
 
 
 `#SBATCH -J <jobname>`
