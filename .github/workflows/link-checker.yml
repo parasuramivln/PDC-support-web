@@ -26,10 +26,11 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           wget "https://github.com/gohugoio/hugo/releases/download/v0.144.1/hugo_0.144.1_Linux-64bit.tar.gz"
           tar -xvzf hugo_0.144.1_Linux-64bit.tar.gz
-          echo $PATH
-          echo $(pwd)
-          export PATH="$(pwd):$PATH"
-          echo $PATH
+          # echo $PATH
+          # echo $(pwd)
+          # export PATH="$(pwd):$PATH"
+          # echo $PATH
+          cp hugo /usr/local/bin/
       - name: Build docs
         run: make build
       - name: Validate JSON
