@@ -8,4 +8,4 @@ Within this documentation you can also find information on **How to use** said s
 at our resources.
 
 Information on what software are available can be reached by either pressent the
-**Applications** menu above or at https://support.pdc.kth.se/docs/applications
+**Applications** menu above or at https://support.pdc.kth.se/doc/applications
