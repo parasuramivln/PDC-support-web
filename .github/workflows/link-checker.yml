@@ -38,12 +38,12 @@ jobs:
         env:
           INPUT_SCHEMA: .github/workflows/valid_json_schema.json
           INPUT_JSONS: .github/workflows/mlc_config.json
-      # - name: Check Markdown links
-      #   uses: gaurav-nelson/github-action-markdown-link-check@v1
-      #   with:
-      #     config-file: 'mlc_config.json'
-      #     use-quiet-mode: 'yes'
-      #     use-verbose-mode: 'no'
+      - name: Check Markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          config-file: 'mlc_config.json'
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
 #    - name: Lint with flake8
 #      run: |
 #        # stop the build if there are Python syntax errors or undefined names
