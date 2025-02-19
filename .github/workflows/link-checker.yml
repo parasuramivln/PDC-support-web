@@ -37,7 +37,7 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: .github/workflows/valid_json_schema.json
-          INPUT_JSONS: mlc_config.json
+          INPUT_JSONS: .github/workflows/mlc_config.json
       # - name: Check Markdown links
       #   uses: gaurav-nelson/github-action-markdown-link-check@v1
       #   with:
